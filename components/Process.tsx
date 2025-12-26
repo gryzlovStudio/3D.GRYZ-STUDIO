@@ -1,0 +1,111 @@
+'use client'
+
+export default function Process() {
+  const steps = [
+    {
+      number: "01",
+      title: "Бриф за 15 минут",
+      description: "Рассказываете о задаче, целях и референсах. Быстро и без лишних встреч"
+    },
+    {
+      number: "02",
+      title: "3 концепта за час",
+      description: "Наш специалист по нейросетям создает концепты с использованием продвинутых AI-инструментов. Вам не нужно разбираться в технологиях — мы делаем это профессионально"
+    },
+    {
+      number: "03",
+      title: "Реализация",
+      description: "Создаем анимацию, рекламные ролики, персонажей, баннеры — всё что нужно. Комбинируем AI и ручную работу для идеального результата. Готовый проект за дни вместо месяцев"
+    },
+    {
+      number: "04",
+      title: "Передача материалов и финальная поддержка",
+      description: "Передаем все исходники и файлы в нужных форматах. Предоставляем инструкции по использованию и техническую поддержку"
+    }
+  ]
+
+  return (
+    <section className="py-24 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/10 via-bg-dark to-accent-pink/5"></div>
+
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: `linear-gradient(rgba(188, 240, 0, 0.1) 1px, transparent 1px),
+                           linear-gradient(90deg, rgba(188, 240, 0, 0.1) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}
+      ></div>
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-display font-black uppercase mb-4">
+            От идеи до результата <span className="gradient-text">за 4 шага</span>
+          </h2>
+          <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+            Прозрачный процесс работы без лишних встреч и затянутых согласований
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="relative group"
+            >
+              {/* Connection line (for desktop) */}
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-accent-purple to-transparent z-0"></div>
+              )}
+
+              {/* Card */}
+              <div className="relative h-full p-8 rounded-2xl border border-white/10 bg-bg-darker/80 backdrop-blur-sm hover:border-accent-lime/50 transition-all duration-300 hover:glow-lime">
+                {/* Number Badge */}
+                <div className="absolute -top-4 -left-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-lime to-accent-gold flex items-center justify-center shadow-lg">
+                  <span className="text-2xl font-black font-mono text-bg-dark">{step.number}</span>
+                </div>
+
+                {/* Content */}
+                <div className="mt-6">
+                  <h3 className="text-2xl font-bold mb-4 gradient-text-lime-gold">
+                    {step.title}
+                  </h3>
+                  <p className="text-text-secondary leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+
+                {/* Arrow indicator for next step */}
+                {index < steps.length - 1 && (
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 md:hidden">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent-purple to-accent-pink flex items-center justify-center">
+                      <span className="text-white text-lg">↓</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Glow effect */}
+              <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-2xl"
+                style={{
+                  background: 'radial-gradient(circle at center, rgba(188, 240, 0, 0.2), transparent 70%)'
+                }}
+              ></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <p className="text-text-muted mb-6">Готовы начать свой проект?</p>
+          <a
+            href="/get-concept"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 shine-button"
+          >
+            Получить бесплатный концепт
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}

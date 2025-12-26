@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0A0F;
+  color: #FFFFFF;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Кастомный scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #12121A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6B2AFF;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B4AFF;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(18, 18, 26, 0.75);
+  backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow effect */
+.glow-purple {
+  box-shadow:
+    0 0 20px rgba(78, 0, 239, 0.3),
+    0 0 40px rgba(78, 0, 239, 0.1);
+}
+
+.glow-lime {
+  box-shadow:
+    0 0 20px rgba(188, 240, 0, 0.3),
+    0 0 40px rgba(188, 240, 0, 0.1);
+}
+
+.glow-gold {
+  box-shadow:
+    0 0 20px rgba(240, 197, 0, 0.3),
+    0 0 40px rgba(240, 197, 0, 0.1);
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Shine animation - золотой блик каждые 7 секунд */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.shine-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  animation: shine 7s infinite;
+  pointer-events: none;
+}
+
+/* Gradient text - фиолетово-розовая основа */
+.gradient-text {
+  background: linear-gradient(135deg, #6B2AFF 0%, #FF6B9D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Альтернативные градиенты */
+.gradient-text-lime-gold {
+  background: linear-gradient(135deg, #BCF000 0%, #F0C500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-gold-purple {
+  background: linear-gradient(135deg, #FF6B9D 0%, #6B2AFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-purple-pink {
+  background: linear-gradient(135deg, #6B2AFF 0%, #B794F6 50%, #FF6B9D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
