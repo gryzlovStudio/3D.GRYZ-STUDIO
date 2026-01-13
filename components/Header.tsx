@@ -1,9 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import Image from 'next/image'
+import { useLanguage } from '@/lib/i18n'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  const { language, setLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,44 +26,47 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-smooth">
-          <div className="w-10 h-10 bg-gradient-to-br from-accent-purple to-accent-pink rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl font-mono">3D</span>
-          </div>
-          <span className="text-xl font-bold font-mono uppercase">GRYZ</span>
+        <a href="/" className="hover:opacity-80 transition-smooth">
+          <Image
+            src="/logo.png"
+            alt="3D GRYZ"
+            width={120}
+            height={40}
+            className="h-10 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <a
             href="/"
-            className="text-text-secondary hover:text-accent-purple transition-smooth uppercase text-sm font-medium"
+            className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
-            Главная
+            {t.header.home}
           </a>
           <a
             href="/about"
-            className="text-text-secondary hover:text-accent-purple transition-smooth uppercase text-sm font-medium"
+            className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/about' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
-            О нас
+            {t.header.about}
           </a>
           <a
             href="/services"
-            className="text-text-secondary hover:text-accent-purple transition-smooth uppercase text-sm font-medium"
+            className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/services' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
-            Услуги
+            {t.header.services}
           </a>
           <a
             href="/portfolio"
-            className="text-text-secondary hover:text-accent-purple transition-smooth uppercase text-sm font-medium"
+            className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/portfolio' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
-            Портфолио
+            {t.header.portfolio}
           </a>
           <a
             href="/ai-content"
-            className="text-text-secondary hover:text-accent-purple transition-smooth uppercase text-sm font-medium"
+            className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/ai-content' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
-            ИИ-контент
+            {t.header.aiContent}
           </a>
           <a
             href="https://blenderverse.getcourse.ru/MainPageNew"
@@ -66,22 +74,36 @@ export default function Header() {
             rel="noopener noreferrer"
             className="text-text-secondary hover:text-accent-pink transition-smooth uppercase text-sm font-medium"
           >
-            Школа
+            {t.header.school}
           </a>
 
           {/* Language Switcher */}
           <div className="flex items-center gap-2 border border-white/10 rounded-lg p-1">
-            <button className="px-3 py-1 bg-accent-purple rounded text-xs font-medium uppercase">
+            <button
+              onClick={() => setLanguage('ru')}
+              className={`px-3 py-1 rounded text-xs font-medium uppercase transition-smooth ${
+                language === 'ru'
+                  ? 'bg-accent-purple text-white'
+                  : 'text-text-muted hover:text-text-primary'
+              }`}
+            >
               RU
             </button>
-            <button className="px-3 py-1 text-text-muted hover:text-text-primary transition-smooth text-xs font-medium uppercase">
+            <button
+              onClick={() => setLanguage('en')}
+              className={`px-3 py-1 rounded text-xs font-medium uppercase transition-smooth ${
+                language === 'en'
+                  ? 'bg-accent-purple text-white'
+                  : 'text-text-muted hover:text-text-primary'
+              }`}
+            >
               EN
             </button>
           </div>
 
           {/* CTA Button */}
           <a href="/get-concept" className="px-6 py-3 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-sm hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
-            Получить концепт
+            {t.header.getConcept}
           </a>
         </nav>
 

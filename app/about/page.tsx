@@ -1,7 +1,12 @@
+'use client'
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { useLanguage } from '@/lib/i18n'
 
 export default function AboutPage() {
+  const { t } = useLanguage()
+
   return (
     <main className="min-h-screen">
       <Header />
@@ -16,9 +21,9 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-black uppercase leading-tight">
-            <span className="gradient-text-lime-gold">3D-студия</span><br />
-            нового поколения.<br />
-            <span className="gradient-text-gold-purple">AI × экспертиза × результат.</span>
+            <span className="gradient-text-lime-gold">{t.about.hero.title1}</span><br />
+            {t.about.hero.title2}<br />
+            <span className="gradient-text-gold-purple">{t.about.hero.title3}</span>
           </h1>
         </div>
       </section>
@@ -30,32 +35,18 @@ export default function AboutPage() {
             {/* Left - Text */}
             <div>
               <h2 className="text-5xl font-black uppercase mb-8">
-                Наша <span className="text-accent-purple">миссия</span>
+                {t.about.mission.title} <span className="text-accent-purple">{t.about.mission.titleHighlight}</span>
               </h2>
               <div className="space-y-6 text-lg text-text-secondary leading-relaxed">
-                <p>
-                  Мы — команда 3D-художников и AI-инженеров, которые влюблены в свое дело.
-                  Наша цель — создавать визуальный контент, который не просто красивый, но и работает на результат.
-                </p>
-                <p>
-                  За годы работы мы поняли: лучшие проекты рождаются на стыке творчества и технологий.
-                  Именно поэтому мы объединили классическую 3D-разработку с искусственным интеллектом.
-                </p>
-                <p>
-                  Сегодня качественный 3D доступен не только крупным брендам. Благодаря AI мы делаем
-                  профессиональный визуальный контент быстрее и доступнее для бизнеса любого размера.
-                </p>
+                <p>{t.about.mission.text1}</p>
+                <p>{t.about.mission.text2}</p>
+                <p>{t.about.mission.text3}</p>
               </div>
             </div>
 
             {/* Right - Stats */}
             <div className="grid grid-cols-2 gap-8">
-              {[
-                { value: '150+', label: 'Успешных проектов' },
-                { value: '98%', label: 'Клиенты возвращаются' },
-                { value: '10x', label: 'Быстрее с AI' },
-                { value: '60%', label: 'Экономия бюджета' },
-              ].map((stat, i) => (
+              {t.about.stats.map((stat, i) => (
                 <div key={i} className="glass rounded-xl p-6 text-center flex flex-col items-center justify-center">
                   <div className="text-5xl font-black font-mono text-accent-purple mb-2">
                     {stat.value}
@@ -76,24 +67,11 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <h2 className="text-5xl font-black uppercase mb-16 text-center">
-            Наши <span className="gradient-text">принципы</span>
+            {t.about.values.title} <span className="gradient-text">{t.about.values.titleHighlight}</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              {
-                title: 'Фокус на результат',
-                desc: 'Каждый проект нацелен на конкретные бизнес-цели. Мы измеряем успех вашими метриками.',
-              },
-              {
-                title: 'Технологии AI',
-                desc: 'Используем передовые AI-инструменты для ускорения процессов без потери качества.',
-              },
-              {
-                title: 'Ваш успех — наша цель',
-                desc: 'Работаем как партнеры, а не подрядчики. Ваш рост — это наш приоритет.',
-              },
-            ].map((value, i) => (
+            {t.about.values.items.map((value, i) => (
               <div key={i} className="text-center">
                 <h3 className="text-2xl font-bold uppercase mb-4 text-accent-purple">
                   {value.title}
@@ -111,28 +89,11 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-black uppercase mb-16 text-center">
-            Наши <span className="gradient-text-gold-purple">технологии</span>
+            {t.about.technologies.title} <span className="gradient-text-gold-purple">{t.about.technologies.titleHighlight}</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                category: '3D Программы',
-                tools: ['Blender', 'Maya', 'ZBrush', 'Substance Painter'],
-              },
-              {
-                category: 'AI Инструменты',
-                tools: ['ComfyUI', 'Flux', 'Stable Diffusion', 'Video AI'],
-              },
-              {
-                category: 'Рендеринг',
-                tools: ['Cycles', 'Octane', 'V-Ray', 'AI Render'],
-              },
-              {
-                category: 'Игровые движки',
-                tools: ['Unity', 'Unreal Engine', 'Three.js', 'WebGL'],
-              },
-            ].map((tech, i) => (
+            {t.about.technologies.items.map((tech, i) => (
               <div key={i} className="glass rounded-xl p-6">
                 <h3 className="text-xl font-bold uppercase mb-4 text-accent-purple">
                   {tech.category}
@@ -161,31 +122,14 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <h2 className="text-5xl font-black uppercase mb-8">
-            Наша <span className="gradient-text">команда</span>
+            {t.about.team.title} <span className="gradient-text">{t.about.team.titleHighlight}</span>
           </h2>
           <p className="text-xl text-text-secondary mb-16 max-w-3xl mx-auto">
-            Профессиональные 3D-художники, AI-инженеры и аниматоры,
-            объединенные одной целью — ваш успех.
+            {t.about.team.subtitle}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              {
-                role: '3D-художники',
-                count: '5+',
-                desc: 'Профессионалы в Blender, Maya и ZBrush с опытом работы для крупных брендов'
-              },
-              {
-                role: 'AI-инженеры',
-                count: '3+',
-                desc: 'Эксперты в ComfyUI, Stable Diffusion и генеративных технологиях'
-              },
-              {
-                role: 'Аниматоры',
-                count: '4+',
-                desc: '3D-анимация и motion-дизайн для рекламы и продуктов'
-              },
-            ].map((team, i) => (
+            {t.about.team.members.map((team, i) => (
               <div key={i} className="glass rounded-2xl p-8">
                 <div className="text-2xl font-bold uppercase mb-3">{team.role}</div>
                 <p className="text-sm text-text-secondary leading-relaxed">{team.desc}</p>
@@ -199,15 +143,15 @@ export default function AboutPage() {
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-black uppercase mb-6">
-            Готовы <span className="gradient-text-lime-gold">работать вместе?</span>
+            {t.about.cta.title} <span className="gradient-text-lime-gold">{t.about.cta.titleHighlight}</span>
           </h2>
           <p className="text-xl text-text-secondary mb-12">
-            Начнем с бесплатной консультации и концепта
+            {t.about.cta.subtitle}
           </p>
 
           <div className="flex justify-center">
             <a href="/get-concept" className="px-12 py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
-              Связаться с нами
+              {t.about.cta.button}
             </a>
           </div>
         </div>

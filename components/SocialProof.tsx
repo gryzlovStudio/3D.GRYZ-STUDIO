@@ -1,15 +1,19 @@
 'use client'
 
+import { useLanguage } from '@/lib/i18n'
+
+const clients = [
+  { name: "Sberbank", nameRu: "Сбербанк", placeholder: "SB" },
+  { name: "Alfa-Bank", nameRu: "Альфа-Банк", placeholder: "AB" },
+  { name: "Tinkoff", nameRu: "Тинькофф", placeholder: "TF" },
+  { name: "VKontakte", nameRu: "ВКонтакте", placeholder: "VK" },
+  { name: "Yandex", nameRu: "Яндекс", placeholder: "YA" },
+  { name: "Rostelecom", nameRu: "Ростелеком", placeholder: "RT" },
+  { name: "Akkond", nameRu: "Акконд", placeholder: "AK" }
+]
+
 export default function SocialProof() {
-  const clients = [
-    { name: "Сбербанк", placeholder: "SB" },
-    { name: "Альфа-Банк", placeholder: "AB" },
-    { name: "Тинькофф", placeholder: "TF" },
-    { name: "ВКонтакте", placeholder: "VK" },
-    { name: "Яндекс", placeholder: "YA" },
-    { name: "Ростелеком", placeholder: "RT" },
-    { name: "Акконд", placeholder: "AK" }
-  ]
+  const { language, t } = useLanguage()
 
   return (
     <section className="py-24 px-6 relative">
@@ -18,10 +22,10 @@ export default function SocialProof() {
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-display font-black uppercase mb-4">
-            Нам <span className="gradient-text">доверяют</span>
+            {t.socialProof.title} <span className="gradient-text">{t.socialProof.titleHighlight}</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            150+ проектов для компаний из финтеха, IT, производства, недвижимости и образования
+            {t.socialProof.subtitle}
           </p>
         </div>
 
@@ -42,7 +46,7 @@ export default function SocialProof() {
                     </span>
                   </div>
                   <p className="text-xs text-text-muted group-hover:text-text-secondary transition-colors">
-                    {client.name}
+                    {language === 'ru' ? client.nameRu : client.name}
                   </p>
                 </div>
               </div>
@@ -60,7 +64,7 @@ export default function SocialProof() {
         {/* Note for uploading logos */}
         <div className="mt-12 text-center">
           <p className="text-sm text-text-muted italic">
-            📌 Placeholder для логотипов. Загрузите изображения в папку /public/logos/
+            {t.socialProof.logoPlaceholder}
           </p>
         </div>
       </div>

@@ -1,83 +1,64 @@
 'use client'
 
+import Image from 'next/image'
+import { useLanguage } from '@/lib/i18n'
+
 export default function Footer() {
+  const { language, setLanguage, t } = useLanguage()
+
   return (
     <footer className="relative py-16 px-6 border-t border-white/10">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-accent-purple/10 to-transparent"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent-lime to-accent-purple rounded-lg flex items-center justify-center">
-                <span className="text-bg-dark font-bold text-xl font-mono">3D</span>
-              </div>
-              <span className="text-xl font-bold font-mono uppercase">GRYZ</span>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="3D GRYZ"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-text-muted text-sm">
-              Превращаем идеи в высокодоходный визуальный контент
+              {t.footer.tagline}
             </p>
           </div>
 
           {/* Company */}
-          <div>
-            <h4 className="font-bold uppercase mb-4 text-sm">Компания</h4>
+          <div className="md:text-right">
+            <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.company}</h4>
             <ul className="space-y-2">
               <li>
                 <a href="/about" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  О нас
+                  {t.header.about}
                 </a>
               </li>
               <li>
                 <a href="/services" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  Услуги
+                  {t.header.services}
                 </a>
               </li>
               <li>
                 <a href="/portfolio" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  Портфолио
+                  {t.header.portfolio}
                 </a>
               </li>
               <li>
                 <a href="/ai-content" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  ИИ-контент
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Solutions/Services */}
-          <div>
-            <h4 className="font-bold uppercase mb-4 text-sm">Решения</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="/services#3d-characters" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  3D-персонажи
-                </a>
-              </li>
-              <li>
-                <a href="/services#video" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  Рекламные видео
-                </a>
-              </li>
-              <li>
-                <a href="/services#marketing" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  Контент для маркетинга
-                </a>
-              </li>
-              <li>
-                <a href="/get-concept" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  Получить концепт
+                  {t.header.aiContent}
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-bold uppercase mb-4 text-sm">Контакты</h4>
+          <div className="md:text-right">
+            <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.contacts}</h4>
             <ul className="space-y-2">
               <li>
                 <a href="mailto:gryzlovstudio@gmail.com" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
@@ -108,28 +89,43 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
               <p className="text-text-muted text-sm">
-                © 2025 3D.GRYZ. Все права защищены.
+                {t.footer.rights}
               </p>
               <span className="text-text-muted hidden md:inline">|</span>
               <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
                 <a href="/privacy-policy" className="text-text-muted hover:text-accent-lime transition-smooth text-xs">
-                  Политика конфиденциальности
+                  {t.footer.privacyPolicy}
                 </a>
                 <span className="text-text-muted hidden md:inline">|</span>
                 <a href="/personal-data" className="text-text-muted hover:text-accent-lime transition-smooth text-xs">
-                  Обработка персональных данных
+                  {t.footer.personalData}
                 </a>
               </div>
             </div>
 
-            <div className="flex gap-6">
-              <a href="#" className="text-text-muted hover:text-accent-lime transition-smooth text-sm uppercase">
+            {/* Language Switcher */}
+            <div className="flex gap-4">
+              <button
+                onClick={() => setLanguage('ru')}
+                className={`transition-smooth text-sm uppercase ${
+                  language === 'ru'
+                    ? 'text-accent-lime'
+                    : 'text-text-muted hover:text-accent-lime'
+                }`}
+              >
                 RU
-              </a>
+              </button>
               <span className="text-text-muted">|</span>
-              <a href="#" className="text-text-muted hover:text-accent-lime transition-smooth text-sm uppercase">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`transition-smooth text-sm uppercase ${
+                  language === 'en'
+                    ? 'text-accent-lime'
+                    : 'text-text-muted hover:text-accent-lime'
+                }`}
+              >
                 EN
-              </a>
+              </button>
             </div>
           </div>
         </div>

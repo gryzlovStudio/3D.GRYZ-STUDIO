@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
+import { readFile } from 'fs/promises'
+import { join } from 'path'
 
-// Размер иконки
 export const size = {
   width: 32,
   height: 32,
@@ -8,26 +9,32 @@ export const size = {
 
 export const contentType = 'image/png'
 
-// Генерируем favicon (как в Header)
-export default function Icon() {
+export default async function Icon() {
+  const logoData = await readFile(join(process.cwd(), 'public', 'logo.png'))
+  const logoBase64 = `data:image/png;base64,${logoData.toString('base64')}`
+
   return new ImageResponse(
     (
       <div
         style={{
-          fontSize: 20,
-          background: 'linear-gradient(135deg, #6B2AFF 0%, #FF6B9D 100%)',
+          background: '#6B2AFF',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#FFFFFF',
-          fontWeight: 'bold',
-          fontFamily: 'monospace',
           borderRadius: '6px',
+          padding: '4px',
         }}
       >
-        3D
+        <img
+          src={logoBase64}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+          }}
+        />
       </div>
     ),
     {

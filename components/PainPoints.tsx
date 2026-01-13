@@ -1,20 +1,9 @@
 'use client'
 
+import { useLanguage } from '@/lib/i18n'
+
 export default function PainPoints() {
-  const painPoints = [
-    {
-      problem: "Традиционная 3D-разработка занимает месяцы работы",
-      solution: "AI-инструменты в руках наших экспертов сокращают сроки в 5-10 раз. Вместо месяцев — недели, вместо недель — дни, в зависимости от задачи"
-    },
-    {
-      problem: "Традиционная студия — десятки специалистов и большие расходы",
-      solution: "AI-ускорение позволяет работать эффективной командой из нескольких специалистов. Сокращаем издержки — снижаем стоимость без потери качества"
-    },
-    {
-      problem: "В традиционном 3D нужно выбирать между качеством и скоростью",
-      solution: "AI-инструменты + опыт 3D-художников = premium качество за дни, а не месяцы. Получаете и скорость, и качество"
-    }
-  ]
+  const { t } = useLanguage()
 
   return (
     <section className="py-24 px-6 relative">
@@ -23,12 +12,12 @@ export default function PainPoints() {
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-display font-black uppercase mb-4">
-            Почему бренды выбирают <span className="gradient-text">AI-ускоренный 3D-контент</span>
+            {t.painPoints.title} <span className="gradient-text">{t.painPoints.titleHighlight}</span>
           </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {painPoints.map((item, index) => (
+          {t.painPoints.items.map((item, index) => (
             <div
               key={index}
               className="relative group"
@@ -42,7 +31,7 @@ export default function PainPoints() {
 
                 {/* Solution without arrow */}
                 <div className="space-y-2 mt-auto min-h-[140px] flex flex-col justify-end">
-                  <p className="text-sm uppercase font-bold text-accent-lime text-center">Наше решение:</p>
+                  <p className="text-sm uppercase font-bold text-accent-lime text-center">{t.painPoints.solutionLabel}</p>
                   <p className="text-text-secondary text-base leading-relaxed text-center">
                     {item.solution}
                   </p>

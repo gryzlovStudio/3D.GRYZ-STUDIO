@@ -1,13 +1,17 @@
+'use client'
+
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import PainPoints from '@/components/PainPoints'
 import Process from '@/components/Process'
 import Cases from '@/components/Cases'
-import SocialProof from '@/components/SocialProof'
 import WhyUs from '@/components/WhyUs'
 import Footer from '@/components/Footer'
+import { useLanguage } from '@/lib/i18n'
 
 export default function Home() {
+  const { t } = useLanguage()
+
   return (
     <main className="min-h-screen">
       <Header />
@@ -15,7 +19,6 @@ export default function Home() {
       <PainPoints />
       <Process />
       <Cases />
-      <SocialProof />
       <WhyUs />
 
       {/* CTA Section */}
@@ -24,15 +27,15 @@ export default function Home() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-display font-black uppercase mb-6">
-            Начнем <span className="gradient-text">ваш проект</span>
+            {t.homeCta.title} <span className="gradient-text">{t.homeCta.titleHighlight}</span>
           </h2>
           <p className="text-xl text-text-secondary mb-12">
-            Получите бесплатный концепт менее чем за час
+            {t.homeCta.subtitle}
           </p>
 
           <div className="flex justify-center">
             <a href="/get-concept" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 text-center shine-button">
-              Получить предложение
+              {t.homeCta.button}
             </a>
           </div>
 

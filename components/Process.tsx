@@ -1,28 +1,9 @@
 'use client'
 
+import { useLanguage } from '@/lib/i18n'
+
 export default function Process() {
-  const steps = [
-    {
-      number: "01",
-      title: "Бриф за 15 минут",
-      description: "Рассказываете о задаче, целях и референсах. Быстро и без лишних встреч"
-    },
-    {
-      number: "02",
-      title: "3 концепта за час",
-      description: "Наш специалист по нейросетям создает концепты с использованием продвинутых AI-инструментов. Вам не нужно разбираться в технологиях — мы делаем это профессионально"
-    },
-    {
-      number: "03",
-      title: "Реализация",
-      description: "Создаем анимацию, рекламные ролики, персонажей, баннеры — всё что нужно. Комбинируем AI и ручную работу для идеального результата. Готовый проект за дни вместо месяцев"
-    },
-    {
-      number: "04",
-      title: "Передача материалов и финальная поддержка",
-      description: "Передаем все исходники и файлы в нужных форматах. Предоставляем инструкции по использованию и техническую поддержку"
-    }
-  ]
+  const { t } = useLanguage()
 
   return (
     <section className="py-24 px-6 relative overflow-hidden">
@@ -40,21 +21,21 @@ export default function Process() {
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-display font-black uppercase mb-4">
-            От идеи до результата <span className="gradient-text">за 4 шага</span>
+            {t.process.title} <span className="gradient-text">{t.process.titleHighlight}</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Прозрачный процесс работы без лишних встреч и затянутых согласований
+            {t.process.subtitle}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {steps.map((step, index) => (
+          {t.process.steps.map((step, index) => (
             <div
               key={index}
               className="relative group"
             >
               {/* Connection line (for desktop) */}
-              {index < steps.length - 1 && (
+              {index < t.process.steps.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-accent-purple to-transparent z-0"></div>
               )}
 
@@ -76,7 +57,7 @@ export default function Process() {
                 </div>
 
                 {/* Arrow indicator for next step */}
-                {index < steps.length - 1 && (
+                {index < t.process.steps.length - 1 && (
                   <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 md:hidden">
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent-purple to-accent-pink flex items-center justify-center">
                       <span className="text-white text-lg">↓</span>
@@ -97,12 +78,12 @@ export default function Process() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-text-muted mb-6">Готовы начать свой проект?</p>
+          <p className="text-text-muted mb-6">{t.process.readyToStart}</p>
           <a
             href="/get-concept"
             className="inline-block px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 shine-button"
           >
-            Получить бесплатный концепт
+            {t.process.getConcept}
           </a>
         </div>
       </div>
