@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background Video - Vimeo */}
       <div className="absolute inset-0 overflow-hidden">
         <iframe
-          src="https://player.vimeo.com/video/1153932015?background=1&autoplay=1&loop=1&muted=1&quality=1080p"
+          src="https://player.vimeo.com/video/1153933439?background=1&autoplay=1&loop=1&muted=1&quality=1080p"
           className="absolute top-1/2 left-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2"
           frameBorder="0"
           allow="autoplay; fullscreen"
