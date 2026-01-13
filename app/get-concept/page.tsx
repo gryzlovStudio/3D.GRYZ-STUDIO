@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { useLanguage } from '@/lib/i18n'
@@ -148,9 +149,9 @@ export default function GetConceptPage() {
                   ? 'Мы свяжемся с вами в течение часа и пришлём концепты.'
                   : 'We will contact you within an hour and send the concepts.'}
               </p>
-              <a href="/" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase inline-block hover:scale-105 transition-all">
+              <Link href="/" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase inline-block hover:scale-105 transition-all">
                 {language === 'ru' ? 'На главную' : 'Back to Home'}
-              </a>
+              </Link>
             </div>
           ) : (
           <form onSubmit={handleSubmit} className="glass rounded-2xl p-8 md:p-12">

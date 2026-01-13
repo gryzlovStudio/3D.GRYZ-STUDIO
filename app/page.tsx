@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import PainPoints from '@/components/PainPoints'
@@ -34,9 +35,9 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center">
-            <a href="/get-concept" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 text-center shine-button">
+            <Link href="/get-concept" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 text-center shine-button">
               {t.homeCta.button}
-            </a>
+            </Link>
           </div>
 
           <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6 text-sm text-text-muted">

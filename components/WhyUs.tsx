@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
 
 export default function WhyUs() {
@@ -57,12 +58,12 @@ export default function WhyUs() {
 
         {/* About Us CTA */}
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/about"
             className="inline-block px-8 py-4 border border-accent-lime rounded-lg text-text-primary font-bold uppercase text-base hover:bg-accent-lime/20 hover:scale-105 hover:glow-lime transition-all duration-300"
           >
             {t.whyUs.aboutBtn}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

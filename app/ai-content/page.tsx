@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { useLanguage } from '@/lib/i18n'
@@ -28,9 +29,9 @@ export default function AIContentPage() {
             {t.aiContent.hero.subtitle1} <span className="text-accent-lime font-bold">{t.aiContent.hero.subtitle2}</span> {t.aiContent.hero.subtitle3}
           </p>
 
-          <a href="/get-concept" className="inline-block px-12 py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
+          <Link href="/get-concept" className="inline-block px-12 py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
             {t.aiContent.hero.cta}
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -137,9 +138,9 @@ export default function AIContentPage() {
             {t.aiContent.cta.subtitle}
           </p>
 
-          <a href="/get-concept" className="px-12 py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button inline-block">
+          <Link href="/get-concept" className="px-12 py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button inline-block">
             {t.aiContent.cta.button}
-          </a>
+          </Link>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
 
 export default function Process() {
@@ -79,12 +80,12 @@ export default function Process() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-text-muted mb-6">{t.process.readyToStart}</p>
-          <a
+          <Link
             href="/get-concept"
             className="inline-block px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 shine-button"
           >
             {t.process.getConcept}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

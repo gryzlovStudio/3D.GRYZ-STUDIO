@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
 
 const caseImages = ['🏦', '🏘️', '🥔']
@@ -75,12 +76,12 @@ export default function Cases() {
 
         {/* Portfolio CTA */}
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/portfolio"
             className="inline-block px-8 py-4 bg-gradient-to-r from-accent-purple to-accent-pink rounded-lg text-text-primary font-bold uppercase text-base hover:scale-105 hover:glow-purple transition-all duration-300"
           >
             {t.cases.viewPortfolio} →
-          </a>
+          </Link>
         </div>
       </div>
     </section>

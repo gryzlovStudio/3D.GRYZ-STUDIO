@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { useLanguage } from '@/lib/i18n'
@@ -84,12 +85,12 @@ export default function ServicesPage() {
 
                 {/* Button */}
                 <div className="text-center">
-                  <a
+                  <Link
                     href="/ai-content"
                     className="inline-block px-10 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 shine-button"
                   >
                     {t.services.learnMore}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -130,9 +131,9 @@ export default function ServicesPage() {
             {t.services.cta.subtitle}
           </p>
 
-          <a href="/get-concept" className="px-12 py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button inline-block">
+          <Link href="/get-concept" className="px-12 py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button inline-block">
             {t.services.cta.button}
-          </a>
+          </Link>
         </div>
       </section>
 

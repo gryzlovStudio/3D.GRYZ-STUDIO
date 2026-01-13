@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { useLanguage } from '@/lib/i18n'
@@ -132,9 +133,9 @@ export default function PortfolioPage() {
           </p>
 
           <div className="flex justify-center">
-            <a href="/get-concept" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
+            <Link href="/get-concept" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
               {t.portfolio.cta.button}
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -252,12 +253,12 @@ export default function PortfolioPage() {
 
             {/* CTA */}
             <div className="p-8 pt-0 text-center">
-              <a
+              <Link
                 href="/get-concept"
                 className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase hover:glow-lime hover:scale-105 transition-all duration-300 shine-button inline-block"
               >
                 {t.portfolio.labels.orderSimilar}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

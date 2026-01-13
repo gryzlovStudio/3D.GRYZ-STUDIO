@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
 
 export default function Footer() {
@@ -34,24 +35,24 @@ export default function Footer() {
             <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.company}</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/about" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                <Link href="/about" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
                   {t.header.about}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                <Link href="/services" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
                   {t.header.services}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/portfolio" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                <Link href="/portfolio" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
                   {t.header.portfolio}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/ai-content" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                <Link href="/ai-content" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
                   {t.header.aiContent}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -93,13 +94,13 @@ export default function Footer() {
               </p>
               <span className="text-text-muted hidden md:inline">|</span>
               <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-                <a href="/privacy-policy" className="text-text-muted hover:text-accent-lime transition-smooth text-xs">
+                <Link href="/privacy-policy" className="text-text-muted hover:text-accent-lime transition-smooth text-xs">
                   {t.footer.privacyPolicy}
-                </a>
+                </Link>
                 <span className="text-text-muted hidden md:inline">|</span>
-                <a href="/personal-data" className="text-text-muted hover:text-accent-lime transition-smooth text-xs">
+                <Link href="/personal-data" className="text-text-muted hover:text-accent-lime transition-smooth text-xs">
                   {t.footer.personalData}
-                </a>
+                </Link>
               </div>
             </div>
 

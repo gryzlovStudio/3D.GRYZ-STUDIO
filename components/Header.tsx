@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
 
 export default function Header() {
@@ -26,7 +27,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="hover:opacity-80 transition-smooth">
+        <Link href="/" className="hover:opacity-80 transition-smooth">
           <Image
             src="/logo.png"
             alt="3D GRYZ"
@@ -34,40 +35,40 @@ export default function Header() {
             height={40}
             className="h-10 w-auto"
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
-          <a
+          <Link
             href="/"
             className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
             {t.header.home}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/about' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
             {t.header.about}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/services"
             className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/services' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
             {t.header.services}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/portfolio"
             className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/portfolio' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
             {t.header.portfolio}
-          </a>
-          <a
+          </Link>
+          <Link
             href="/ai-content"
             className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname === '/ai-content' ? 'text-accent-purple' : 'text-text-secondary'}`}
           >
             {t.header.aiContent}
-          </a>
+          </Link>
           <a
             href="https://blenderverse.getcourse.ru/MainPageNew"
             target="_blank"
@@ -102,9 +103,9 @@ export default function Header() {
           </div>
 
           {/* CTA Button */}
-          <a href="/get-concept" className="px-6 py-3 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-sm hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
+          <Link href="/get-concept" className="px-6 py-3 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-sm hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
             {t.header.getConcept}
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
