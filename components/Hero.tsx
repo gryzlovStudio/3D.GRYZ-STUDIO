@@ -2,26 +2,25 @@
 
 import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
-import { getAssetPath } from '@/lib/utils'
 
 export default function Hero() {
   const { t } = useLanguage()
 
   return (
     <section className="relative min-h-screen flex items-end justify-center overflow-hidden pb-16 md:pb-24">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src={getAssetPath("/hero-video.mp4")} type="video/mp4" />
-      </video>
+      {/* Background Video - Vimeo */}
+      <div className="absolute inset-0 overflow-hidden">
+        <iframe
+          src="https://player.vimeo.com/video/1153932015?background=1&autoplay=1&loop=1&muted=1&quality=1080p"
+          className="absolute top-1/2 left-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        />
+      </div>
 
       {/* Dark Overlay for better text readability */}
-      <div className="absolute inset-0 bg-bg-dark/60"></div>
+      <div className="absolute inset-0 bg-bg-dark/50"></div>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0"
