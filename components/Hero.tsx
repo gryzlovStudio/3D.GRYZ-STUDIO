@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
+import { getAssetPath } from '@/lib/utils'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -16,7 +17,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
+        <source src={getAssetPath("/hero-video.mp4")} type="video/mp4" />
       </video>
 
       {/* Dark Overlay for better text readability */}

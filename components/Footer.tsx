@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
+import { getAssetPath } from '@/lib/utils'
 
 export default function Footer() {
   const { language, setLanguage, t } = useLanguage()
@@ -18,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <Image
-                src="/logo.png"
+                src={getAssetPath("/logo.png")}
                 alt="3D GRYZ"
                 width={120}
                 height={40}

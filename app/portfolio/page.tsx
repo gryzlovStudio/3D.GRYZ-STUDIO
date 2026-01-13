@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { useLanguage } from '@/lib/i18n'
+import { getAssetPath } from '@/lib/utils'
 
 const galleryImages = [
   { src: '/portfolio/bulldog/gallery-1.jpg', alt: 'Bulldog - main view' },
@@ -61,7 +62,7 @@ export default function PortfolioPage() {
                 <div className="w-full md:w-1/3">
                   <div className="aspect-square rounded-xl overflow-hidden relative bg-gradient-to-br from-accent-purple/20 to-accent-pink/20 border border-white/10">
                     <Image
-                      src="/portfolio/bulldog/cover.jpg"
+                      src={getAssetPath("/portfolio/bulldog/cover.jpg")}
                       alt={item.title}
                       fill
                       className="object-cover"
@@ -171,7 +172,7 @@ export default function PortfolioPage() {
                 <div className="w-full md:w-1/3">
                   <div className="aspect-square rounded-xl overflow-hidden relative border border-white/10">
                     <Image
-                      src="/portfolio/bulldog/cover.jpg"
+                      src={getAssetPath("/portfolio/bulldog/cover.jpg")}
                       alt={t.portfolio.items[selectedProject].title}
                       fill
                       className="object-cover"
@@ -241,7 +242,7 @@ export default function PortfolioPage() {
                 {galleryImages.map((image, i) => (
                   <div key={i} className="aspect-square rounded-xl overflow-hidden relative border border-white/10 hover:border-accent-purple/50 transition-all">
                     <Image
-                      src={image.src}
+                      src={getAssetPath(image.src)}
                       alt={image.alt}
                       fill
                       className="object-cover"

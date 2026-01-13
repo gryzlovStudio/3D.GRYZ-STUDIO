@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { useLanguage } from '@/lib/i18n'
+import { getAssetPath } from '@/lib/utils'
 
 export default function GetConceptPage() {
   const router = useRouter()
@@ -192,7 +193,7 @@ export default function GetConceptPage() {
                       {/* Style preview */}
                       <div className="aspect-square rounded-lg overflow-hidden mb-3 relative">
                         <Image
-                          src={`/styles/${style.id}.jpg`}
+                          src={getAssetPath(`/styles/${style.id}.jpg`)}
                           alt={style.label}
                           fill
                           className="object-cover"

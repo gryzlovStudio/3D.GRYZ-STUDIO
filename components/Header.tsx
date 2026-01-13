@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
+import { getAssetPath } from '@/lib/utils'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -29,7 +30,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="hover:opacity-80 transition-smooth">
           <Image
-            src="/logo.png"
+            src={getAssetPath("/logo.png")}
             alt="3D GRYZ"
             width={120}
             height={40}
