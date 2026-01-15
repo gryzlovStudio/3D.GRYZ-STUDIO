@@ -21,14 +21,14 @@ export default function ServicesPage() {
         ></div>
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
-          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase leading-tight mb-8 text-right">
-            <span className="gradient-text-lime-gold">{t.services.hero.title1}</span><br />
-            <span className="gradient-text-gold-purple">{t.services.hero.title2}</span>
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase leading-tight mb-8">
+            <span className="gradient-text-lime-gold block text-left">{t.services.hero.title1}</span>
+            <span className="gradient-text-gold-purple block text-right">{t.services.hero.title2}</span>
           </h1>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <div className="absolute bottom-40 md:bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
           <svg className="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
