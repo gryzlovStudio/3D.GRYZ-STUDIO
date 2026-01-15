@@ -41,7 +41,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 md:pb-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-24 w-full">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-end lg:items-end">
           {/* Left Side - Main subtitle and CTAs */}
           <div className="flex-1">
@@ -61,11 +61,18 @@ export default function Hero() {
           </div>
 
           {/* Right Side - Additional text */}
-          <div className="lg:max-w-sm">
+          <div className="lg:max-w-sm hidden lg:block">
             <p className="text-sm md:text-base text-text-secondary leading-relaxed">
               {t.hero.description}
             </p>
           </div>
+        </div>
+
+        {/* Scroll indicator - mobile only */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce md:hidden">
+          <svg className="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
     </section>

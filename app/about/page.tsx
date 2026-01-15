@@ -13,7 +13,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-4 md:px-6 relative min-h-screen flex items-center">
+      <section className="pt-32 pb-24 px-4 md:px-6 relative min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0"
           style={{
             background: 'linear-gradient(135deg, rgba(78, 0, 239, 0.1) 0%, rgba(10, 10, 15, 1) 100%)'
@@ -26,6 +26,13 @@ export default function AboutPage() {
             {t.about.hero.title2}<br />
             <span className="gradient-text-gold-purple">{t.about.hero.title3}</span>
           </h1>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+          <svg className="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 

@@ -138,9 +138,22 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden fixed top-0 left-0 right-0 bottom-0 w-full h-full bg-bg-dark z-40 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
-        <nav className="flex flex-col items-center justify-center h-full gap-6 px-6 pt-20">
+      {/* Mobile Menu - Portal style, outside header flow */}
+      {isMobileMenuOpen && (
+        <div
+          className="md:hidden fixed inset-0 w-screen h-screen bg-bg-dark z-[100]"
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+        >
+          {/* Close button */}
+          <button
+            className="absolute top-6 right-6 w-10 h-10 flex flex-col items-center justify-center gap-1.5 z-[110]"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <span className="w-6 h-0.5 bg-text-primary rounded rotate-45 translate-y-1"></span>
+            <span className="w-6 h-0.5 bg-text-primary rounded -rotate-45 -translate-y-1"></span>
+          </button>
+
+          <nav className="flex flex-col items-center justify-center h-full gap-6 px-6">
           <Link
             href="/"
             className={`text-2xl font-bold uppercase ${pathname === '/' ? 'text-accent-purple' : 'text-text-primary'}`}
@@ -212,7 +225,8 @@ export default function Header() {
             {t.header.getConcept}
           </Link>
         </nav>
-      </div>
+        </div>
+      )}
     </header>
   )
 }

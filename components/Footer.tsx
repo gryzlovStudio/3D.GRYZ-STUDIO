@@ -14,25 +14,26 @@ export default function Footer() {
       <div className="absolute inset-0 bg-gradient-to-t from-accent-purple/10 to-transparent"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}
-          <div>
-            <div className="mb-4">
-              <Image
-                src={getAssetPath("/logo.png")}
-                alt="3D GRYZ"
-                width={120}
-                height={40}
-                className="h-10 w-auto"
-              />
-            </div>
-            <p className="text-text-muted text-sm">
-              {t.footer.tagline}
-            </p>
+        {/* Brand - always on top */}
+        <div className="mb-8">
+          <div className="mb-4">
+            <Image
+              src={getAssetPath("/logo.png")}
+              alt="3D GRYZ"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
           </div>
+          <p className="text-text-muted text-sm max-w-xs">
+            {t.footer.tagline}
+          </p>
+        </div>
 
+        {/* Company and Contact - side by side on mobile */}
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mb-12">
           {/* Company */}
-          <div className="md:text-right">
+          <div>
             <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.company}</h4>
             <ul className="space-y-2">
               <li>
@@ -59,7 +60,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="md:text-right">
+          <div className="text-right">
             <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.contacts}</h4>
             <ul className="space-y-2">
               <li>

@@ -13,7 +13,7 @@ export default function AIContentPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-4 md:px-6 relative min-h-screen flex items-center">
+      <section className="pt-32 pb-24 px-4 md:px-6 relative min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0"
           style={{
             background: 'radial-gradient(circle at 50% 50%, rgba(78, 0, 239, 0.2) 0%, rgba(10, 10, 15, 1) 70%)'
@@ -32,6 +32,13 @@ export default function AIContentPage() {
           <Link href="/get-concept" className="inline-block px-8 md:px-12 py-4 md:py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base md:text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button">
             {t.aiContent.hero.cta}
           </Link>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+          <svg className="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
