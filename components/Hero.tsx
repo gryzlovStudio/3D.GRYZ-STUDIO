@@ -7,7 +7,7 @@ export default function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative min-h-screen flex items-end justify-center overflow-hidden pb-16 md:pb-24">
+    <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Background Video - Vimeo */}
       <div className="absolute inset-0 overflow-hidden">
         <iframe
@@ -29,27 +29,43 @@ export default function Hero() {
         }}
       ></div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        {/* Headline */}
-        <h1 className="text-hero font-black uppercase mb-6 leading-tight">
+      {/* Main Title - Center Top */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-20 md:pt-32">
+        <h1 className="text-hero font-black uppercase leading-tight text-center">
           <span className="gradient-text">{t.hero.title1}</span><br />
           {t.hero.title2}
         </h1>
-
-        {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto">
-          {t.hero.subtitle}
+        <p className="text-2xl md:text-3xl font-bold text-accent-lime mt-4 uppercase tracking-wider">
+          + AI Production
         </p>
+      </div>
 
-        {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link href="/get-concept" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 w-full sm:w-auto text-center shine-button">
-            {t.hero.cta}
-          </Link>
-          <Link href="/services" className="px-8 py-4 border border-accent-purple rounded-lg text-text-primary font-bold uppercase text-base hover:bg-accent-purple/20 hover:glow-purple transition-smooth w-full sm:w-auto text-center">
-            {t.hero.servicesBtn}
-          </Link>
+      {/* Bottom Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 md:pb-20 w-full">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-end lg:items-end">
+          {/* Left Side - Main subtitle and CTAs */}
+          <div className="flex-1">
+            <p className="text-xl md:text-2xl text-text-primary mb-6 max-w-xl">
+              {t.hero.subtitle}
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/get-concept" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 w-full sm:w-auto text-center shine-button">
+                {t.hero.cta}
+              </Link>
+              <Link href="/services" className="px-8 py-4 border border-accent-purple rounded-lg text-text-primary font-bold uppercase text-base hover:bg-accent-purple/20 hover:glow-purple transition-smooth w-full sm:w-auto text-center">
+                {t.hero.servicesBtn}
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Side - Additional text */}
+          <div className="lg:max-w-sm">
+            <p className="text-sm md:text-base text-text-secondary leading-relaxed">
+              {t.hero.description}
+            </p>
+          </div>
         </div>
       </div>
     </section>

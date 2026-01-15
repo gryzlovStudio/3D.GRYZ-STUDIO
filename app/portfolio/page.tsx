@@ -8,14 +8,22 @@ import Footer from '@/components/Footer'
 import { useLanguage } from '@/lib/i18n'
 import { getAssetPath } from '@/lib/utils'
 
-const galleryImages = [
-  { src: '/portfolio/bulldog/gallery-1.jpg', alt: 'Bulldog - main view' },
-  { src: '/portfolio/bulldog/gallery-2.jpg', alt: 'Bulldog - classic look' },
-  { src: '/portfolio/bulldog/gallery-3.jpg', alt: 'Bulldog - sporty look' },
-  { src: '/portfolio/bulldog/gallery-4.jpg', alt: 'Bulldog - concept development' },
-  { src: '/portfolio/bulldog/gallery-5.jpg', alt: 'Bulldog - banner' },
-  { src: '/portfolio/bulldog/gallery-7.jpg', alt: 'Bulldog - all angles' },
-]
+const projectGalleries: Record<string, { src: string; alt: string }[]> = {
+  bulldog: [
+    { src: '/portfolio/bulldog/gallery-1.jpg', alt: 'Bulldog - main view' },
+    { src: '/portfolio/bulldog/gallery-2.jpg', alt: 'Bulldog - classic look' },
+    { src: '/portfolio/bulldog/gallery-3.jpg', alt: 'Bulldog - sporty look' },
+    { src: '/portfolio/bulldog/gallery-4.jpg', alt: 'Bulldog - concept development' },
+    { src: '/portfolio/bulldog/gallery-5.jpg', alt: 'Bulldog - banner' },
+    { src: '/portfolio/bulldog/gallery-7.jpg', alt: 'Bulldog - all angles' },
+  ],
+  bars: [
+    { src: '/portfolio/bars/gallery-1.jpg', alt: 'Барс Арс - основной вид' },
+    { src: '/portfolio/bars/gallery-2.jpg', alt: 'Барс Арс - стикер-пак' },
+    { src: '/portfolio/bars/gallery-3.jpg', alt: 'Барс Арс - концепт-арт' },
+    { src: '/portfolio/bars/gallery-4.jpg', alt: 'Барс Арс - дополнительные позы' },
+  ],
+}
 
 export default function PortfolioPage() {
   const { t } = useLanguage()
@@ -62,7 +70,7 @@ export default function PortfolioPage() {
                 <div className="w-full md:w-1/3">
                   <div className="aspect-square rounded-xl overflow-hidden relative bg-gradient-to-br from-accent-purple/20 to-accent-pink/20 border border-white/10">
                     <Image
-                      src={getAssetPath("/portfolio/bulldog/cover.jpg")}
+                      src={getAssetPath(`/portfolio/${item.id}/cover.jpg`)}
                       alt={item.title}
                       fill
                       className="object-cover"
@@ -172,7 +180,7 @@ export default function PortfolioPage() {
                 <div className="w-full md:w-1/3">
                   <div className="aspect-square rounded-xl overflow-hidden relative border border-white/10">
                     <Image
-                      src={getAssetPath("/portfolio/bulldog/cover.jpg")}
+                      src={getAssetPath(`/portfolio/${t.portfolio.items[selectedProject].id}/cover.jpg`)}
                       alt={t.portfolio.items[selectedProject].title}
                       fill
                       className="object-cover"
@@ -239,7 +247,7 @@ export default function PortfolioPage() {
             <div className="p-8 pt-0">
               <h3 className="text-2xl font-bold uppercase mb-6">{t.portfolio.labels.gallery}</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {galleryImages.map((image, i) => (
+                {(projectGalleries[t.portfolio.items[selectedProject].id] || []).map((image, i) => (
                   <div key={i} className="aspect-square rounded-xl overflow-hidden relative border border-white/10 hover:border-accent-purple/50 transition-all">
                     <Image
                       src={getAssetPath(image.src)}
