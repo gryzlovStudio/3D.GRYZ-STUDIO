@@ -15,6 +15,7 @@ const projectGalleries: Record<string, { src: string; alt: string }[]> = {
     { src: '/portfolio/bulldog/gallery-3.jpg', alt: 'Bulldog - sporty look' },
     { src: '/portfolio/bulldog/gallery-4.jpg', alt: 'Bulldog - concept development' },
     { src: '/portfolio/bulldog/gallery-5.jpg', alt: 'Bulldog - banner' },
+    { src: '/portfolio/bulldog/gallery-6.jpg', alt: 'Bulldog - banner promo' },
     { src: '/portfolio/bulldog/gallery-7.jpg', alt: 'Bulldog - all angles' },
   ],
   bars: [
