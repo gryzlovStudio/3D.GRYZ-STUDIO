@@ -29,15 +29,12 @@ main, section, div {
   max-width: 100%;
 }
 
-/* Mobile text fixes */
+/* Mobile text fixes - no hyphenation */
 @media (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
-    word-break: break-word;
-    hyphens: auto;
-  }
-
-  .text-hero {
-    font-size: clamp(2rem, 8vw, 4rem) !important;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
   }
 }
 

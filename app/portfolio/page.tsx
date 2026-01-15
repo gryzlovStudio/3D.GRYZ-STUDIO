@@ -37,7 +37,7 @@ export default function PortfolioPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 relative">
+      <section className="pt-32 pb-16 px-4 md:px-6 relative">
         <div className="absolute inset-0"
           style={{
             background: 'linear-gradient(135deg, rgba(78, 0, 239, 0.1) 0%, rgba(10, 10, 15, 1) 100%)'
@@ -45,10 +45,10 @@ export default function PortfolioPage() {
         ></div>
 
         <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-black uppercase mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase mb-6">
             {t.portfolio.hero.title} <span className="gradient-text">{t.portfolio.hero.titleHighlight}</span>
           </h1>
-          <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
             {t.portfolio.hero.subtitle}
           </p>
         </div>
@@ -127,7 +127,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 relative">
+      <section className="py-24 px-4 md:px-6 relative">
         <div className="absolute inset-0"
           style={{
             background: 'linear-gradient(135deg, rgba(240, 197, 0, 0.1) 0%, rgba(78, 0, 239, 0.1) 100%)'
@@ -135,10 +135,10 @@ export default function PortfolioPage() {
         ></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-black uppercase mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-6">
             {t.portfolio.cta.title} <span className="gradient-text-gold-purple">{t.portfolio.cta.titleHighlight}</span>
           </h2>
-          <p className="text-xl text-text-secondary mb-12">
+          <p className="text-base md:text-xl text-text-secondary mb-12">
             {t.portfolio.cta.subtitle}
           </p>
 

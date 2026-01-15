@@ -18,6 +18,18 @@ export default function Header() {
     setIsMobileMenuOpen(false)
   }, [pathname])
 
+  // Block body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMobileMenuOpen])
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
@@ -127,8 +139,8 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden fixed inset-0 bg-bg-dark/95 backdrop-blur-lg z-40 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-        <nav className="flex flex-col items-center justify-center h-full gap-6 px-6">
+      <div className={`md:hidden fixed top-0 left-0 right-0 bottom-0 w-full h-full bg-bg-dark z-40 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}>
+        <nav className="flex flex-col items-center justify-center h-full gap-6 px-6 pt-20">
           <Link
             href="/"
             className={`text-2xl font-bold uppercase ${pathname === '/' ? 'text-accent-purple' : 'text-text-primary'}`}
