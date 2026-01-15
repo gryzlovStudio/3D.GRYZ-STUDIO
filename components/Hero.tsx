@@ -30,12 +30,12 @@ export default function Hero() {
       ></div>
 
       {/* Main Title - Center Top */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-20 md:pt-32">
-        <h1 className="text-hero font-black uppercase leading-tight text-center">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-20 md:pt-32 px-4">
+        <h1 className="text-hero font-black uppercase leading-tight text-center px-2">
           <span className="gradient-text">{t.hero.title1}</span><br />
           {t.hero.title2}
         </h1>
-        <p className="text-2xl md:text-3xl font-bold text-accent-lime mt-4 uppercase tracking-wider">
+        <p className="text-xl md:text-3xl font-bold text-accent-lime mt-4 uppercase tracking-wider text-center">
           + AI Production
         </p>
       </div>

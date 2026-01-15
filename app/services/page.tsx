@@ -13,15 +13,15 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6 relative min-h-screen flex items-center">
+      <section className="pt-32 pb-24 px-4 md:px-6 relative min-h-screen flex items-center">
         <div className="absolute inset-0"
           style={{
             background: 'linear-gradient(135deg, rgba(78, 0, 239, 0.1) 0%, rgba(10, 10, 15, 1) 50%, rgba(240, 197, 0, 0.05) 100%)'
           }}
         ></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-black uppercase leading-tight mb-8">
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase leading-tight mb-8">
             <span className="gradient-text-lime-gold">{t.services.hero.title1}</span><br />
             <span className="gradient-text-gold-purple">{t.services.hero.title2}</span>
           </h1>
@@ -29,17 +29,17 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* First 6 services - regular cards */}
             {t.services.items.slice(0, 6).map((service, index) => (
               <div
                 key={index}
-                className="group glass rounded-2xl p-8 hover:border-accent-purple transition-all duration-300"
+                className="group glass rounded-2xl p-6 md:p-8 hover:border-accent-purple transition-all duration-300"
               >
                 {/* Title */}
-                <h2 className="text-4xl font-black uppercase mb-2 group-hover:text-accent-purple transition-colors">
+                <h2 className="text-2xl md:text-4xl font-black uppercase mb-2 group-hover:text-accent-purple transition-colors">
                   {service.title}
                 </h2>
 
@@ -66,10 +66,10 @@ export default function ServicesPage() {
             ))}
 
             {/* 7th service - AI-ускоренное производство - special card */}
-            <div className="lg:col-span-2 group glass rounded-2xl p-12 hover:border-accent-lime transition-all duration-300 bg-gradient-to-br from-accent-purple/5 to-accent-lime/5">
+            <div className="lg:col-span-2 group glass rounded-2xl p-6 md:p-12 hover:border-accent-lime transition-all duration-300 bg-gradient-to-br from-accent-purple/5 to-accent-lime/5">
               <div className="max-w-4xl mx-auto">
                 {/* Title */}
-                <h2 className="text-5xl font-black uppercase mb-3 group-hover:text-accent-lime transition-colors text-center">
+                <h2 className="text-2xl md:text-5xl font-black uppercase mb-3 group-hover:text-accent-lime transition-colors text-center">
                   {t.services.items[6].title}
                 </h2>
 
@@ -99,22 +99,22 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 px-6 relative">
+      <section className="py-24 px-4 md:px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-bg-dark via-accent-purple/5 to-bg-dark"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          <h2 className="text-5xl font-black uppercase mb-16 text-center">
+          <h2 className="text-3xl md:text-5xl font-black uppercase mb-12 md:mb-16 text-center">
             {t.services.process.title} <span className="gradient-text">{t.services.process.titleHighlight}</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {t.services.process.steps.map((item, i) => (
               <div key={i} className="text-center">
-                <div className="text-6xl font-black font-mono text-accent-purple mb-4 opacity-50">
+                <div className="text-4xl md:text-6xl font-black font-mono text-accent-purple mb-4 opacity-50">
                   {item.step}
                 </div>
-                <h3 className="text-2xl font-bold uppercase mb-2">{item.title}</h3>
-                <p className="text-text-muted text-sm">{item.desc}</p>
+                <h3 className="text-lg md:text-2xl font-bold uppercase mb-2">{item.title}</h3>
+                <p className="text-text-muted text-xs md:text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -122,9 +122,9 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-black uppercase mb-6">
+          <h2 className="text-3xl md:text-5xl font-black uppercase mb-6">
             {t.services.cta.title} <span className="gradient-text-gold-purple">{t.services.cta.titleHighlight}</span>
           </h2>
           <p className="text-xl text-text-secondary mb-12">
