@@ -119,7 +119,7 @@ export default function GetConceptPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 relative">
+      <section className="pt-32 pb-8 md:pb-16 px-6 relative">
         <div className="absolute inset-0"
           style={{
             background: 'linear-gradient(135deg, rgba(78, 0, 239, 0.1) 0%, rgba(10, 10, 15, 1) 100%)'
@@ -138,7 +138,7 @@ export default function GetConceptPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 px-6">
+      <section className="py-8 md:py-16 px-6">
         <div className="max-w-4xl mx-auto">
           {submitSuccess ? (
             <div className="glass rounded-2xl p-8 md:p-12 text-center">
