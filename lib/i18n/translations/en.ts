@@ -246,8 +246,10 @@ export const en = {
   // Services page
   services: {
     hero: {
-      title1: 'Creating Content',
-      title2: 'That Works',
+      word1: 'Creating',
+      word2: 'content',
+      word3: 'that',
+      word4: 'works',
     },
     items: [
       {

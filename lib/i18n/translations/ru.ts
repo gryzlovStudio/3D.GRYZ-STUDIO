@@ -246,8 +246,10 @@ export const ru = {
   // Services page
   services: {
     hero: {
-      title1: 'Создаем контент,',
-      title2: 'который работает',
+      word1: 'Создаем',
+      word2: 'контент,',
+      word3: 'который',
+      word4: 'работает',
     },
     items: [
       {

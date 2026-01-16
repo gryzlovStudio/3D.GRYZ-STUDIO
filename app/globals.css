@@ -151,3 +151,17 @@ main, section, div {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.gradient-text-lime {
+  background: linear-gradient(135deg, #BCF000 0%, #9FD400 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #F0C500 0%, #FF9500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
