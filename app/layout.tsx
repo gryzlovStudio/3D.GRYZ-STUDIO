@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'KI-bSBVCrgtx7QJ2YfFRHq7iyowFKnSoTslNnHUVSoc',
-    // yandex: 'yandex-verification-code', // Добавить после регистрации в Яндекс.Вебмастер
+    yandex: '6b71a9e7e8090ea6',
   },
 }
 
