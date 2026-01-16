@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="text-right">
+          <div>
             <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.contacts}</h4>
             <ul className="space-y-2">
               <li>
