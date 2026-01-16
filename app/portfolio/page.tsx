@@ -37,22 +37,28 @@ export default function PortfolioPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 md:px-6 relative min-h-[60vh] md:min-h-[50vh] flex flex-col justify-center">
+      <section className="pt-32 pb-24 px-4 md:px-6 relative min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0"
           style={{
             background: 'linear-gradient(135deg, rgba(78, 0, 239, 0.1) 0%, rgba(10, 10, 15, 1) 100%)'
           }}
         ></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase mb-6">
-            {t.portfolio.hero.title} <span className="gradient-text">{t.portfolio.hero.titleHighlight}</span>
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase leading-tight mb-8">
+            <span className="gradient-text-lime-gold block text-left">{t.portfolio.hero.word1}</span>
+            <span className="gradient-text-lime block text-left pl-[10%] md:pl-[15%]">{t.portfolio.hero.word2}</span>
+            <span className="gradient-text-gold block text-right pr-[10%] md:pr-[15%]">{t.portfolio.hero.word3}</span>
+            <span className="gradient-text-gold-purple block text-right">{t.portfolio.hero.word4}</span>
           </h1>
-          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
-            {t.portfolio.hero.subtitle}
-          </p>
         </div>
 
+        {/* Scroll indicator */}
+        <div className="absolute bottom-24 md:bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+          <svg className="w-6 h-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
       </section>
 
       {/* Portfolio Grid */}

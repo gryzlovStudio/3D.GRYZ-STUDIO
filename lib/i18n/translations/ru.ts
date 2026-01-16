@@ -157,8 +157,8 @@ export const ru = {
   about: {
     hero: {
       title1: '3D-студия',
-      title2: 'нового поколения.',
-      title3: 'AI × экспертиза × результат.',
+      title2: 'нового поколения',
+      title3: 'AI × экспертиза × результат',
     },
     mission: {
       title: 'Наша',
@@ -360,9 +360,10 @@ export const ru = {
   // Portfolio page
   portfolio: {
     hero: {
-      title: 'Наше',
-      titleHighlight: 'портфолио',
-      subtitle: 'Реальные проекты, реальные результаты для бизнеса',
+      word1: 'Каждый',
+      word2: 'пиксель',
+      word3: 'имеет',
+      word4: 'значение',
     },
     labels: {
       timeline: 'Сроки:',

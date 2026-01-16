@@ -157,8 +157,8 @@ export const en = {
   about: {
     hero: {
       title1: '3D Studio',
-      title2: 'of the New Generation.',
-      title3: 'AI × Expertise × Results.',
+      title2: 'of the New Generation',
+      title3: 'AI × Expertise × Results',
     },
     mission: {
       title: 'Our',
@@ -360,9 +360,10 @@ export const en = {
   // Portfolio page
   portfolio: {
     hero: {
-      title: 'Our',
-      titleHighlight: 'Portfolio',
-      subtitle: 'Real projects, real results for business',
+      word1: 'Every',
+      word2: 'pixel',
+      word3: 'has',
+      word4: 'meaning',
     },
     labels: {
       timeline: 'Timeline:',
