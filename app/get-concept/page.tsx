@@ -128,9 +128,8 @@ export default function GetConceptPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-2xl sm:text-5xl md:text-7xl font-black uppercase mb-4 md:mb-6">
-            <span className="md:inline block">{t.getConcept.hero.title}</span>{' '}
-            <span className="gradient-text-lime-gold">{t.getConcept.hero.titleHighlight}</span>{' '}
-            <span className="md:inline block">{t.getConcept.hero.title2}</span>
+            <span className="block md:inline">{t.getConcept.hero.title} <span className="gradient-text-lime-gold">{t.getConcept.hero.titleHighlight}</span></span>
+            <span className="block md:inline"> {t.getConcept.hero.title2}</span>
           </h1>
           <p className="text-base md:text-xl text-text-secondary">
             {t.getConcept.hero.subtitle}
@@ -372,14 +371,28 @@ export default function GetConceptPage() {
             {t.getConcept.benefits.title} <span className="gradient-text">{t.getConcept.benefits.titleHighlight}</span>
           </h2>
 
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-8">
+          <div className="flex flex-col gap-3 md:hidden">
             {t.getConcept.benefits.items.map((item, i) => (
-              <div key={i} className="glass rounded-xl p-3 md:p-8 text-center">
-                <div className="text-2xl md:text-6xl font-black font-mono mb-1 md:mb-4 text-accent-purple">
+              <div key={i} className="glass rounded-xl p-4 flex items-center gap-4">
+                <div className="text-3xl font-black font-mono text-accent-purple flex-shrink-0">
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                <h3 className="text-xs md:text-xl font-bold uppercase mb-1 md:mb-2">{item.title}</h3>
-                <p className="text-text-muted text-[10px] md:text-base hidden md:block">{item.desc}</p>
+                <div>
+                  <h3 className="text-sm font-bold uppercase">{item.title}</h3>
+                  <p className="text-text-muted text-xs">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="hidden md:grid md:grid-cols-3 gap-8">
+            {t.getConcept.benefits.items.map((item, i) => (
+              <div key={i} className="glass rounded-xl p-8 text-center">
+                <div className="text-6xl font-black font-mono mb-4 text-accent-purple">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <h3 className="text-xl font-bold uppercase mb-2">{item.title}</h3>
+                <p className="text-text-muted">{item.desc}</p>
               </div>
             ))}
           </div>
