@@ -1,22 +1,29 @@
 'use client'
 
+import { useState } from 'react'
 import { useLanguage } from '@/lib/i18n'
 
 export default function PainPoints() {
   const { t } = useLanguage()
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
 
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-16 md:py-24 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-bg-dark via-bg-darker to-bg-dark"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-16 px-2">
+        <div className="text-center mb-10 md:mb-16 px-2">
           <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black uppercase mb-4 leading-tight">
             {t.painPoints.title}<br className="sm:hidden" /> <span className="gradient-text">{t.painPoints.titleHighlight}</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Desktop: Cards */}
+        <div className="hidden md:grid md:grid-cols-3 gap-8">
           {t.painPoints.items.map((item, index) => (
             <div
               key={index}
@@ -44,6 +51,50 @@ export default function PainPoints() {
                   background: 'radial-gradient(circle at center, rgba(107, 42, 255, 0.3), transparent 70%)'
                 }}
               ></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: Accordion */}
+        <div className="md:hidden space-y-3">
+          {t.painPoints.items.map((item, index) => (
+            <div
+              key={index}
+              className="border border-white/10 rounded-xl overflow-hidden bg-bg-darker/50 backdrop-blur-sm"
+            >
+              {/* Accordion Header */}
+              <button
+                onClick={() => toggleAccordion(index)}
+                className="w-full px-5 py-4 flex items-center justify-between text-left"
+              >
+                <h3 className="text-base font-bold text-text-primary pr-3">
+                  {item.problem}
+                </h3>
+                <svg
+                  className={`w-5 h-5 text-accent-purple transition-transform duration-300 flex-shrink-0 ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Accordion Content */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className="px-5 pb-4">
+                  <p className="text-xs uppercase font-bold text-accent-lime mb-2">{t.painPoints.solutionLabel}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed">
+                    {item.solution}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
