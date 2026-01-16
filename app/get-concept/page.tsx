@@ -127,7 +127,7 @@ export default function GetConceptPage() {
         ></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-black uppercase mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black uppercase mb-6">
             {t.getConcept.hero.title} <span className="gradient-text-lime-gold">{t.getConcept.hero.titleHighlight}</span> {t.getConcept.hero.title2}
           </h1>
           <p className="text-xl text-text-secondary">
@@ -178,20 +178,20 @@ export default function GetConceptPage() {
                 <label className="block text-lg font-bold uppercase mb-3 text-accent-lime">
                   {t.getConcept.form.step2.label} <span className="text-accent-pink">{t.getConcept.form.step2.required}</span>
                 </label>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-2 md:gap-4">
                   {t.getConcept.form.step2.styles.map((style) => (
                     <button
                       key={style.id}
                       type="button"
                       onClick={() => setFormData({ ...formData, style: style.id })}
-                      className={`p-4 border-2 rounded-xl transition-all flex flex-col ${
+                      className={`p-2 md:p-4 border-2 rounded-xl transition-all flex flex-col ${
                         formData.style === style.id
                           ? 'border-accent-lime bg-accent-lime/10'
                           : 'border-white/10 hover:border-accent-lime/50'
                       }`}
                     >
                       {/* Style preview */}
-                      <div className="aspect-square rounded-lg overflow-hidden mb-3 relative">
+                      <div className="aspect-square rounded-lg overflow-hidden mb-2 md:mb-3 relative">
                         <Image
                           src={getAssetPath(`/styles/${style.id}.jpg`)}
                           alt={style.label}
@@ -199,8 +199,8 @@ export default function GetConceptPage() {
                           className="object-cover"
                         />
                       </div>
-                      <div className="text-lg font-bold uppercase mb-1">{style.label}</div>
-                      <div className="text-xs text-text-muted">{style.desc}</div>
+                      <div className="text-xs md:text-lg font-bold uppercase mb-1">{style.label}</div>
+                      <div className="hidden md:block text-xs text-text-muted">{style.desc}</div>
                     </button>
                   ))}
                 </div>
@@ -305,7 +305,7 @@ export default function GetConceptPage() {
               <button
                 type="submit"
                 disabled={isGenerating}
-                className="w-full px-8 py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-lg hover:glow-lime hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shine-button"
+                className="w-full px-4 md:px-8 py-4 md:py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-sm md:text-lg hover:glow-lime hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shine-button"
               >
                 {isGenerating ? (
                   <span className="flex items-center justify-center gap-3">

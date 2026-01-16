@@ -548,7 +548,7 @@ The finished environment is suitable for animation projects, YouTube videos, com
         label: '1. Describe Your Idea',
         required: '*',
         hint: 'Tell us in detail about the character, product, or scene you want to create',
-        placeholder: 'For example: A futuristic robot barista for a coffee shop. Friendly, stylish, with steampunk elements. Should evoke associations with quality coffee and technology...',
+        placeholder: 'E.g.: Robot barista for a coffee shop. Friendly, stylish, steampunk...',
       },
       step2: {
         label: '2. Choose a Style',
