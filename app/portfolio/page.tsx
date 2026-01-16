@@ -20,8 +20,10 @@ const projectGalleries: Record<string, { src: string; alt: string }[]> = {
   bars: [
     { src: '/portfolio/bars/gallery-1.jpg', alt: 'Барс Арс - основной вид' },
     { src: '/portfolio/bars/gallery-2.jpg', alt: 'Барс Арс - стикер-пак' },
-    { src: '/portfolio/bars/gallery-3.jpg', alt: 'Барс Арс - концепт-арт' },
-    { src: '/portfolio/bars/gallery-4.jpg', alt: 'Барс Арс - дополнительные позы' },
+    { src: '/portfolio/bars/gallery-3.jpg', alt: 'Барс Арс - ракурс 3' },
+    { src: '/portfolio/bars/gallery-4.jpg', alt: 'Барс Арс - ракурс 4' },
+    { src: '/portfolio/bars/gallery-5.jpg', alt: 'Барс Арс - ракурс 5' },
+    { src: '/portfolio/bars/gallery-6.jpg', alt: 'Барс Арс - ракурс 6' },
   ],
   'turning-red-room': [
     { src: '/portfolio/turning-red-room/gallery-1.jpg', alt: 'Комната - общий вид' },
