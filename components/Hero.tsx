@@ -30,8 +30,8 @@ export default function Hero() {
       ></div>
 
       {/* Main Title - Center Top */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-20 md:pt-32 px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-tight text-center">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-20 md:pt-32 px-6">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-tight text-center">
           <span className="gradient-text whitespace-nowrap">{t.hero.title1}</span><br />
           <span className="whitespace-nowrap">{t.hero.title2}</span>
         </h1>
@@ -51,10 +51,10 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-row gap-3 md:gap-4">
-              <Link href="/get-concept" className="px-4 py-3 md:px-8 md:py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-xs md:text-base hover:glow-lime hover:scale-105 transition-all duration-300 text-center shine-button">
+              <Link href="/get-concept" className="px-4 py-3 md:px-8 md:py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-xs md:text-base hover:glow-lime hover:scale-105 transition-all duration-300 text-center shine-button flex items-center justify-center">
                 {t.hero.cta}
               </Link>
-              <Link href="/services" className="px-4 py-3 md:px-8 md:py-4 border border-accent-purple rounded-lg text-text-primary font-bold uppercase text-xs md:text-base hover:bg-accent-purple/20 hover:glow-purple transition-smooth text-center">
+              <Link href="/services" className="px-4 py-3 md:px-8 md:py-4 border border-accent-purple bg-accent-purple/20 md:bg-transparent rounded-lg text-text-primary font-bold uppercase text-xs md:text-base hover:bg-accent-purple/20 hover:glow-purple transition-smooth text-center flex items-center justify-center">
                 {t.hero.servicesBtn}
               </Link>
             </div>
