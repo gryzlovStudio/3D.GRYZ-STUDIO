@@ -88,7 +88,7 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Description */}
-                <p className="text-text-secondary mb-8 leading-relaxed text-lg text-center">
+                <p className="text-text-secondary mb-8 leading-relaxed text-sm md:text-lg text-center">
                   {t.services.items[6].description}
                 </p>
 
