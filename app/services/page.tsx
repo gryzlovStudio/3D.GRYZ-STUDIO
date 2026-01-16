@@ -57,8 +57,8 @@ export default function ServicesPage() {
                   {service.subtitle}
                 </div>
 
-                {/* Description */}
-                <p className="text-text-secondary mb-6 leading-relaxed">
+                {/* Description - hidden on mobile */}
+                <p className="hidden md:block text-text-secondary mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
