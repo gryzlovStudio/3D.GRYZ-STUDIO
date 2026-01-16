@@ -127,10 +127,12 @@ export default function GetConceptPage() {
         ></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black uppercase mb-6">
-            {t.getConcept.hero.title} <span className="gradient-text-lime-gold">{t.getConcept.hero.titleHighlight}</span> {t.getConcept.hero.title2}
+          <h1 className="text-2xl sm:text-5xl md:text-7xl font-black uppercase mb-4 md:mb-6">
+            <span className="md:inline block">{t.getConcept.hero.title}</span>{' '}
+            <span className="gradient-text-lime-gold">{t.getConcept.hero.titleHighlight}</span>{' '}
+            <span className="md:inline block">{t.getConcept.hero.title2}</span>
           </h1>
-          <p className="text-xl text-text-secondary">
+          <p className="text-base md:text-xl text-text-secondary">
             {t.getConcept.hero.subtitle}
           </p>
         </div>
@@ -157,11 +159,11 @@ export default function GetConceptPage() {
           ) : (
           <form onSubmit={handleSubmit} className="glass rounded-2xl p-8 md:p-12">
               {/* Step 1: Description */}
-              <div className="mb-8">
-                <label className="block text-lg font-bold uppercase mb-3 text-accent-lime">
+              <div className="mb-6 md:mb-8">
+                <label className="block text-sm md:text-lg font-bold uppercase mb-2 md:mb-3 text-accent-lime">
                   {t.getConcept.form.step1.label} <span className="text-accent-pink">{t.getConcept.form.step1.required}</span>
                 </label>
-                <p className="text-sm text-text-muted mb-4">
+                <p className="text-xs md:text-sm text-text-muted mb-3 md:mb-4">
                   {t.getConcept.form.step1.hint}
                 </p>
                 <textarea
@@ -174,24 +176,24 @@ export default function GetConceptPage() {
               </div>
 
               {/* Step 2: Style */}
-              <div className="mb-8">
-                <label className="block text-lg font-bold uppercase mb-3 text-accent-lime">
+              <div className="mb-6 md:mb-8">
+                <label className="block text-sm md:text-lg font-bold uppercase mb-2 md:mb-3 text-accent-lime">
                   {t.getConcept.form.step2.label} <span className="text-accent-pink">{t.getConcept.form.step2.required}</span>
                 </label>
-                <div className="grid grid-cols-3 gap-2 md:gap-4">
+                {/* Mobile: horizontal cards */}
+                <div className="flex flex-col gap-2 md:hidden">
                   {t.getConcept.form.step2.styles.map((style) => (
                     <button
                       key={style.id}
                       type="button"
                       onClick={() => setFormData({ ...formData, style: style.id })}
-                      className={`p-2 md:p-4 border-2 rounded-xl transition-all flex flex-col ${
+                      className={`p-2 border-2 rounded-xl transition-all flex items-center gap-3 ${
                         formData.style === style.id
                           ? 'border-accent-lime bg-accent-lime/10'
-                          : 'border-white/10 hover:border-accent-lime/50'
+                          : 'border-white/10'
                       }`}
                     >
-                      {/* Style preview */}
-                      <div className="aspect-square rounded-lg overflow-hidden mb-2 md:mb-3 relative">
+                      <div className="w-16 h-16 rounded-lg overflow-hidden relative flex-shrink-0">
                         <Image
                           src={getAssetPath(`/styles/${style.id}.jpg`)}
                           alt={style.label}
@@ -199,19 +201,47 @@ export default function GetConceptPage() {
                           className="object-cover"
                         />
                       </div>
-                      <div className="text-xs md:text-lg font-bold uppercase mb-1">{style.label}</div>
-                      <div className="hidden md:block text-xs text-text-muted">{style.desc}</div>
+                      <div className="text-left">
+                        <div className="text-sm font-bold uppercase">{style.label}</div>
+                        <div className="text-xs text-text-muted">{style.desc}</div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+                {/* Desktop: grid */}
+                <div className="hidden md:grid md:grid-cols-3 gap-4">
+                  {t.getConcept.form.step2.styles.map((style) => (
+                    <button
+                      key={style.id}
+                      type="button"
+                      onClick={() => setFormData({ ...formData, style: style.id })}
+                      className={`p-4 border-2 rounded-xl transition-all flex flex-col ${
+                        formData.style === style.id
+                          ? 'border-accent-lime bg-accent-lime/10'
+                          : 'border-white/10 hover:border-accent-lime/50'
+                      }`}
+                    >
+                      <div className="aspect-square rounded-lg overflow-hidden mb-3 relative">
+                        <Image
+                          src={getAssetPath(`/styles/${style.id}.jpg`)}
+                          alt={style.label}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="text-lg font-bold uppercase mb-1">{style.label}</div>
+                      <div className="text-xs text-text-muted">{style.desc}</div>
                     </button>
                   ))}
                 </div>
               </div>
 
               {/* Step 3: References */}
-              <div className="mb-8">
-                <label className="block text-lg font-bold uppercase mb-3 text-accent-lime">
+              <div className="mb-6 md:mb-8">
+                <label className="block text-sm md:text-lg font-bold uppercase mb-2 md:mb-3 text-accent-lime">
                   {t.getConcept.form.step3.label}
                 </label>
-                <p className="text-sm text-text-muted mb-4">
+                <p className="text-xs md:text-sm text-text-muted mb-3 md:mb-4">
                   {t.getConcept.form.step3.hint}
                 </p>
 
@@ -274,8 +304,8 @@ export default function GetConceptPage() {
               </div>
 
               {/* Contact Info */}
-              <div className="mb-8">
-                <label className="block text-lg font-bold uppercase mb-3 text-accent-lime">
+              <div className="mb-6 md:mb-8">
+                <label className="block text-sm md:text-lg font-bold uppercase mb-2 md:mb-3 text-accent-lime">
                   {t.getConcept.form.step4.label} <span className="text-accent-pink">{t.getConcept.form.step4.required}</span>
                 </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -334,22 +364,22 @@ export default function GetConceptPage() {
       </section>
 
       {/* Info Section */}
-      <section className="py-16 px-6 relative">
+      <section className="py-10 md:py-16 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-bg-dark via-accent-purple/5 to-bg-dark"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black uppercase mb-12 text-center">
+          <h2 className="text-2xl md:text-4xl font-black uppercase mb-6 md:mb-12 text-center">
             {t.getConcept.benefits.title} <span className="gradient-text">{t.getConcept.benefits.titleHighlight}</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-8">
             {t.getConcept.benefits.items.map((item, i) => (
-              <div key={i} className="glass rounded-xl p-8 text-center">
-                <div className="text-6xl font-black font-mono mb-4 text-accent-purple">
+              <div key={i} className="glass rounded-xl p-3 md:p-8 text-center">
+                <div className="text-2xl md:text-6xl font-black font-mono mb-1 md:mb-4 text-accent-purple">
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                <h3 className="text-xl font-bold uppercase mb-2">{item.title}</h3>
-                <p className="text-text-muted">{item.desc}</p>
+                <h3 className="text-xs md:text-xl font-bold uppercase mb-1 md:mb-2">{item.title}</h3>
+                <p className="text-text-muted text-[10px] md:text-base hidden md:block">{item.desc}</p>
               </div>
             ))}
           </div>
