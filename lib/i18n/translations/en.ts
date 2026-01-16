@@ -420,6 +420,30 @@ The main goal was to place the character on the company website and use it in so
           { title: 'Sticker Pack', desc: 'Set of stickers with different emotions and poses for social media communication' },
         ],
       },
+      {
+        id: 'turning-red-room',
+        title: 'Turning Red Style Room',
+        subtitle: 'Stylized 3D environment for animation',
+        client: 'Personal Project',
+        tags: ['3D Environment', 'Stylization', 'Pixar Style', 'Animation'],
+        timeline: '1 month',
+        results: 'Fully complete environment for animation projects and YouTube content',
+        cost: '$1,000',
+        description: 'Detailed room in Pixar movie style, created entirely by hand',
+        fullDescription: `Stylized 3D environment inspired by the visual style of Pixar's "Turning Red" movie. This project demonstrates our expertise in creating complex stylized scenes with high detail.
+
+The room was created entirely from scratch without using artificial intelligence. Every element — from furniture to small decor details — was modeled and textured by hand while maintaining a consistent style.
+
+The finished environment is suitable for animation projects, YouTube videos, commercials, and any content requiring the recognizable "Pixar" aesthetic.`,
+        whatWasDone: [
+          { title: 'Concept and Layout', desc: 'Developing room layout, defining key elements and stylistic solutions' },
+          { title: 'Environment Modeling', desc: 'Creating all room elements from scratch: furniture, walls, floor, windows, doors' },
+          { title: 'Details and Decor', desc: 'Developing small details: posters, books, toys, plants and other decor elements' },
+          { title: 'Texturing', desc: 'Creating stylized textures and materials in Pixar animation style' },
+          { title: 'Lighting', desc: 'Setting up lighting to convey the characteristic movie atmosphere' },
+          { title: 'Optimization', desc: 'Preparing the scene for use in animation and rendering' },
+        ],
+      },
     ],
     cta: {
       title: 'Ready to Create',

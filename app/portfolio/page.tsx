@@ -24,6 +24,12 @@ const projectGalleries: Record<string, { src: string; alt: string }[]> = {
     { src: '/portfolio/bars/gallery-3.jpg', alt: 'Барс Арс - концепт-арт' },
     { src: '/portfolio/bars/gallery-4.jpg', alt: 'Барс Арс - дополнительные позы' },
   ],
+  'turning-red-room': [
+    { src: '/portfolio/turning-red-room/gallery-1.jpg', alt: 'Комната - общий вид' },
+    { src: '/portfolio/turning-red-room/gallery-2.jpg', alt: 'Комната - детали интерьера' },
+    { src: '/portfolio/turning-red-room/gallery-3.jpg', alt: 'Комната - освещение' },
+    { src: '/portfolio/turning-red-room/gallery-4.jpg', alt: 'Комната - декор' },
+  ],
 }
 
 export default function PortfolioPage() {
