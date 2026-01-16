@@ -49,24 +49,24 @@ export default function Home() {
         <WhyUs />
 
         {/* CTA Section */}
-        <section className="py-24 xl:py-32 px-6 relative">
+        <section className="py-24 2xl:py-32 px-6 relative">
           <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/20 via-accent-pink/15 to-accent-purple/10"></div>
 
-          <div className="relative z-10 max-w-4xl xl:max-w-5xl 2xl:max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black uppercase mb-6">
+          <div className="relative z-10 max-w-4xl 2xl:max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black uppercase mb-6">
               {t.homeCta.title} <span className="gradient-text">{t.homeCta.titleHighlight}</span>
             </h2>
-            <p className="text-xl xl:text-2xl 2xl:text-3xl text-text-secondary mb-12">
+            <p className="text-xl 2xl:text-2xl text-text-secondary mb-12">
               {t.homeCta.subtitle}
             </p>
 
             <div className="flex justify-center">
-              <Link href="/get-concept" className="px-8 py-4 xl:px-10 xl:py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base xl:text-lg hover:glow-lime hover:scale-105 transition-all duration-300 text-center shine-button">
+              <Link href="/get-concept" className="px-8 py-4 2xl:px-10 2xl:py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base 2xl:text-lg hover:glow-lime hover:scale-105 transition-all duration-300 text-center shine-button">
                 {t.homeCta.button}
               </Link>
             </div>
 
-            <div className="hidden sm:flex flex-row justify-center gap-6 text-sm xl:text-base text-text-muted mt-12">
+            <div className="hidden sm:flex flex-row justify-center gap-6 text-sm text-text-muted mt-12">
               <a href="mailto:gryzlovstudio@gmail.com" className="hover:text-accent-lime transition-smooth">
                 gryzlovstudio@gmail.com
               </a>

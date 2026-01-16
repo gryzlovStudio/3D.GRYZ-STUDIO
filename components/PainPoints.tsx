@@ -12,34 +12,34 @@ export default function PainPoints() {
   }
 
   return (
-    <section className="py-16 md:py-24 xl:py-32 px-6 relative">
+    <section className="py-16 md:py-24 2xl:py-32 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-bg-dark via-bg-darker to-bg-dark"></div>
 
-      <div className="relative z-10 max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
-        <div className="text-center mb-10 md:mb-16 xl:mb-20 px-2">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black uppercase mb-4 leading-tight">
+      <div className="relative z-10 max-w-7xl 2xl:max-w-[1400px] mx-auto">
+        <div className="text-center mb-10 md:mb-16 px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black uppercase mb-4 leading-tight">
             {t.painPoints.title}<br /> <span className="gradient-text">{t.painPoints.titleHighlight}</span>
           </h2>
         </div>
 
         {/* Desktop: Cards */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8 xl:gap-10 2xl:gap-12">
+        <div className="hidden md:grid md:grid-cols-3 gap-8 2xl:gap-10">
           {t.painPoints.items.map((item, index) => (
             <div
               key={index}
               className="relative group"
             >
               {/* Card */}
-              <div className="relative h-full p-8 xl:p-10 2xl:p-12 rounded-2xl border border-white/10 bg-bg-darker/50 backdrop-blur-sm hover:border-accent-purple/50 transition-all duration-300 hover:glow-purple flex flex-col">
+              <div className="relative h-full p-8 2xl:p-10 rounded-2xl border border-white/10 bg-bg-darker/50 backdrop-blur-sm hover:border-accent-purple/50 transition-all duration-300 hover:glow-purple flex flex-col">
                 {/* Problem as centered bold heading with fixed height */}
-                <h3 className="text-lg xl:text-xl 2xl:text-2xl font-bold text-text-primary mb-6 leading-relaxed text-center min-h-[80px] xl:min-h-[100px] flex items-center justify-center">
+                <h3 className="text-lg 2xl:text-xl font-bold text-text-primary mb-6 leading-relaxed text-center min-h-[80px] flex items-center justify-center">
                   {item.problem}
                 </h3>
 
                 {/* Solution without arrow */}
-                <div className="space-y-2 mt-auto min-h-[140px] xl:min-h-[160px] flex flex-col justify-end">
-                  <p className="text-sm xl:text-base uppercase font-bold text-accent-lime text-center">{t.painPoints.solutionLabel}</p>
-                  <p className="text-text-secondary text-base xl:text-lg 2xl:text-xl leading-relaxed text-center">
+                <div className="space-y-2 mt-auto min-h-[140px] flex flex-col justify-end">
+                  <p className="text-sm uppercase font-bold text-accent-lime text-center">{t.painPoints.solutionLabel}</p>
+                  <p className="text-text-secondary text-base 2xl:text-lg leading-relaxed text-center">
                     {item.solution}
                   </p>
                 </div>

@@ -7,7 +7,7 @@ export default function Process() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-24 xl:py-32 px-6 relative overflow-hidden">
+    <section className="py-24 2xl:py-32 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/10 via-bg-dark to-accent-pink/5"></div>
 
       {/* Grid Pattern */}
@@ -19,17 +19,17 @@ export default function Process() {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-6xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
-        <div className="text-center mb-16 xl:mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black uppercase mb-4">
+      <div className="relative z-10 max-w-6xl 2xl:max-w-[1400px] mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black uppercase mb-4">
             {t.process.title} <span className="gradient-text">{t.process.titleHighlight}</span>
           </h2>
-          <p className="text-xl xl:text-2xl 2xl:text-3xl text-text-secondary max-w-2xl xl:max-w-3xl mx-auto">
+          <p className="text-xl 2xl:text-2xl text-text-secondary max-w-2xl mx-auto">
             {t.process.subtitle}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 xl:gap-10 2xl:gap-12">
+        <div className="grid md:grid-cols-2 gap-8 2xl:gap-10">
           {t.process.steps.map((step, index) => (
             <div
               key={index}
@@ -41,18 +41,18 @@ export default function Process() {
               )}
 
               {/* Card */}
-              <div className="relative h-full p-8 xl:p-10 2xl:p-12 rounded-2xl border border-white/10 bg-bg-darker/80 backdrop-blur-sm hover:border-accent-lime/50 transition-all duration-300 hover:glow-lime">
+              <div className="relative h-full p-8 2xl:p-10 rounded-2xl border border-white/10 bg-bg-darker/80 backdrop-blur-sm hover:border-accent-lime/50 transition-all duration-300 hover:glow-lime">
                 {/* Number Badge */}
-                <div className="absolute -top-4 -left-4 w-16 h-16 xl:w-20 xl:h-20 rounded-2xl bg-gradient-to-br from-accent-lime to-accent-gold flex items-center justify-center shadow-lg">
-                  <span className="text-2xl xl:text-3xl font-black font-mono text-bg-dark">{step.number}</span>
+                <div className="absolute -top-4 -left-4 w-16 h-16 2xl:w-20 2xl:h-20 rounded-2xl bg-gradient-to-br from-accent-lime to-accent-gold flex items-center justify-center shadow-lg">
+                  <span className="text-2xl 2xl:text-3xl font-black font-mono text-bg-dark">{step.number}</span>
                 </div>
 
                 {/* Content */}
-                <div className="mt-6 xl:mt-8">
-                  <h3 className="text-2xl xl:text-3xl 2xl:text-4xl font-bold mb-4 gradient-text-lime-gold">
+                <div className="mt-6">
+                  <h3 className="text-2xl 2xl:text-3xl font-bold mb-4 gradient-text-lime-gold">
                     {step.title}
                   </h3>
-                  <p className="text-text-secondary xl:text-lg 2xl:text-xl leading-relaxed">
+                  <p className="text-text-secondary 2xl:text-lg leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -78,11 +78,11 @@ export default function Process() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16 xl:mt-20">
-          <p className="text-text-muted xl:text-lg mb-6">{t.process.readyToStart}</p>
+        <div className="text-center mt-16">
+          <p className="text-text-muted mb-6">{t.process.readyToStart}</p>
           <Link
             href="/get-concept"
-            className="inline-block px-8 py-4 xl:px-10 xl:py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base xl:text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button"
+            className="inline-block px-8 py-4 2xl:px-10 2xl:py-5 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base 2xl:text-lg hover:glow-lime hover:scale-105 transition-all duration-300 shine-button"
           >
             {t.process.getConcept}
           </Link>
