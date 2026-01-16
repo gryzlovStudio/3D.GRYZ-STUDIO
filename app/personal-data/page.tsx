@@ -8,7 +8,7 @@ export default function PersonalDataPage() {
 
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black uppercase mb-8">
+          <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-8">
             Согласие на обработку <span className="gradient-text">персональных данных</span>
           </h1>
           <p className="text-text-muted text-sm mb-12">
