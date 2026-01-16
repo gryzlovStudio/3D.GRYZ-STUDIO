@@ -26,7 +26,11 @@ const projectGalleries: Record<string, { src: string; alt: string }[]> = {
   ],
   'turning-red-room': [
     { src: '/portfolio/turning-red-room/gallery-1.jpg', alt: 'Комната - общий вид' },
-    { src: '/portfolio/turning-red-room/gallery-2.jpg', alt: 'Комната - детали интерьера' },
+    { src: '/portfolio/turning-red-room/gallery-2.jpg', alt: 'Комната - ракурс 2' },
+    { src: '/portfolio/turning-red-room/gallery-3.jpg', alt: 'Комната - ракурс 3' },
+    { src: '/portfolio/turning-red-room/gallery-4.jpg', alt: 'Комната - детали' },
+    { src: '/portfolio/turning-red-room/gallery-5.jpg', alt: 'Комната - декор' },
+    { src: '/portfolio/turning-red-room/gallery-6.jpg', alt: 'Комната - освещение' },
   ],
 }
 
