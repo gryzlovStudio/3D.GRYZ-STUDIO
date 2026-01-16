@@ -165,3 +165,72 @@ main, section, div {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Loading Screen Animations */
+@keyframes liquid-rise {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes logo-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(188, 240, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(188, 240, 0, 0.6));
+  }
+}
+
+@keyframes dots {
+  0%, 20% {
+    content: '.';
+  }
+  40% {
+    content: '..';
+  }
+  60%, 100% {
+    content: '...';
+  }
+}
+
+.liquid-fill {
+  animation: liquid-rise 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.logo-letter {
+  animation: logo-fade-in 0.5s ease-out forwards;
+}
+
+.logo-text {
+  animation: logo-fade-in 0.5s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.thermometer {
+  animation: logo-glow 2s ease-in-out infinite;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(1) infinite;
+}
+
+/* Duration utility for loading screen */
+.duration-600 {
+  transition-duration: 600ms;
+}

@@ -3,7 +3,11 @@
 import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
 
-export default function Hero() {
+interface HeroProps {
+  onVideoLoad?: () => void
+}
+
+export default function Hero({ onVideoLoad }: HeroProps) {
   const { t } = useLanguage()
 
   return (
@@ -16,6 +20,7 @@ export default function Hero() {
           frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen
+          onLoad={onVideoLoad}
         />
       </div>
 
