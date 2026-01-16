@@ -40,11 +40,11 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6 text-sm text-text-muted">
+          <div className="hidden sm:flex flex-row justify-center gap-6 text-sm text-text-muted mt-12">
             <a href="mailto:gryzlovstudio@gmail.com" className="hover:text-accent-lime transition-smooth">
               gryzlovstudio@gmail.com
             </a>
-            <span className="hidden sm:inline">|</span>
+            <span>|</span>
             <a href="https://t.me/ddd_gryz" className="hover:text-accent-lime transition-smooth">
               Telegram: @ddd_gryz
             </a>

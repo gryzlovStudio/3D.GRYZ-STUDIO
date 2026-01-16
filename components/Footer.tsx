@@ -65,7 +65,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a href="mailto:gryzlovstudio@gmail.com" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  gryzlovstudio@gmail.com
+                  <span className="md:hidden">Почта</span>
+                  <span className="hidden md:inline">gryzlovstudio@gmail.com</span>
                 </a>
               </li>
               <li>

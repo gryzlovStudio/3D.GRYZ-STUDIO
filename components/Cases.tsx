@@ -32,7 +32,7 @@ export default function Cases() {
               className="group glass rounded-2xl overflow-hidden hover:border-accent-purple transition-all duration-300 hover:-translate-y-2"
             >
               {/* Image */}
-              <div className="relative h-48 md:h-64 overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={getAssetPath(`/portfolio/${item.id}/cover.jpg`)}
                   alt={item.title}
