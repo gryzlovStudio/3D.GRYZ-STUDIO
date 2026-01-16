@@ -13,44 +13,44 @@ export default function WhyUs() {
   }
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-24 xl:py-32 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-bg-dark via-bg-darker/50 to-bg-dark"></div>
 
       {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-accent-purple/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-64 h-64 bg-accent-pink/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 left-10 w-64 h-64 xl:w-96 xl:h-96 bg-accent-purple/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-64 h-64 xl:w-96 xl:h-96 bg-accent-pink/10 rounded-full blur-3xl"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-4">
+      <div className="relative z-10 max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
+        <div className="text-center mb-12 md:mb-16 xl:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black uppercase mb-4">
             {t.whyUs.title} <span className="gradient-text">{t.whyUs.titleHighlight}</span>
           </h2>
-          <p className="text-base md:text-xl text-text-secondary max-w-2xl mx-auto">
+          <p className="text-base md:text-xl xl:text-2xl 2xl:text-3xl text-text-secondary max-w-2xl xl:max-w-3xl mx-auto">
             {t.whyUs.subtitle}
           </p>
         </div>
 
         {/* Desktop: Cards */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8">
+        <div className="hidden md:grid md:grid-cols-3 gap-8 xl:gap-10 2xl:gap-12">
           {t.whyUs.features.map((feature, index) => (
             <div
               key={index}
               className="relative group"
             >
               {/* Card */}
-              <div className="relative h-full p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-bg-darker/80 to-bg-dark/80 backdrop-blur-sm hover:border-accent-lime/50 transition-all duration-300">
+              <div className="relative h-full p-8 xl:p-10 2xl:p-12 rounded-2xl border border-white/10 bg-gradient-to-br from-bg-darker/80 to-bg-dark/80 backdrop-blur-sm hover:border-accent-lime/50 transition-all duration-300">
                 {/* Title with hover scale */}
-                <h3 className="text-2xl font-bold mb-4 gradient-text-lime-gold transform group-hover:scale-110 transition-transform duration-300 origin-left whitespace-pre-line">
+                <h3 className="text-2xl xl:text-3xl 2xl:text-4xl font-bold mb-4 gradient-text-lime-gold transform group-hover:scale-110 transition-transform duration-300 origin-left whitespace-pre-line">
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-text-secondary leading-relaxed">
+                <p className="text-text-secondary xl:text-lg 2xl:text-xl leading-relaxed">
                   {feature.description}
                 </p>
 
                 {/* Decorative corner */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-accent-lime/10 to-transparent rounded-tr-2xl"></div>
+                <div className="absolute top-0 right-0 w-20 h-20 xl:w-24 xl:h-24 bg-gradient-to-bl from-accent-lime/10 to-transparent rounded-tr-2xl"></div>
               </div>
 
               {/* Glow effect */}
@@ -105,10 +105,10 @@ export default function WhyUs() {
         </div>
 
         {/* About Us CTA */}
-        <div className="text-center mt-10 md:mt-12">
+        <div className="text-center mt-10 md:mt-12 xl:mt-16">
           <Link
             href="/about"
-            className="inline-block px-6 py-3 md:px-8 md:py-4 border border-accent-lime rounded-lg text-text-primary font-bold uppercase text-sm md:text-base hover:bg-accent-lime/20 hover:scale-105 hover:glow-lime transition-all duration-300"
+            className="inline-block px-6 py-3 md:px-8 md:py-4 xl:px-10 xl:py-5 border border-accent-lime rounded-lg text-text-primary font-bold uppercase text-sm md:text-base xl:text-lg hover:bg-accent-lime/20 hover:scale-105 hover:glow-lime transition-all duration-300"
           >
             {t.whyUs.aboutBtn}
           </Link>
