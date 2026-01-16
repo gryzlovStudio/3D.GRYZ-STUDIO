@@ -22,8 +22,8 @@ export const ru = {
 
   // PainPoints
   painPoints: {
-    title: 'Почему бренды выбирают',
-    titleHighlight: 'AI-ускоренный 3D-контент',
+    title: 'Преимущества',
+    titleHighlight: 'AI-производства',
     solutionLabel: 'Наше решение:',
     items: [
       {
