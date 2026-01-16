@@ -31,11 +31,11 @@ export default function Hero() {
 
       {/* Main Title - Center Top */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-20 md:pt-32 px-4">
-        <h1 className="text-hero font-black uppercase leading-tight text-center px-2">
-          <span className="gradient-text">{t.hero.title1}</span><br />
-          {t.hero.title2}
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-tight text-center">
+          <span className="gradient-text whitespace-nowrap">{t.hero.title1}</span><br />
+          <span className="whitespace-nowrap">{t.hero.title2}</span>
         </h1>
-        <p className="text-xl md:text-3xl font-bold text-accent-lime mt-4 uppercase tracking-wider text-center">
+        <p className="text-lg md:text-3xl font-bold text-accent-lime mt-3 md:mt-4 uppercase tracking-wider text-center">
           + AI Production
         </p>
       </div>
@@ -50,11 +50,11 @@ export default function Hero() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/get-concept" className="px-8 py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-base hover:glow-lime hover:scale-105 transition-all duration-300 w-full sm:w-auto text-center shine-button">
+            <div className="flex flex-row gap-3 md:gap-4">
+              <Link href="/get-concept" className="px-4 py-3 md:px-8 md:py-4 bg-gradient-to-r from-accent-lime to-accent-gold rounded-lg text-bg-dark font-bold uppercase text-xs md:text-base hover:glow-lime hover:scale-105 transition-all duration-300 text-center shine-button">
                 {t.hero.cta}
               </Link>
-              <Link href="/services" className="px-8 py-4 border border-accent-purple rounded-lg text-text-primary font-bold uppercase text-base hover:bg-accent-purple/20 hover:glow-purple transition-smooth w-full sm:w-auto text-center">
+              <Link href="/services" className="px-4 py-3 md:px-8 md:py-4 border border-accent-purple rounded-lg text-text-primary font-bold uppercase text-xs md:text-base hover:bg-accent-purple/20 hover:glow-purple transition-smooth text-center">
                 {t.hero.servicesBtn}
               </Link>
             </div>

@@ -10,8 +10,8 @@ export default function PainPoints() {
       <div className="absolute inset-0 bg-gradient-to-b from-bg-dark via-bg-darker to-bg-dark"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-display font-black uppercase mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-4">
             {t.painPoints.title} <span className="gradient-text">{t.painPoints.titleHighlight}</span>
           </h2>
         </div>
