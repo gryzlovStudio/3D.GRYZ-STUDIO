@@ -1,0 +1,20 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://3dgryz.ru/sitemap.xml
+
+# Crawl-delay для вежливости к серверу
+Crawl-delay: 1
+
+# Блокируем служебные страницы
+Disallow: /api/
+Disallow: /_next/
+Disallow: /concept-result
+
+# Yandex specific
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+Sitemap: https://3dgryz.ru/sitemap.xml
