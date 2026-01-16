@@ -88,9 +88,9 @@ export default function Footer() {
         </div>
 
         {/* Desktop: All 3 blocks in one row */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8">
+        <div className="hidden md:flex md:justify-between mb-8">
           {/* Brand */}
-          <div>
+          <div className="flex-1">
             <div className="mb-3">
               <Image
                 src={getAssetPath("/logo.png")}
@@ -105,58 +105,61 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Company */}
-          <div>
-            <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.company}</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  {t.header.about}
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  {t.header.services}
-                </Link>
-              </li>
-              <li>
-                <Link href="/portfolio" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  {t.header.portfolio}
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-content" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  {t.header.aiContent}
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Company and Contacts together on the right */}
+          <div className="flex gap-16">
+            {/* Company */}
+            <div>
+              <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.company}</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/about" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                    {t.header.about}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                    {t.header.services}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/portfolio" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                    {t.header.portfolio}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ai-content" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                    {t.header.aiContent}
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          {/* Contact */}
-          <div className="text-right">
-            <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.contacts}</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="mailto:gryzlovstudio@gmail.com" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  gryzlovstudio@gmail.com
-                </a>
-              </li>
-              <li>
-                <a href="https://t.me/ddd_gryz" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  Telegram
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/3d.gryz?igsh=Ynlobm9qOGRsOW1w&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="https://www.behance.net/gryzlovstudio" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
-                  Behance
-                </a>
-              </li>
-            </ul>
+            {/* Contact */}
+            <div>
+              <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.contacts}</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="mailto:gryzlovstudio@gmail.com" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                    gryzlovstudio@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/ddd_gryz" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                    Telegram
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/3d.gryz?igsh=Ynlobm9qOGRsOW1w&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.behance.net/gryzlovstudio" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                    Behance
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
