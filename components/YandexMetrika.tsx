@@ -20,7 +20,7 @@ export function YandexMetrika() {
     <>
       <Script
         id="yandex-metrika"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(m,e,t,r,i,k,a){
@@ -31,7 +31,6 @@ export function YandexMetrika() {
             })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
 
             ym(${METRIKA_ID}, 'init', {
-              defer: true,
               clickmap: true,
               trackLinks: true,
               accurateTrackBounce: true,
