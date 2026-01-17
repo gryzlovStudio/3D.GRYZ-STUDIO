@@ -17,4 +17,5 @@ Disallow: /concept-result
 User-agent: Yandex
 Allow: /
 Crawl-delay: 2
+Host: https://3dgryz.ru
 Sitemap: https://3dgryz.ru/sitemap.xml

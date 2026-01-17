@@ -51,6 +51,9 @@ export const metadata: Metadata = {
       'ru': siteUrl,
       'en': `${siteUrl}/en`,
     },
+    types: {
+      'application/rss+xml': `${siteUrl}/feed.xml`,
+    },
   },
   openGraph: {
     type: 'website',
