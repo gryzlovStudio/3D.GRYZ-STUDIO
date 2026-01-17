@@ -6,6 +6,7 @@ export const en = {
     services: 'Services',
     portfolio: 'Portfolio',
     aiContent: 'AI Content',
+    blog: 'Blog',
     school: 'School',
     getConcept: 'Get Concept',
   },

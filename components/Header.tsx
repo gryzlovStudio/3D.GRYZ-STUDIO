@@ -88,6 +88,12 @@ export default function Header() {
           >
             {t.header.aiContent}
           </Link>
+          <Link
+            href="/blog"
+            className={`hover:text-accent-purple transition-smooth uppercase text-sm font-medium ${pathname?.startsWith('/blog') ? 'text-accent-purple' : 'text-text-secondary'}`}
+          >
+            {t.header.blog || 'Блог'}
+          </Link>
           <a
             href="https://blenderverse.getcourse.ru/MainPageNew"
             target="_blank"
@@ -183,6 +189,12 @@ export default function Header() {
             className={`text-2xl font-bold uppercase ${pathname === '/ai-content' ? 'text-accent-purple' : 'text-text-primary'}`}
           >
             {t.header.aiContent}
+          </Link>
+          <Link
+            href="/blog"
+            className={`text-2xl font-bold uppercase ${pathname?.startsWith('/blog') ? 'text-accent-purple' : 'text-text-primary'}`}
+          >
+            {t.header.blog || 'Блог'}
           </Link>
           <a
             href="https://blenderverse.getcourse.ru/MainPageNew"

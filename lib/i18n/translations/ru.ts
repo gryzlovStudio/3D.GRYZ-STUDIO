@@ -6,6 +6,7 @@ export const ru = {
     services: 'Услуги',
     portfolio: 'Портфолио',
     aiContent: 'ИИ-контент',
+    blog: 'Блог',
     school: 'Школа',
     getConcept: 'Получить концепт',
   },
