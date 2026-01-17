@@ -84,12 +84,24 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/3d.gryz?igsh=Ynlobm9qOGRsOW1w&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                <a
+                  href="https://www.instagram.com/3d.gryz?igsh=Ynlobm9qOGRsOW1w&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-accent-lime transition-smooth text-sm"
+                  onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_instagram')}
+                >
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="https://www.behance.net/gryzlovstudio" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                <a
+                  href="https://www.behance.net/gryzlovstudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-accent-lime transition-smooth text-sm"
+                  onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_behance')}
+                >
                   Behance
                 </a>
               </li>
@@ -169,12 +181,24 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/3d.gryz?igsh=Ynlobm9qOGRsOW1w&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                  <a
+                    href="https://www.instagram.com/3d.gryz?igsh=Ynlobm9qOGRsOW1w&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-muted hover:text-accent-lime transition-smooth text-sm"
+                    onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_instagram')}
+                  >
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.behance.net/gryzlovstudio" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                  <a
+                    href="https://www.behance.net/gryzlovstudio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-muted hover:text-accent-lime transition-smooth text-sm"
+                    onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_behance')}
+                  >
                     Behance
                   </a>
                 </li>
