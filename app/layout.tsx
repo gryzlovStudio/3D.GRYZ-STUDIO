@@ -90,6 +90,16 @@ export const metadata: Metadata = {
     google: 'KI-bSBVCrgtx7QJ2YfFRHq7iyowFKnSoTslNnHUVSoc',
     yandex: '6b71a9e7e8090ea6',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 }
 
 export default function RootLayout({
