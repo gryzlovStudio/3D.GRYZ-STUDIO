@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from 'next'
+import { Suspense } from 'react'
 import './globals.css'
 import { Providers } from '@/components/Providers'
 import { OrganizationJsonLd, WebSiteJsonLd, LocalBusinessJsonLd } from '@/components/JsonLd'
+import { YandexMetrika } from '@/components/YandexMetrika'
 
 const siteUrl = 'https://3dgryz.ru'
 
@@ -106,6 +108,9 @@ export default function RootLayout({
         <LocalBusinessJsonLd />
       </head>
       <body>
+        <Suspense fallback={null}>
+          <YandexMetrika />
+        </Suspense>
         <Providers>
           {children}
         </Providers>
