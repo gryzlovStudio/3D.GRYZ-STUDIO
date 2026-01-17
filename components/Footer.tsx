@@ -64,12 +64,22 @@ export default function Footer() {
             <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.contacts}</h4>
             <ul className="space-y-2">
               <li>
-                <a href="mailto:gryzlovstudio@gmail.com" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                <a
+                  href="mailto:gryzlovstudio@gmail.com"
+                  className="text-text-muted hover:text-accent-lime transition-smooth text-sm"
+                  onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_email')}
+                >
                   Почта
                 </a>
               </li>
               <li>
-                <a href="https://t.me/ddd_gryz" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                <a
+                  href="https://t.me/ddd_gryz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-accent-lime transition-smooth text-sm"
+                  onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_telegram')}
+                >
                   Telegram
                 </a>
               </li>
@@ -139,12 +149,22 @@ export default function Footer() {
               <h4 className="font-bold uppercase mb-4 text-sm">{t.footer.contacts}</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="mailto:gryzlovstudio@gmail.com" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                  <a
+                    href="mailto:gryzlovstudio@gmail.com"
+                    className="text-text-muted hover:text-accent-lime transition-smooth text-sm"
+                    onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_email')}
+                  >
                     gryzlovstudio@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a href="https://t.me/ddd_gryz" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-lime transition-smooth text-sm">
+                  <a
+                    href="https://t.me/ddd_gryz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-muted hover:text-accent-lime transition-smooth text-sm"
+                    onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_telegram')}
+                  >
                     Telegram
                   </a>
                 </li>

@@ -67,11 +67,19 @@ export default function Home() {
             </div>
 
             <div className="hidden sm:flex flex-row justify-center gap-6 text-sm text-text-muted mt-12">
-              <a href="mailto:gryzlovstudio@gmail.com" className="hover:text-accent-lime transition-smooth">
+              <a
+                href="mailto:gryzlovstudio@gmail.com"
+                className="hover:text-accent-lime transition-smooth"
+                onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_email')}
+              >
                 gryzlovstudio@gmail.com
               </a>
               <span>|</span>
-              <a href="https://t.me/ddd_gryz" className="hover:text-accent-lime transition-smooth">
+              <a
+                href="https://t.me/ddd_gryz"
+                className="hover:text-accent-lime transition-smooth"
+                onClick={() => (window as any).ym?.(106307550, 'reachGoal', 'click_telegram')}
+              >
                 Telegram: @ddd_gryz
               </a>
             </div>
