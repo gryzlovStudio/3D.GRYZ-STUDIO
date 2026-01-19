@@ -20,7 +20,7 @@ export function YandexMetrika() {
     <>
       <Script
         id="yandex-metrika"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(m,e,t,r,i,k,a){
