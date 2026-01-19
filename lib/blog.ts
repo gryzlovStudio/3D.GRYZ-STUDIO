@@ -37,9 +37,6 @@ export const blogPosts: BlogPost[] = [
 
 В этой статье разберём актуальные цены на рынке, факторы, влияющие на стоимость, и поможем понять, какой бюджет заложить на визуализацию именно вашего продукта.
 
-![Пример 3D визуализации продукта](/blog/product-visualization-hero.jpg)
-
----
 
 ## Средние цены на 3D визуализацию в 2026 году
 
@@ -56,9 +53,6 @@ export const blogPosts: BlogPost[] = [
 
 > **Важно:** Цены указаны за профессиональную студийную работу. На фриланс-биржах можно найти предложения от 2 000 ₽, но качество и сроки могут отличаться.
 
-![Примеры продуктов разной сложности](/blog/product-complexity-examples.jpg)
-
----
 
 ## Что влияет на стоимость 3D визуализации
 
@@ -108,10 +102,6 @@ export const blogPosts: BlogPost[] = [
 | Качество | Разное | Стабильное |
 | Коммуникация | Напрямую | Менеджер проекта |
 
-![Сравнение работ фрилансера и студии](/blog/freelancer-vs-studio.jpg)
-
----
-
 ## Стоимость дополнительных услуг
 
 | Услуга | Цена | Для чего нужна |
@@ -123,7 +113,6 @@ export const blogPosts: BlogPost[] = [
 | **HDRI-сцена** | от 8 000 ₽ | Реалистичное окружение |
 | **Взрыв-схема** | от 25 000 ₽ | Показ внутреннего устройства |
 
----
 
 ## 3D визуализация для маркетплейсов
 
@@ -144,9 +133,9 @@ Wildberries, Ozon и Яндекс.Маркет активно продвигаю
 - **AR-примерка** — возможность «поставить» товар у себя дома
 - **Больше ракурсов** — без дополнительной фотосъёмки
 
-![Пример карточки товара с 3D на Wildberries](/blog/marketplace-3d-example.jpg)
 
----
+
+
 
 ## 3D визуализация vs фотосъёмка: что выбрать
 
@@ -178,7 +167,8 @@ Wildberries, Ozon и Яндекс.Маркет активно продвигаю
 - Важна «живая» фактура (ткани, еда)
 - Один-два ракурса без вариантов
 
----
+
+
 
 ## Как сэкономить на 3D визуализации
 
@@ -206,7 +196,8 @@ Wildberries, Ozon и Яндекс.Маркет активно продвигаю
 
 Некоторые студии предлагают подписку на определённое количество визуализаций в месяц. Это выгодно при постоянном потоке новых товаров.
 
----
+
+
 
 ## Этапы создания 3D визуализации
 
@@ -236,9 +227,9 @@ Wildberries, Ozon и Яндекс.Маркет активно продвигаю
 
 Цветокоррекция, ретушь, подготовка к публикации.
 
-![Этапы создания 3D визуализации](/blog/3d-visualization-process.jpg)
 
----
+
+
 
 ## Сроки выполнения
 
@@ -249,7 +240,8 @@ Wildberries, Ozon и Яндекс.Маркет активно продвигаю
 | Сложный продукт | 10-20 рабочих дней | 7-10 дней |
 | Анимация | +5-10 дней | +3-5 дней |
 
----
+
+
 
 ## FAQ: Частые вопросы
 
@@ -286,7 +278,8 @@ Wildberries, Ozon и Яндекс.Маркет активно продвигаю
 - Печатной продукции
 - Интерактива на сайте
 
----
+
+
 
 ## Получите бесплатную оценку вашего проекта
 
@@ -299,7 +292,8 @@ Wildberries, Ozon и Яндекс.Маркет активно продвигаю
 
 [Оставить заявку на бесплатную оценку](/get-concept)
 
----
+
+
 
 *Цены актуальны на январь 2026 года и могут отличаться в зависимости от специфики проекта.*
       `,
@@ -308,9 +302,9 @@ Wildberries, Ozon и Яндекс.Маркет активно продвигаю
 
 In this article, we'll break down current market prices, factors affecting cost, and help you understand what budget to allocate for visualizing your specific product.
 
-![3D Product Visualization Example](/blog/product-visualization-hero.jpg)
 
----
+
+
 
 ## Average 3D Visualization Prices in 2026
 
@@ -327,9 +321,9 @@ The cost of 3D visualization varies widely — from $50 to $2,000+ per product. 
 
 > **Important:** Prices are for professional studio work. On freelance platforms, you can find offers starting from $30, but quality and timelines may vary.
 
-![Products of Different Complexity Examples](/blog/product-complexity-examples.jpg)
 
----
+
+
 
 ## What Affects 3D Visualization Cost
 
@@ -379,9 +373,9 @@ Rush orders are always more expensive. Standard surcharges:
 | Quality | Varies | Consistent |
 | Communication | Direct | Project manager |
 
-![Freelancer vs Studio Work Comparison](/blog/freelancer-vs-studio.jpg)
 
----
+
+
 
 ## Additional Services Pricing
 
@@ -394,7 +388,8 @@ Rush orders are always more expensive. Standard surcharges:
 | **HDRI scene** | from $110 | Realistic environment |
 | **Exploded view** | from $350 | Show internal structure |
 
----
+
+
 
 ## 3D Visualization for Marketplaces
 
@@ -415,9 +410,9 @@ Major marketplaces are actively promoting 3D content. Some platforms even have A
 - **AR try-on** — ability to "place" product at home
 - **More angles** — without additional photography
 
-![Marketplace 3D Product Card Example](/blog/marketplace-3d-example.jpg)
 
----
+
+
 
 ## 3D Visualization vs Photography: What to Choose
 
@@ -449,7 +444,8 @@ Major marketplaces are actively promoting 3D content. Some platforms even have A
 - "Live" texture matters (fabrics, food)
 - One or two angles without variants
 
----
+
+
 
 ## How to Save on 3D Visualization
 
@@ -478,7 +474,8 @@ Order 2-3 main angles, test on marketplace. If conversion grows — order 360° 
 
 Some studios offer subscriptions for a set number of visualizations per month. This is profitable with constant flow of new products.
 
----
+
+
 
 ## 3D Visualization Creation Stages
 
@@ -508,9 +505,9 @@ Calculating the final image. Higher quality means longer render.
 
 Color correction, retouching, preparing for publication.
 
-![3D Visualization Creation Stages](/blog/3d-visualization-process.jpg)
 
----
+
+
 
 ## Turnaround Times
 
@@ -521,7 +518,8 @@ Color correction, retouching, preparing for publication.
 | Complex product | 10-20 business days | 7-10 days |
 | Animation | +5-10 days | +3-5 days |
 
----
+
+
 
 ## FAQ: Frequently Asked Questions
 
@@ -558,7 +556,8 @@ Yes, this is one of the main advantages of 3D. One model can be used for:
 - Print materials
 - Website interactivity
 
----
+
+
 
 ## Get a Free Estimate for Your Project
 
@@ -571,7 +570,8 @@ We will free of charge:
 
 [Submit a Request for Free Estimate](/get-concept)
 
----
+
+
 
 *Prices are current as of January 2026 and may vary depending on project specifics.*
       `,

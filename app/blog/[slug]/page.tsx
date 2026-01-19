@@ -9,6 +9,7 @@ import { useLanguage } from '@/lib/i18n'
 import { getBlogPost, getAllBlogPosts } from '@/lib/blog'
 import { getAssetPath } from '@/lib/utils'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 function ArticleJsonLd({
   title,
@@ -173,8 +174,10 @@ export default function BlogPostPage() {
           )}
 
           {/* Content */}
-          <div className="prose prose-invert prose-lg max-w-none prose-headings:font-black prose-headings:uppercase prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-text-secondary prose-p:leading-relaxed prose-li:text-text-secondary prose-strong:text-text-primary prose-a:text-accent-lime prose-a:no-underline hover:prose-a:underline">
-            <ReactMarkdown>{post.content[language]}</ReactMarkdown>
+          <div className="article-content">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {post.content[language]}
+            </ReactMarkdown>
           </div>
 
           {/* Tags */}
