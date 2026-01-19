@@ -1,5 +1,7 @@
 import { getAllBlogPosts } from '@/lib/blog'
 
+export const dynamic = 'force-static'
+
 const siteUrl = 'https://3dgryz.ru'
 
 export async function GET() {
