@@ -24,168 +24,563 @@ export const blogPosts: BlogPost[] = [
   {
     slug: '3d-product-visualization-cost',
     title: {
-      ru: 'Сколько стоит 3D визуализация продукта в 2026 году',
-      en: 'How Much Does 3D Product Visualization Cost in 2026',
+      ru: 'Сколько стоит 3D визуализация продукта в 2026 году: полный гид по ценам',
+      en: 'How Much Does 3D Product Visualization Cost in 2026: Complete Pricing Guide',
     },
     excerpt: {
-      ru: 'Разбираем реальные цены на 3D визуализацию товаров: от чего зависит стоимость, какие форматы бывают и как сэкономить без потери качества.',
-      en: 'We break down real prices for 3D product visualization: what affects the cost, available formats, and how to save without losing quality.',
+      ru: 'Актуальные цены на 3D визуализацию товаров в России: от 2 000 до 100 000+ рублей. Разбираем все факторы ценообразования, сравниваем с фотосъёмкой и даём советы по экономии.',
+      en: 'Current prices for 3D product visualization: from $50 to $2,000+. We analyze all pricing factors, compare with photography, and give tips on how to save.',
     },
     content: {
       ru: `
-## Зачем бизнесу 3D визуализация продукта?
+3D визуализация продукта — это создание фотореалистичного цифрового изображения товара с помощью специализированного программного обеспечения. В 2026 году этот инструмент стал незаменимым для e-commerce, маркетплейсов и презентаций новых продуктов.
 
-3D визуализация товара — это фотореалистичное изображение продукта, созданное на компьютере. В отличие от обычной фотосъёмки, 3D позволяет:
+В этой статье разберём актуальные цены на рынке, факторы, влияющие на стоимость, и поможем понять, какой бюджет заложить на визуализацию именно вашего продукта.
 
-- **Показать продукт до его производства** — идеально для краудфандинга и презентаций инвесторам
-- **Создать идеальную картинку** — без бликов, пыли и дефектов
-- **Легко менять цвета и материалы** — один раз смоделировали, меняем вариации за минуты
-- **Использовать в AR** — покупатели могут «примерить» товар у себя дома
+![Пример 3D визуализации продукта](/blog/product-visualization-hero.jpg)
 
-## От чего зависит цена 3D визуализации?
+---
 
-### 1. Сложность продукта
+## Средние цены на 3D визуализацию в 2026 году
 
-| Тип продукта | Примеры | Цена |
-|--------------|---------|------|
-| Простой | Упаковка, бутылка, коробка | от 15 000 ₽ |
-| Средний | Электроника, мебель, техника | от 30 000 ₽ |
-| Сложный | Механизмы, ювелирка, детализированные модели | от 60 000 ₽ |
+Стоимость 3D визуализации варьируется в широком диапазоне — от 2 000 до 100 000+ рублей за один продукт. Всё зависит от сложности, детализации и типа конечного контента.
 
-### 2. Количество ракурсов
+### Таблица цен по категориям сложности
 
-- **1-3 ракурса** — базовый пакет для карточки товара
-- **5-10 ракурсов** — для детальной презентации
-- **360° вращение** — интерактивный просмотр со всех сторон
+| Категория | Примеры продуктов | Цена за модель | Цена за 1 ракурс |
+|-----------|-------------------|----------------|------------------|
+| **Простые** | Упаковка, бутылки, коробки, простая посуда | 5 000 – 15 000 ₽ | 1 500 – 3 000 ₽ |
+| **Средние** | Электроника, бытовая техника, мебель, обувь | 15 000 – 40 000 ₽ | 3 000 – 7 000 ₽ |
+| **Сложные** | Механизмы, ювелирные изделия, автозапчасти | 40 000 – 100 000 ₽ | 7 000 – 15 000 ₽ |
+| **Премиум** | Автомобили, сложная техника, детализированные модели | от 100 000 ₽ | от 15 000 ₽ |
 
-### 3. Дополнительные услуги
+> **Важно:** Цены указаны за профессиональную студийную работу. На фриланс-биржах можно найти предложения от 2 000 ₽, но качество и сроки могут отличаться.
 
-- **Анимация продукта** — от 50 000 ₽
-- **Интеграция в интерьер** — от 20 000 ₽
-- **AR-модель** — от 25 000 ₽
+![Примеры продуктов разной сложности](/blog/product-complexity-examples.jpg)
 
-## Сравнение: 3D визуализация vs фотосъёмка
+---
 
-| Параметр | Фотосъёмка | 3D визуализация |
+## Что влияет на стоимость 3D визуализации
+
+### 1. Сложность и детализация модели
+
+Это главный фактор ценообразования. Чем больше мелких деталей, текстур и элементов — тем дороже работа.
+
+**Примеры:**
+- Простая картонная коробка — минимум деталей, быстрое моделирование
+- Наушники с кнопками и текстурой материала — средняя сложность
+- Механические часы с видимым механизмом — высокая сложность
+
+### 2. Количество ракурсов и вариантов
+
+| Пакет | Описание | Применение |
+|-------|----------|------------|
+| **1-3 ракурса** | Основные виды продукта | Карточка товара на маркетплейсе |
+| **5-10 ракурсов** | Детальный показ со всех сторон | Лендинг, презентация |
+| **360° вращение** | Интерактивный просмотр | Премиум-карточки, сайт бренда |
+
+**Цветовые варианты:** Если продукт выпускается в нескольких цветах, дополнительные варианты обычно стоят 20-30% от базовой цены модели.
+
+### 3. Тип визуализации
+
+| Тип | Описание | Средняя стоимость |
+|-----|----------|-------------------|
+| **Статичные рендеры** | Фотореалистичные изображения | Базовая цена |
+| **Анимация** | Вращение, сборка/разборка | +50-100% к базе |
+| **AR-модель** | Для дополненной реальности | +30-50% к базе |
+| **Интерактивный 3D** | Для встраивания на сайт | +40-70% к базе |
+
+### 4. Сроки выполнения
+
+Срочные заказы всегда дороже. Стандартные наценки:
+
+- **Стандартный срок** — базовая цена
+- **Ускоренный (в 2 раза быстрее)** — +30-50%
+- **Срочный (24-48 часов)** — +50-100%
+
+### 5. Исполнитель: фрилансер vs студия
+
+| Параметр | Фрилансер | Студия |
+|----------|-----------|--------|
+| Цена | Ниже на 30-50% | Выше |
+| Гарантии сроков | Зависит от исполнителя | Высокие |
+| Правки | Обычно ограничены | Входят в стоимость |
+| Качество | Разное | Стабильное |
+| Коммуникация | Напрямую | Менеджер проекта |
+
+![Сравнение работ фрилансера и студии](/blog/freelancer-vs-studio.jpg)
+
+---
+
+## Стоимость дополнительных услуг
+
+| Услуга | Цена | Для чего нужна |
+|--------|------|----------------|
+| **Анимация продукта** | от 30 000 ₽ | Рекламные ролики, соцсети |
+| **360° вращение** | от 10 000 ₽ | Интерактивные карточки |
+| **AR-модель** | от 20 000 ₽ | Примерка в приложении |
+| **Интеграция в интерьер** | от 15 000 ₽ | Показ продукта в контексте |
+| **HDRI-сцена** | от 8 000 ₽ | Реалистичное окружение |
+| **Взрыв-схема** | от 25 000 ₽ | Показ внутреннего устройства |
+
+---
+
+## 3D визуализация для маркетплейсов
+
+Wildberries, Ozon и Яндекс.Маркет активно продвигают 3D-контент. На Wildberries даже появилась функция 3D-примерки товаров в дополненной реальности.
+
+### Цены на визуализацию для маркетплейсов
+
+| Платформа | Требования | Средняя цена |
+|-----------|------------|--------------|
+| **Wildberries** | Фото на белом фоне, 360° опционально | от 2 500 ₽ |
+| **Ozon** | Инфографика, 3D-модели | от 3 000 ₽ |
+| **Яндекс.Маркет** | 3D-модели для AR | от 5 000 ₽ |
+
+### Что даёт 3D на маркетплейсах
+
+- **Выделение среди конкурентов** — 3D-карточки привлекают больше внимания
+- **Снижение возвратов** — покупатель лучше понимает товар
+- **AR-примерка** — возможность «поставить» товар у себя дома
+- **Больше ракурсов** — без дополнительной фотосъёмки
+
+![Пример карточки товара с 3D на Wildberries](/blog/marketplace-3d-example.jpg)
+
+---
+
+## 3D визуализация vs фотосъёмка: что выбрать
+
+| Критерий | Фотосъёмка | 3D визуализация |
 |----------|------------|-----------------|
-| Нужен готовый образец | Да | Нет |
-| Изменение цвета | Новая съёмка | 5 минут |
-| Идеальное качество | Зависит от условий | Всегда |
-| Использование в AR | Невозможно | Да |
-| Стоимость 10 товаров | от 100 000 ₽ | от 80 000 ₽ |
+| **Нужен физический образец** | Да, обязательно | Нет |
+| **Скорость производства** | 1-2 дня на съёмку | 3-7 дней на модель |
+| **Изменение цвета** | Новая съёмка | 15-30 минут |
+| **Идеальное качество** | Зависит от условий | Всегда контролируемо |
+| **Использование в AR** | Невозможно | Да |
+| **Масштабирование** | Каждый товар отдельно | Легко тиражировать |
+| **Стоимость 1 товара** | от 3 000 ₽ | от 5 000 ₽ |
+| **Стоимость 10 товаров** | от 25 000 ₽ | от 35 000 ₽* |
 
-## Как сэкономить на 3D визуализации?
+*При серийном заказе цена за единицу снижается на 30-50%
+
+### Когда выбрать 3D визуализацию
+
+- Продукт ещё не произведён (краудфандинг, презентация инвесторам)
+- Много цветовых вариантов
+- Нужна AR-модель или анимация
+- Требуется показать внутреннее устройство
+- Невозможно качественно сфотографировать (мелкие детали, отражающие поверхности)
+
+### Когда выбрать фотосъёмку
+
+- Нужно быстро и есть готовый образец
+- Бюджет ограничен
+- Важна «живая» фактура (ткани, еда)
+- Один-два ракурса без вариантов
+
+---
+
+## Как сэкономить на 3D визуализации
 
 ### 1. Заказывайте пакетом
-При заказе визуализации нескольких товаров цена за единицу снижается на 20-40%.
+
+При заказе визуализации 5+ товаров большинство студий дают скидку 20-40%. Экономия может составить десятки тысяч рублей.
 
 ### 2. Используйте AI-ускоренное производство
-Современные студии (включая нас) используют AI для ускорения процесса. Это снижает стоимость без потери качества.
 
-### 3. Начните с базового пакета
-Закажите 2-3 ракурса, протестируйте на маркетплейсе, затем дозакажите остальные.
+Современные студии применяют AI для ускорения рутинных процессов. Это снижает стоимость на 15-25% без потери качества. В 3D.GRYZ мы используем AI-инструменты для генерации концептов и ускорения моделирования.
+
+### 3. Подготовьте качественные материалы
+
+Чем лучше исходные данные — тем быстрее работа:
+- Чёткие фотографии с разных сторон
+- Точные размеры и чертежи
+- Информация о материалах
+- Референсы желаемого результата
+
+### 4. Начните с базового пакета
+
+Закажите 2-3 основных ракурса, протестируйте на маркетплейсе. Если конверсия растёт — дозакажите 360° и дополнительные виды.
+
+### 5. Рассмотрите подписочную модель
+
+Некоторые студии предлагают подписку на определённое количество визуализаций в месяц. Это выгодно при постоянном потоке новых товаров.
+
+---
+
+## Этапы создания 3D визуализации
+
+Понимание процесса поможет оценить адекватность цены и сроков.
+
+### 1. Бриф и оценка (бесплатно)
+
+Обсуждение задачи, сбор материалов, расчёт стоимости и сроков.
+
+### 2. Моделирование (40% времени)
+
+Создание 3D-модели продукта на основе фотографий или чертежей.
+
+### 3. Текстурирование (20% времени)
+
+Нанесение материалов: металл, пластик, ткань, стекло и т.д.
+
+### 4. Освещение и композиция (15% времени)
+
+Настройка студийного света, выбор ракурсов, создание сцены.
+
+### 5. Рендеринг (15% времени)
+
+Расчёт финального изображения. Чем выше качество — тем дольше рендер.
+
+### 6. Постобработка (10% времени)
+
+Цветокоррекция, ретушь, подготовка к публикации.
+
+![Этапы создания 3D визуализации](/blog/3d-visualization-process.jpg)
+
+---
 
 ## Сроки выполнения
 
-- **Простой продукт** — 2-3 рабочих дня
-- **Средней сложности** — 5-7 рабочих дней
-- **Сложный проект** — 10-14 рабочих дней
+| Тип проекта | Стандартный срок | Минимальный срок |
+|-------------|------------------|------------------|
+| Простой продукт | 3-5 рабочих дней | 1-2 дня |
+| Средней сложности | 5-10 рабочих дней | 3-5 дней |
+| Сложный продукт | 10-20 рабочих дней | 7-10 дней |
+| Анимация | +5-10 дней | +3-5 дней |
 
-## Что нужно для начала работы?
+---
 
-Чтобы мы могли оценить ваш проект, подготовьте:
+## FAQ: Частые вопросы
 
-1. **Фотографии продукта** с разных сторон (или чертежи)
-2. **Размеры** — габариты изделия
-3. **Материалы** — из чего сделан продукт
-4. **Референсы** — примеры визуализаций, которые вам нравятся
+### Что нужно предоставить для начала работы?
 
-## Получите бесплатную оценку
+**Минимум:**
+- Фотографии продукта с 4-6 сторон
+- Габаритные размеры
+
+**В идеале:**
+- Чертежи или CAD-модель
+- Информация о материалах и цветах (Pantone, RAL)
+- Референсы желаемого стиля
+- Логотип в векторе (если нужен на продукте)
+
+### Сколько правок включено в стоимость?
+
+Обычно 2-3 раунда правок входят в базовую цену. Каждый раунд — это комплекс мелких изменений (ракурс, свет, цвет). Существенные изменения (переделка модели) оцениваются отдельно.
+
+### Получу ли я исходные файлы?
+
+По умолчанию — нет. Исходные файлы (3D-модель) передаются за дополнительную плату, обычно +30-50% к стоимости проекта. Обговорите это заранее, если планируете использовать модель для AR или игр.
+
+### Подходит ли 3D для маркетплейсов?
+
+Да, полностью. Wildberries, Ozon и другие площадки принимают 3D-визуализации наравне с фотографиями. Более того, некоторые категории (мебель, техника) показывают лучшую конверсию именно с 3D.
+
+### Можно ли использовать одну модель для разных целей?
+
+Да, это одно из главных преимуществ 3D. Одна модель может использоваться для:
+- Статичных рендеров
+- Анимации
+- AR-приложений
+- Печатной продукции
+- Интерактива на сайте
+
+---
+
+## Получите бесплатную оценку вашего проекта
 
 Не уверены, сколько будет стоить визуализация именно вашего продукта?
 
-[Оставьте заявку](/get-concept) — мы бесплатно оценим проект и подготовим 3 варианта концепта в течение 1 часа.
+Мы бесплатно:
+- Оценим сложность и стоимость
+- Предложим оптимальный формат
+- Подготовим 3 варианта концепта за 1 час
+
+[Оставить заявку на бесплатную оценку](/get-concept)
+
+---
+
+*Цены актуальны на январь 2026 года и могут отличаться в зависимости от специфики проекта.*
       `,
       en: `
-## Why Does Business Need 3D Product Visualization?
+3D product visualization is the creation of photorealistic digital images of products using specialized software. In 2026, this tool has become indispensable for e-commerce, marketplaces, and new product presentations.
 
-3D product visualization is a photorealistic image of a product created on a computer. Unlike regular photography, 3D allows you to:
+In this article, we'll break down current market prices, factors affecting cost, and help you understand what budget to allocate for visualizing your specific product.
 
-- **Show the product before production** — perfect for crowdfunding and investor presentations
-- **Create the perfect image** — no glare, dust, or defects
-- **Easily change colors and materials** — model once, change variations in minutes
-- **Use in AR** — customers can "try" the product at home
+![3D Product Visualization Example](/blog/product-visualization-hero.jpg)
 
-## What Affects the Price of 3D Visualization?
+---
 
-### 1. Product Complexity
+## Average 3D Visualization Prices in 2026
 
-| Product Type | Examples | Price |
-|--------------|----------|-------|
-| Simple | Packaging, bottle, box | from $200 |
-| Medium | Electronics, furniture, appliances | from $400 |
-| Complex | Mechanisms, jewelry, detailed models | from $800 |
+The cost of 3D visualization varies widely — from $50 to $2,000+ per product. Everything depends on complexity, detail level, and type of final content.
 
-### 2. Number of Angles
+### Pricing Table by Complexity Category
 
-- **1-3 angles** — basic package for product card
-- **5-10 angles** — for detailed presentation
-- **360° rotation** — interactive view from all sides
+| Category | Product Examples | Price per Model | Price per Angle |
+|----------|------------------|-----------------|-----------------|
+| **Simple** | Packaging, bottles, boxes, simple dishes | $70 – $200 | $20 – $40 |
+| **Medium** | Electronics, appliances, furniture, footwear | $200 – $550 | $40 – $100 |
+| **Complex** | Mechanisms, jewelry, auto parts | $550 – $1,400 | $100 – $200 |
+| **Premium** | Vehicles, complex machinery, detailed models | from $1,400 | from $200 |
 
-### 3. Additional Services
+> **Important:** Prices are for professional studio work. On freelance platforms, you can find offers starting from $30, but quality and timelines may vary.
 
-- **Product animation** — from $700
-- **Interior integration** — from $300
-- **AR model** — from $350
+![Products of Different Complexity Examples](/blog/product-complexity-examples.jpg)
 
-## Comparison: 3D Visualization vs Photography
+---
 
-| Parameter | Photography | 3D Visualization |
-|-----------|-------------|------------------|
-| Need finished sample | Yes | No |
-| Color change | New shoot | 5 minutes |
-| Perfect quality | Depends on conditions | Always |
-| AR usage | Impossible | Yes |
-| Cost for 10 products | from $1,500 | from $1,200 |
+## What Affects 3D Visualization Cost
 
-## How to Save on 3D Visualization?
+### 1. Complexity and Model Detail
+
+This is the main pricing factor. The more small details, textures, and elements — the more expensive the work.
+
+**Examples:**
+- Simple cardboard box — minimal details, quick modeling
+- Headphones with buttons and material texture — medium complexity
+- Mechanical watch with visible mechanism — high complexity
+
+### 2. Number of Angles and Variants
+
+| Package | Description | Application |
+|---------|-------------|-------------|
+| **1-3 angles** | Main product views | Marketplace product card |
+| **5-10 angles** | Detailed view from all sides | Landing page, presentation |
+| **360° rotation** | Interactive viewing | Premium cards, brand website |
+
+**Color variants:** If the product comes in multiple colors, additional variants typically cost 20-30% of the base model price.
+
+### 3. Visualization Type
+
+| Type | Description | Average Cost |
+|------|-------------|--------------|
+| **Static renders** | Photorealistic images | Base price |
+| **Animation** | Rotation, assembly/disassembly | +50-100% to base |
+| **AR model** | For augmented reality | +30-50% to base |
+| **Interactive 3D** | For website embedding | +40-70% to base |
+
+### 4. Turnaround Time
+
+Rush orders are always more expensive. Standard surcharges:
+
+- **Standard timeline** — base price
+- **Accelerated (2x faster)** — +30-50%
+- **Rush (24-48 hours)** — +50-100%
+
+### 5. Provider: Freelancer vs Studio
+
+| Parameter | Freelancer | Studio |
+|-----------|------------|--------|
+| Price | 30-50% lower | Higher |
+| Timeline guarantees | Depends on provider | High |
+| Revisions | Usually limited | Included |
+| Quality | Varies | Consistent |
+| Communication | Direct | Project manager |
+
+![Freelancer vs Studio Work Comparison](/blog/freelancer-vs-studio.jpg)
+
+---
+
+## Additional Services Pricing
+
+| Service | Price | Purpose |
+|---------|-------|---------|
+| **Product animation** | from $400 | Ads, social media |
+| **360° rotation** | from $140 | Interactive cards |
+| **AR model** | from $280 | In-app try-on |
+| **Interior integration** | from $200 | Product in context |
+| **HDRI scene** | from $110 | Realistic environment |
+| **Exploded view** | from $350 | Show internal structure |
+
+---
+
+## 3D Visualization for Marketplaces
+
+Major marketplaces are actively promoting 3D content. Some platforms even have AR try-on features for products.
+
+### Marketplace Visualization Pricing
+
+| Platform | Requirements | Average Price |
+|----------|--------------|---------------|
+| **Amazon** | White background, 360° optional | from $50 |
+| **Shopify** | AR models, 3D viewer | from $70 |
+| **Custom stores** | Full 3D integration | from $100 |
+
+### What 3D Offers for Marketplaces
+
+- **Stand out from competitors** — 3D cards attract more attention
+- **Reduce returns** — buyers better understand the product
+- **AR try-on** — ability to "place" product at home
+- **More angles** — without additional photography
+
+![Marketplace 3D Product Card Example](/blog/marketplace-3d-example.jpg)
+
+---
+
+## 3D Visualization vs Photography: What to Choose
+
+| Criteria | Photography | 3D Visualization |
+|----------|-------------|------------------|
+| **Physical sample needed** | Yes, required | No |
+| **Production speed** | 1-2 days for shoot | 3-7 days for model |
+| **Color change** | New shoot | 15-30 minutes |
+| **Perfect quality** | Depends on conditions | Always controllable |
+| **AR usage** | Impossible | Yes |
+| **Scalability** | Each product separate | Easy to replicate |
+| **Cost for 1 product** | from $40 | from $70 |
+| **Cost for 10 products** | from $350 | from $500* |
+
+*With bulk orders, price per unit decreases by 30-50%
+
+### When to Choose 3D Visualization
+
+- Product not yet manufactured (crowdfunding, investor presentation)
+- Many color variants
+- Need AR model or animation
+- Need to show internal structure
+- Impossible to photograph well (small details, reflective surfaces)
+
+### When to Choose Photography
+
+- Need quickly and have ready sample
+- Limited budget
+- "Live" texture matters (fabrics, food)
+- One or two angles without variants
+
+---
+
+## How to Save on 3D Visualization
 
 ### 1. Order in Bulk
-When ordering visualization of multiple products, the price per unit decreases by 20-40%.
+
+When ordering visualization of 5+ products, most studios offer 20-40% discount. Savings can be significant.
 
 ### 2. Use AI-Accelerated Production
-Modern studios (including us) use AI to speed up the process. This reduces cost without losing quality.
 
-### 3. Start with a Basic Package
-Order 2-3 angles, test on marketplace, then order the rest.
+Modern studios use AI to speed up routine processes. This reduces cost by 15-25% without quality loss. At 3D.GRYZ, we use AI tools for concept generation and modeling acceleration.
 
-## Turnaround Time
+### 3. Prepare Quality Materials
 
-- **Simple product** — 2-3 business days
-- **Medium complexity** — 5-7 business days
-- **Complex project** — 10-14 business days
+Better source data means faster work:
+- Clear photos from 4-6 sides
+- Exact dimensions and drawings
+- Material and color information (Pantone, RAL)
+- Reference images of desired style
+- Vector logo (if needed on product)
 
-## What Do You Need to Get Started?
+### 4. Start with Basic Package
 
-To evaluate your project, prepare:
+Order 2-3 main angles, test on marketplace. If conversion grows — order 360° and additional views.
 
-1. **Product photos** from different angles (or drawings)
-2. **Dimensions** — product measurements
-3. **Materials** — what the product is made of
-4. **References** — examples of visualizations you like
+### 5. Consider Subscription Model
 
-## Get a Free Estimate
+Some studios offer subscriptions for a set number of visualizations per month. This is profitable with constant flow of new products.
+
+---
+
+## 3D Visualization Creation Stages
+
+Understanding the process helps evaluate price and timeline adequacy.
+
+### 1. Brief and Estimation (Free)
+
+Discussing the task, gathering materials, calculating cost and timeline.
+
+### 2. Modeling (40% of time)
+
+Creating the 3D product model based on photos or drawings.
+
+### 3. Texturing (20% of time)
+
+Applying materials: metal, plastic, fabric, glass, etc.
+
+### 4. Lighting and Composition (15% of time)
+
+Setting up studio lighting, choosing angles, creating the scene.
+
+### 5. Rendering (15% of time)
+
+Calculating the final image. Higher quality means longer render.
+
+### 6. Post-processing (10% of time)
+
+Color correction, retouching, preparing for publication.
+
+![3D Visualization Creation Stages](/blog/3d-visualization-process.jpg)
+
+---
+
+## Turnaround Times
+
+| Project Type | Standard Timeline | Minimum Timeline |
+|--------------|-------------------|------------------|
+| Simple product | 3-5 business days | 1-2 days |
+| Medium complexity | 5-10 business days | 3-5 days |
+| Complex product | 10-20 business days | 7-10 days |
+| Animation | +5-10 days | +3-5 days |
+
+---
+
+## FAQ: Frequently Asked Questions
+
+### What do I need to provide to get started?
+
+**Minimum:**
+- Product photos from 4-6 sides
+- Overall dimensions
+
+**Ideally:**
+- Drawings or CAD model
+- Material and color information (Pantone, RAL)
+- Reference images of desired style
+- Vector logo (if needed on product)
+
+### How many revisions are included?
+
+Usually 2-3 revision rounds are included in the base price. Each round is a set of minor changes (angle, lighting, color). Significant changes (model rework) are priced separately.
+
+### Will I receive source files?
+
+By default — no. Source files (3D model) are transferred for additional fee, usually +30-50% of project cost. Discuss this upfront if you plan to use the model for AR or games.
+
+### Is 3D suitable for marketplaces?
+
+Yes, absolutely. Amazon, Shopify, and other platforms accept 3D visualizations alongside photographs. Moreover, some categories (furniture, appliances) show better conversion with 3D.
+
+### Can I use one model for different purposes?
+
+Yes, this is one of the main advantages of 3D. One model can be used for:
+- Static renders
+- Animation
+- AR applications
+- Print materials
+- Website interactivity
+
+---
+
+## Get a Free Estimate for Your Project
 
 Not sure how much visualization of your product will cost?
 
-[Submit a request](/get-concept) — we'll evaluate your project for free and prepare 3 concept options within 1 hour.
+We will free of charge:
+- Evaluate complexity and cost
+- Suggest optimal format
+- Prepare 3 concept options in 1 hour
+
+[Submit a Request for Free Estimate](/get-concept)
+
+---
+
+*Prices are current as of January 2026 and may vary depending on project specifics.*
       `,
     },
     author: '3D.GRYZ',
     publishedAt: '2026-01-19',
     coverImage: '/blog/product-visualization.jpg',
-    tags: ['3D визуализация', 'цены', 'продуктовая съёмка', 'e-commerce'],
-    readingTime: 7,
+    tags: ['3D визуализация', 'цены', 'e-commerce', 'маркетплейсы', 'продуктовая съёмка', 'руководство'],
+    readingTime: 15,
   },
   {
     slug: '3d-mascots-for-brands',
