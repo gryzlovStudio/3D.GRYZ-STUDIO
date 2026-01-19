@@ -41,6 +41,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://3dgryz.ru/blog/3d-product-visualization-cost</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://3dgryz.ru/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
