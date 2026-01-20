@@ -1,7 +1,9 @@
 'use client'
 
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n'
+import Player from '@vimeo/player'
 
 interface HeroProps {
   onVideoLoad?: () => void
@@ -9,18 +11,46 @@ interface HeroProps {
 
 export default function Hero({ onVideoLoad }: HeroProps) {
   const { t } = useLanguage()
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+  const playerRef = useRef<Player | null>(null)
+
+  useEffect(() => {
+    if (!iframeRef.current) return
+
+    // Initialize Vimeo Player
+    const player = new Player(iframeRef.current)
+    playerRef.current = player
+
+    // Listen for when video actually starts playing
+    player.on('play', () => {
+      onVideoLoad?.()
+    })
+
+    // Also listen for 'loaded' as backup
+    player.on('loaded', () => {
+      // Give a small buffer after loaded event
+      setTimeout(() => {
+        onVideoLoad?.()
+      }, 500)
+    })
+
+    return () => {
+      player.off('play')
+      player.off('loaded')
+    }
+  }, [onVideoLoad])
 
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Background Video - Vimeo */}
       <div className="absolute inset-0 overflow-hidden">
         <iframe
+          ref={iframeRef}
           src="https://player.vimeo.com/video/1153933439?background=1&autoplay=1&loop=1&muted=1&quality=1080p"
           className="absolute top-1/2 left-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2"
           frameBorder="0"
           allow="autoplay; fullscreen"
           allowFullScreen
-          onLoad={onVideoLoad}
         />
       </div>
 
