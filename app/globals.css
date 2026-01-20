@@ -58,6 +58,12 @@ main, section, div {
 
 /* Glass morphism utility */
 .glass {
+  background: rgba(18, 18, 26, 0.85);
+  backdrop-filter: blur(10px) saturate(180%);
+}
+
+/* Glass with border (for cards, etc) */
+.glass-border {
   background: rgba(18, 18, 26, 0.75);
   backdrop-filter: blur(10px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
