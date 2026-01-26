@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BreadcrumbJsonLd } from '@/components/JsonLd'
 import { useLanguage } from '@/lib/i18n'
 
 export default function AboutPage() {
@@ -10,6 +11,12 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen">
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Главная', url: 'https://3dgryz.ru' },
+          { name: 'О нас', url: 'https://3dgryz.ru/about' },
+        ]}
+      />
       <Header />
 
       {/* Hero Section */}

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BreadcrumbJsonLd, FAQPageJsonLd } from '@/components/JsonLd'
 import { useLanguage } from '@/lib/i18n'
 import { getBlogPost, getAllBlogPosts } from '@/lib/blog'
 import { getAssetPath } from '@/lib/utils'
@@ -115,6 +116,16 @@ export default function BlogPostPage() {
 
   return (
     <main className="min-h-screen">
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Главная', url: 'https://3dgryz.ru' },
+          { name: 'Блог', url: 'https://3dgryz.ru/blog' },
+          { name: post.title[language], url: articleUrl },
+        ]}
+      />
+      {post.faqItems && post.faqItems.length > 0 && (
+        <FAQPageJsonLd items={post.faqItems} />
+      )}
       <ArticleJsonLd
         title={post.title[language]}
         description={post.excerpt[language]}

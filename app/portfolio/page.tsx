@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BreadcrumbJsonLd, CreativeWorkJsonLd } from '@/components/JsonLd'
 import { useLanguage } from '@/lib/i18n'
 import { getAssetPath } from '@/lib/utils'
 
@@ -43,6 +44,30 @@ export default function PortfolioPage() {
 
   return (
     <main className="min-h-screen">
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Главная', url: 'https://3dgryz.ru' },
+          { name: 'Портфолио', url: 'https://3dgryz.ru/portfolio' },
+        ]}
+      />
+      <CreativeWorkJsonLd
+        name="Бульдог — маскот для онлайн-казино"
+        description="Дерзкий, задорный и харизматичный маскот-персонаж, созданный полностью вручную. Полный персонаж с ригом, анимациями, баннерами и 3 вариантами одежды."
+        image="https://3dgryz.ru/portfolio/bulldog/cover.jpg"
+        url="https://3dgryz.ru/portfolio"
+      />
+      <CreativeWorkJsonLd
+        name="Барс Арс — маскот для курьерской службы"
+        description="Харизматичный маскот-персонаж снежного барса для курьерской службы. Стилизованный персонаж со стикер-паком для соцсетей."
+        image="https://3dgryz.ru/portfolio/bars/cover.jpg"
+        url="https://3dgryz.ru/portfolio"
+      />
+      <CreativeWorkJsonLd
+        name="Комната в стиле «Я краснею» — 3D окружение"
+        description="Стилизованное 3D-окружение, вдохновлённое визуальным стилем мультфильма Pixar. Полностью созданное вручную с высокой детализацией."
+        image="https://3dgryz.ru/portfolio/turning-red-room/cover.jpg"
+        url="https://3dgryz.ru/portfolio"
+      />
       <Header />
 
       {/* Hero Section */}

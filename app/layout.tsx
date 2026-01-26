@@ -4,6 +4,7 @@ import './globals.css'
 import { Providers } from '@/components/Providers'
 import { OrganizationJsonLd, WebSiteJsonLd, LocalBusinessJsonLd } from '@/components/JsonLd'
 import { YandexMetrika } from '@/components/YandexMetrika'
+import { CookieBanner } from '@/components/CookieBanner'
 
 const siteUrl = 'https://3dgryz.ru'
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     default: '3D.GRYZ - Превращаем идеи в высокодоходный визуальный контент',
     template: '%s | 3D.GRYZ',
   },
-  description: 'AI-ускоренное 3D производство для брендов и бизнеса. Создаём 3D маскоты, персонажи, визуализации и анимации. В среднем наши клиенты увеличивают вовлеченность на +240%',
+  description: '3D.GRYZ — студия AI-ускоренного 3D производства в Москве. Создаём 3D маскоты, персонажи, визуализации и анимации для брендов. Концепт за час, проект за дни. В среднем клиенты увеличивают вовлеченность на +240%.',
   keywords: [
     '3D визуализация',
     '3D моделирование',
@@ -36,6 +37,16 @@ export const metadata: Metadata = {
     'CGI',
     '3D для бизнеса',
     'AI 3D',
+    'заказать 3D маскот для бренда',
+    'создание анимации с помощью нейросетей',
+    'студия 3D анимации AI Москва',
+    '3D визуализация продуктов для маркетплейсов',
+    'создать 3D персонажа на заказ',
+    'AI ускоренное 3D производство',
+    '3D контент для соцсетей',
+    'нейросети для 3D моделирования',
+    'сколько стоит 3D визуализация',
+    '3D маскот цена',
   ],
   authors: [{ name: '3D.GRYZ Studio' }],
   creator: '3D.GRYZ',
@@ -125,28 +136,6 @@ export default function RootLayout({
         <OrganizationJsonLd />
         <WebSiteJsonLd />
         <LocalBusinessJsonLd />
-        {/* Yandex.Metrika counter */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-              m[i].l=1*new Date();
-              for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-              k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-              (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-              ym(106307550, 'init', {
-                clickmap:true,
-                trackLinks:true,
-                accurateTrackBounce:true,
-                webvisor:true,
-                ecommerce:'dataLayer'
-              });
-            `,
-          }}
-        />
-        <noscript>
-          <div><img src="https://mc.yandex.ru/watch/106307550" style={{ position: 'absolute', left: '-9999px' }} alt="" /></div>
-        </noscript>
       </head>
       <body>
         <Suspense fallback={null}>
@@ -154,7 +143,27 @@ export default function RootLayout({
         </Suspense>
         <Providers>
           {children}
+          <CookieBanner />
         </Providers>
+        <noscript>
+          <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', fontFamily: 'sans-serif', color: '#fff', backgroundColor: '#0A0A0F' }}>
+            <h1>3D.GRYZ — AI-ускоренное 3D производство для брендов</h1>
+            <p>3D.GRYZ — это студия 3D-графики нового поколения из Москвы. Мы создаём 3D маскоты, персонажи, анимации, продуктовые визуализации и рекламные видео для брендов и бизнеса. Используем искусственный интеллект для ускорения производства в 5-10 раз без потери качества.</p>
+            <h2>Наши услуги:</h2>
+            <ul>
+              <li>3D-персонажи и маскоты для брендов — разработка уникальных персонажей от концепта до финальной модели</li>
+              <li>Рекламные видео и анимации — 3D анимированные ролики для маркетинга, ТВ и digital</li>
+              <li>Контент для маркетинга — стикеры, AR-маски, анимированные посты для соцсетей</li>
+              <li>Игровые ассеты и метавселенные — персонажи, окружение и props для Unity/Unreal Engine</li>
+              <li>Продуктовая визуализация — фотореалистичные рендеры, 360° обзоры для e-commerce</li>
+              <li>3D-моделирование для печати — прототипы и инженерные детали</li>
+              <li>AI-ускоренное производство — генерация концептов, текстур, видео с помощью нейросетей</li>
+            </ul>
+            <h2>Почему 3D.GRYZ?</h2>
+            <p>150+ успешных проектов. Команда из 10-15 специалистов: 3D-художники, AI-инженеры, аниматоры. Бесплатный концепт за 1 час. Сроки в 5-10 раз быстрее традиционного производства.</p>
+            <p>Контакт: gryzlovstudio@gmail.com | Telegram: @ddd_gryz</p>
+          </div>
+        </noscript>
       </body>
     </html>
   )

@@ -236,6 +236,22 @@ main, section, div {
   animation: dots 1.5s steps(1) infinite;
 }
 
+/* Cookie banner slide-up animation */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
+}
+
 /* Duration utility for loading screen */
 .duration-600 {
   transition-duration: 600ms;

@@ -1,20 +1,51 @@
 'use client'
 
 import Script from 'next/script'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
 const METRIKA_ID = 106307550
+export const COOKIE_CONSENT_KEY = '3dgryz-cookie-consent'
+export const COOKIE_CONSENT_EVENT = 'cookie-consent-changed'
 
 export function YandexMetrika() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
+  const [consentGiven, setConsentGiven] = useState(false)
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.ym) {
+    // Check initial consent state
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY)
+    if (consent === 'accepted') {
+      setConsentGiven(true)
+    }
+
+    // Listen for consent changes
+    const handleConsentChange = () => {
+      const updated = localStorage.getItem(COOKIE_CONSENT_KEY)
+      if (updated === 'accepted') {
+        setConsentGiven(true)
+      }
+    }
+
+    window.addEventListener(COOKIE_CONSENT_EVENT, handleConsentChange)
+    window.addEventListener('storage', handleConsentChange)
+
+    return () => {
+      window.removeEventListener(COOKIE_CONSENT_EVENT, handleConsentChange)
+      window.removeEventListener('storage', handleConsentChange)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (consentGiven && typeof window !== 'undefined' && window.ym) {
       window.ym(METRIKA_ID, 'hit', window.location.href)
     }
-  }, [pathname, searchParams])
+  }, [pathname, searchParams, consentGiven])
+
+  if (!consentGiven) {
+    return null
+  }
 
   return (
     <>

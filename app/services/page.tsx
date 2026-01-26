@@ -3,13 +3,60 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FAQ from '@/components/FAQ'
+import { BreadcrumbJsonLd, ServiceJsonLd } from '@/components/JsonLd'
 import { useLanguage } from '@/lib/i18n'
+
+const services = [
+  {
+    name: '3D-персонажи и маскоты',
+    description: 'Разработка уникальных 3D персонажей и маскотов для брендов. От концепта и истории до финальной модели с ригом и анимациями. Брендовые персонажи, персонажи для игр, анимации и рекламы.',
+  },
+  {
+    name: 'Рекламные видео и анимации',
+    description: '3D анимированные видео для маркетинга и рекламы. Explainer videos, product animations, рекламные ролики для ТВ и digital, контент для соцсетей, motion graphics.',
+  },
+  {
+    name: 'Контент для маркетинга',
+    description: 'Engaging контент для социальных сетей: короткие видео для Reels/TikTok/Shorts, стикер-паки, AR-маски, анимированные посты, branded content, 3D-баннеры.',
+  },
+  {
+    name: 'Игровые ассеты и метавселенные',
+    description: 'Персонажи, окружение, props для игр и метавселенных. Оптимизированные модели для Unity и Unreal Engine с полной документацией. LOD-модели.',
+  },
+  {
+    name: 'Продуктовая визуализация',
+    description: 'Фотореалистичные рендеры продуктов, 360° обзоры, визуализация для e-commerce и маркетплейсов. Замена дорогих фотосессий.',
+  },
+  {
+    name: '3D-моделирование для печати',
+    description: 'Создание 3D-моделей для печати: прототипы продуктов, инженерные детали. Готовые файлы с учётом технических требований вашего принтера.',
+  },
+  {
+    name: 'AI-ускоренное производство',
+    description: 'Генерация сотен вариантов концептов, текстур, фонов с помощью AI. Концепт-арты, текстуры, стиль-трансфер, пакетная обработка, апскейлинг.',
+  },
+]
 
 export default function ServicesPage() {
   const { t } = useLanguage()
 
   return (
     <main className="min-h-screen">
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Главная', url: 'https://3dgryz.ru' },
+          { name: 'Услуги', url: 'https://3dgryz.ru/services' },
+        ]}
+      />
+      {services.map((service) => (
+        <ServiceJsonLd
+          key={service.name}
+          name={service.name}
+          description={service.description}
+        />
+      ))}
+
       <Header />
 
       {/* Hero Section */}
@@ -129,6 +176,13 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ
+        items={t.faq.services.items}
+        title={t.faq.services.title}
+        titleHighlight={t.faq.services.titleHighlight}
+      />
 
       {/* CTA */}
       <section className="py-24 px-4 md:px-6">

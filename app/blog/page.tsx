@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BreadcrumbJsonLd } from '@/components/JsonLd'
 import { useLanguage } from '@/lib/i18n'
 import { getAllBlogPosts } from '@/lib/blog'
 import { getAssetPath } from '@/lib/utils'
@@ -33,6 +34,12 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen">
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Главная', url: 'https://3dgryz.ru' },
+          { name: 'Блог', url: 'https://3dgryz.ru/blog' },
+        ]}
+      />
       <Header />
 
       {/* Hero */}

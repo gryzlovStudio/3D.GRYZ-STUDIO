@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FAQ from '@/components/FAQ'
+import { BreadcrumbJsonLd } from '@/components/JsonLd'
 import { useLanguage } from '@/lib/i18n'
 
 export default function AIContentPage() {
@@ -10,6 +12,12 @@ export default function AIContentPage() {
 
   return (
     <main className="min-h-screen">
+      <BreadcrumbJsonLd
+        items={[
+          { name: 'Главная', url: 'https://3dgryz.ru' },
+          { name: 'AI-контент', url: 'https://3dgryz.ru/ai-content' },
+        ]}
+      />
       <Header />
 
       {/* Hero Section */}
@@ -134,6 +142,13 @@ export default function AIContentPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ
+        items={t.faq.aiContent.items}
+        title={t.faq.aiContent.title}
+        titleHighlight={t.faq.aiContent.titleHighlight}
+      />
 
       {/* CTA */}
       <section className="py-24 px-4 md:px-6">

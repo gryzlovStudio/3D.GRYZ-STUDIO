@@ -536,6 +536,96 @@ The finished environment is suitable for animation projects, YouTube videos, com
     },
   },
 
+  // Cookie Banner
+  cookieBanner: {
+    text: 'We use cookies to improve site performance and analyze traffic.',
+    learnMore: 'Learn more',
+    accept: 'Accept',
+    decline: 'Decline',
+  },
+
+  // FAQ sections
+  faq: {
+    home: {
+      title: 'Frequently',
+      titleHighlight: 'Asked Questions',
+      items: [
+        {
+          question: 'What is 3D.GRYZ and what does the studio do?',
+          answer: '3D.GRYZ is an AI-accelerated 3D production studio based in Moscow. We create 3D mascots, characters, animations, product visualizations, and advertising videos for brands and businesses. We use neural networks and AI tools to speed up production by 5-10x.',
+        },
+        {
+          question: 'How much do 3D.GRYZ services cost?',
+          answer: 'Cost depends on project complexity. A 3D mascot starts from $600, product visualization from $70, advertising animation from $400. The first step is a free concept in 1 hour so you can evaluate quality before payment.',
+        },
+        {
+          question: 'How does AI accelerate 3D production?',
+          answer: 'We use neural networks (ComfyUI, Stable Diffusion, LoRA) for concept generation, textures, and animations. AI handles the routine — generating variations, creating textures, upscaling — while our 3D artists refine the result to perfection. Result: 5-10x shorter timelines, lower cost.',
+        },
+        {
+          question: 'What file formats do you deliver?',
+          answer: 'We work with all standard formats: FBX, OBJ, GLTF/GLB for 3D models; MP4, MOV for video; PNG, JPG, EXR for renders. Models are optimized for Unity, Unreal Engine, web viewing, and printing — depending on your needs.',
+        },
+        {
+          question: 'Can I order just concepts without a full project?',
+          answer: 'Yes, we create the first 3 concepts for free in 1 hour. If you only need concepts without further 3D development — that is also possible, we will discuss the terms.',
+        },
+      ],
+    },
+    services: {
+      title: 'Service',
+      titleHighlight: 'Questions',
+      items: [
+        {
+          question: 'What is the difference between a 3D mascot and a 3D character?',
+          answer: 'A mascot is a character created specifically for a brand: it conveys company values and is used in advertising, social media, websites, and merchandise. A 3D character is a broader concept: it can be a game hero, cartoon character, or any other project.',
+        },
+        {
+          question: 'What are the timelines for a 3D project?',
+          answer: 'Concept — 1 hour. Simple project (visualization, banners) — 3-7 days. Medium (mascot with rig, animation) — 2-3 weeks. Complex (character series, commercial) — 3-6 weeks. Thanks to AI, our timelines are 5-10x faster than traditional 3D.',
+        },
+        {
+          question: 'Is 3D visualization suitable for marketplaces?',
+          answer: 'Yes, absolutely. We create 3D product visualizations specifically for marketplaces: white background images, 360° views, infographics. Cards with 3D stand out from competitors and reduce returns.',
+        },
+        {
+          question: 'Do you use neural networks in AI production?',
+          answer: 'Yes, this is our core competency. We use ComfyUI Workflows, LoRA Training, Stable Diffusion, Wan 2.5, Kling 2.6, and other AI tools. AI generates concepts, textures, backgrounds, and video, while our specialists bring results to production quality.',
+        },
+        {
+          question: 'Do you work with international clients?',
+          answer: 'Yes, we work with clients from anywhere in the world. Our website is available in Russian and English. Communication via Telegram, email, or video calls.',
+        },
+      ],
+    },
+    aiContent: {
+      title: 'AI',
+      titleHighlight: 'Questions',
+      items: [
+        {
+          question: 'What neural networks do you use?',
+          answer: 'We use ComfyUI with custom Workflows, trained LoRA models, Stable Diffusion for image generation, Wan 2.5 and Kling 2.6 for video, Hunyuan and Tripo for 3D generation, as well as specialized tools for upscaling and post-processing.',
+        },
+        {
+          question: 'Will quality suffer when using AI?',
+          answer: 'No. AI accelerates routine processes — generating variations, creating textures, draft rendering. Final quality is ensured by our 3D artists with experience in Blender, Maya, and ZBrush. We combine AI and manual refinement for perfect results.',
+        },
+        {
+          question: 'How much faster is AI production compared to traditional?',
+          answer: '5-10x faster. If traditional concept art takes a week, with AI we create hundreds of variations in hours. A full project (mascot, animation) takes 2-3 weeks instead of 2-3 months.',
+        },
+        {
+          question: 'Can AI content be used commercially?',
+          answer: 'Yes, all content we create belongs to you and can be used for commercial purposes without restrictions: advertising, social media, website, print materials, marketplaces. We transfer all rights.',
+        },
+        {
+          question: 'How is your approach different from simply using neural networks?',
+          answer: 'We do not just generate images through Midjourney. Our approach is a professional AI pipeline: custom ComfyUI Workflows, trained LoRA models, combination of AI generation with classic 3D (Blender, ZBrush) and manual refinement. The result is production-ready content, not raw AI output.',
+        },
+      ],
+    },
+  },
+
   // Get Concept page
   getConcept: {
     hero: {
