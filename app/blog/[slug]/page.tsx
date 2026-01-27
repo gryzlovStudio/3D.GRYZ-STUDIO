@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -61,6 +62,35 @@ function ArticleJsonLd({
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
+  )
+}
+
+function FAQItem({ question, answer }: { question: string; answer: string }) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className="border border-white/10 rounded-xl overflow-hidden transition-colors hover:border-white/20">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between p-5 text-left"
+      >
+        <span className="font-bold text-base sm:text-lg pr-4">{question}</span>
+        <span
+          className={`text-accent-lime text-2xl flex-shrink-0 transition-transform duration-300 ${
+            isOpen ? 'rotate-45' : ''
+          }`}
+        >
+          +
+        </span>
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <p className="px-5 pb-5 text-text-secondary leading-relaxed">{answer}</p>
+      </div>
+    </div>
   )
 }
 
@@ -190,6 +220,20 @@ export default function BlogPostPage() {
               {post.content[language]}
             </ReactMarkdown>
           </div>
+
+          {/* FAQ Section */}
+          {post.faqItems && post.faqItems.length > 0 && (
+            <section className="mt-16" data-speakable="">
+              <h2 className="text-2xl sm:text-3xl font-black uppercase mb-8">
+                {language === 'ru' ? 'Вопросы и ответы' : 'Questions & Answers'}
+              </h2>
+              <div className="space-y-4">
+                {post.faqItems.map((item, index) => (
+                  <FAQItem key={index} question={item.question} answer={item.answer} />
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Tags */}
           {post.tags.length > 0 && (
