@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Suspense } from 'react'
 import './globals.css'
 import { Providers } from '@/components/Providers'
-import { OrganizationJsonLd, WebSiteJsonLd, LocalBusinessJsonLd } from '@/components/JsonLd'
+import { OrganizationJsonLd, WebSiteJsonLd, LocalBusinessJsonLd, WebPageSpeakableJsonLd } from '@/components/JsonLd'
 import { YandexMetrika } from '@/components/YandexMetrika'
 import { CookieBanner } from '@/components/CookieBanner'
 
@@ -133,9 +133,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+        {/* Разрешаем всем ботам (включая Яндекс Нейро) использовать большие сниппеты */}
+        <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <OrganizationJsonLd />
         <WebSiteJsonLd />
         <LocalBusinessJsonLd />
+        <WebPageSpeakableJsonLd />
       </head>
       <body>
         <Suspense fallback={null}>

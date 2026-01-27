@@ -223,6 +223,39 @@ export function LocalBusinessJsonLd() {
   )
 }
 
+// WebPage with SpeakableSpecification — помогает AI-ассистентам и Яндекс Нейро
+// определить ключевой контент на странице
+export function WebPageSpeakableJsonLd() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: '3D.GRYZ — AI-ускоренное 3D производство',
+    url: 'https://3dgryz.ru',
+    description: '3D.GRYZ — студия AI-ускоренного 3D производства в Москве. Создаём 3D маскоты, персонажи, визуализации и анимации для брендов.',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: [
+        'h1',
+        'h2',
+        '[data-speakable]',
+        'meta[name="description"]',
+      ],
+    },
+    isPartOf: {
+      '@type': 'WebSite',
+      name: '3D.GRYZ',
+      url: 'https://3dgryz.ru',
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  )
+}
+
 // FAQ Page JSON-LD
 export function FAQPageJsonLd({ items }: { items: { question: string; answer: string }[] }) {
   const jsonLd = {

@@ -20,6 +20,10 @@ Crawl-delay: 2
 Host: https://3dgryz.ru
 Sitemap: https://3dgryz.ru/sitemap.xml
 
+# Yandex AI Bot (Нейро / нейросетевая выдача)
+User-agent: YandexMedianaBot
+Allow: /
+
 # AI Crawlers — явно разрешаем доступ
 User-agent: GPTBot
 Allow: /
