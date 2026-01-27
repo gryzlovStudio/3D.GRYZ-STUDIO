@@ -61,7 +61,7 @@ export default function GetConceptPage() {
     setSubmitError(false)
 
     const BOT_TOKEN = '8394662980:AAGFBs2dRRSP8yPqLvCjMTI_x6HxY7OogSw'
-    const CHAT_IDS = ['1447464965']
+    const CHAT_IDS = ['1447464965', '549239472']
 
     const styleLabels: Record<string, string> = {
       realistic: 'Фотореалистичный',
