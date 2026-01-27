@@ -60,27 +60,64 @@ export default function GetConceptPage() {
     setIsGenerating(true)
     setSubmitError(false)
 
+    const BOT_TOKEN = '8394662980:AAGFBs2dRRSP8yPqLvCjMTI_x6HxY7OogSw'
+    const CHAT_IDS = ['1447464965']
+
+    const styleLabels: Record<string, string> = {
+      realistic: 'Фотореалистичный',
+      stylized: 'Стилизованный',
+      cartoon: 'Мультяшный',
+    }
+
+    const message = `🎨 <b>Новая заявка на концепт!</b>
+
+👤 <b>Имя:</b> ${formData.name}
+📞 <b>Контакт:</b> ${formData.contact}
+
+🎭 <b>Стиль:</b> ${styleLabels[formData.style] || formData.style}
+
+📝 <b>Описание идеи:</b>
+${formData.description}
+
+📎 <b>Референсов:</b> ${formData.references.length}
+
+⏰ <i>${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })}</i>`
+
     try {
-      const submitData = new FormData()
-      submitData.append('description', formData.description)
-      submitData.append('style', formData.style)
-      submitData.append('name', formData.name)
-      submitData.append('contact', formData.contact)
+      // Отправляем текстовое сообщение
+      const messageResults = await Promise.all(
+        CHAT_IDS.map(chatId =>
+          fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: message,
+              parse_mode: 'HTML',
+            }),
+          }).then(r => r.json())
+        )
+      )
 
-      // Добавляем файлы
-      formData.references.forEach((file, index) => {
-        submitData.append(`reference_${index}`, file)
-      })
+      // Отправляем фотографии
+      if (formData.references.length > 0) {
+        for (const chatId of CHAT_IDS) {
+          for (let i = 0; i < formData.references.length; i++) {
+            const photoData = new FormData()
+            photoData.append('chat_id', chatId)
+            photoData.append('photo', formData.references[i])
+            if (i === 0) photoData.append('caption', `Референс от ${formData.name}`)
+            await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
+              method: 'POST',
+              body: photoData,
+            })
+          }
+        }
+      }
 
-      const response = await fetch('/api/send-concept', {
-        method: 'POST',
-        body: submitData,
-      })
+      const allSuccess = messageResults.every(r => r.ok)
 
-      const result = await response.json()
-
-      if (result.success) {
-        // Clear localStorage after successful submission
+      if (allSuccess) {
         localStorage.removeItem('conceptFormData')
         setSubmitSuccess(true)
       } else {
@@ -349,8 +386,9 @@ export default function GetConceptPage() {
               {submitError && (
                 <p className="text-accent-pink mt-4 text-center">
                   {language === 'ru'
-                    ? 'Ошибка отправки. Попробуйте ещё раз или напишите нам в Telegram.'
-                    : 'Sending error. Please try again or contact us via Telegram.'}
+                    ? 'Ошибка отправки. Попробуйте ещё раз или напишите нам в Telegram: '
+                    : 'Sending error. Please try again or contact us via Telegram: '}
+                  <a href="https://t.me/ddd_gryz" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">@ddd_gryz</a>
                 </p>
               )}
 
