@@ -23,6 +23,456 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ai-content-cost',
+    title: {
+      ru: 'Сколько стоит AI-контент для бизнеса в 2026 году: полный гид по ценам',
+      en: 'How Much Does AI Content Cost for Business in 2026: Complete Pricing Guide',
+    },
+    excerpt: {
+      ru: 'Актуальные цены на AI-контент в России: видео, изображения, нейро-аватары, анимации. Сравниваем с традиционным производством и показываем, где AI экономит бюджет.',
+      en: 'Current AI content pricing: video, images, neural avatars, animations. We compare with traditional production and show where AI saves your budget.',
+    },
+    content: {
+      ru: `
+AI-контент — это изображения, видео, анимации и другие визуальные материалы, созданные с использованием нейросетей и генеративных моделей. В 2026 году рынок AI-контента в России вырос более чем в 3 раза по сравнению с 2024 годом: бизнес массово переходит на нейросети для производства рекламы, карточек товаров и контента для социальных сетей.
+
+Почему компании выбирают AI-контент:
+
+- **Скорость** — готовый ролик или визуал за часы, а не недели
+- **Стоимость** — в 2-5 раз дешевле традиционного продакшена
+- **Масштабируемость** — легко адаптировать под разные форматы и площадки
+- **Гибкость** — быстрые правки без пересъёмки и нового рендера
+
+В этой статье разберём актуальные цены на все виды AI-контента, сравним с классическим производством и расскажем, как выбрать подрядчика.
+
+
+
+
+## Виды AI-контента и средние цены в 2026 году
+
+Стоимость зависит от типа контента, его сложности и требований к качеству. Ниже — актуальная таблица цен на российском рынке.
+
+### Таблица цен по типам AI-контента
+
+| Тип контента | Что входит | Цена |
+|-------------|-----------|------|
+| **AI-видео (ролики, explainer)** | Рекламные ролики, объясняющие видео, product-видео | от 15 000 ₽ |
+| **AI-изображения (рендеры, баннеры)** | Продуктовые визуалы, баннеры, ключевые изображения | от 2 000 ₽ |
+| **Нейро-аватары (цифровые спикеры)** | Виртуальный ведущий, говорящая голова для обучения и рекламы | от 25 000 ₽ |
+| **AI-анимации (motion, персонажи)** | Анимированные ролики, motion-графика, персонажная анимация | от 20 000 ₽ |
+| **AI-контент для соцсетей** | Серии постов, сторис, карусели, Reels-адаптации | от 5 000 ₽ |
+
+> **Важно:** Цены указаны за единицу контента при профессиональном продакшене с промт-инженерингом и постобработкой. Самостоятельная генерация через открытые нейросети обойдётся дешевле, но качество и коммерческая пригодность будут ниже.
+
+
+### Расширенная таблица цен
+
+| Услуга | Базовая цена | Средняя цена | Премиум |
+|--------|-------------|-------------|---------|
+| AI-видео до 30 сек | от 15 000 ₽ | 30 000 – 60 000 ₽ | от 80 000 ₽ |
+| AI-видео 30–60 сек | от 25 000 ₽ | 50 000 – 100 000 ₽ | от 150 000 ₽ |
+| AI-изображение (1 шт.) | от 2 000 ₽ | 5 000 – 10 000 ₽ | от 15 000 ₽ |
+| Серия AI-изображений (5–10 шт.) | от 8 000 ₽ | 20 000 – 40 000 ₽ | от 60 000 ₽ |
+| Нейро-аватар (настройка + 1 мин видео) | от 25 000 ₽ | 40 000 – 70 000 ₽ | от 100 000 ₽ |
+| AI-анимация до 15 сек | от 20 000 ₽ | 35 000 – 60 000 ₽ | от 80 000 ₽ |
+| Пакет для соцсетей (10 единиц) | от 15 000 ₽ | 30 000 – 50 000 ₽ | от 70 000 ₽ |
+
+
+
+
+## Что влияет на стоимость AI-контента
+
+### 1. Сложность и длительность контента
+
+Главный фактор цены — объём работы. 10-секундный product-ролик и 60-секундный explainer с озвучкой — это разные задачи и разные бюджеты.
+
+**Примеры:**
+- Статичное AI-изображение товара на фоне — минимальная цена
+- 15-секундный анимированный ролик с текстовыми подложками — средний сегмент
+- Полноценный рекламный ролик с нейро-аватаром и сценарием — премиум
+
+### 2. Уровень постобработки
+
+Сырой результат нейросети редко подходит для коммерческого использования напрямую. Качественный AI-контент требует:
+
+- Цветокоррекции и грейдинга
+- Ретуши артефактов
+- Композитинга и монтажа
+- Добавления типографики и брендинга
+- Адаптации под разные форматы (вертикальный, горизонтальный, квадратный)
+
+### 3. Необходимость сценария и концепции
+
+Если нужен не просто визуал, а продуманная коммуникация — добавляется стоимость разработки сценария, раскадровки и креативной концепции. Это может составлять 20–40% от общей стоимости.
+
+### 4. Количество итераций и правок
+
+Стандартные 2-3 раунда правок обычно включены в стоимость. Но AI-контент часто требует тонкой настройки промтов и перегенерации — и если клиент хочет попасть в точный образ, количество итераций растёт.
+
+### 5. Лицензирование и права
+
+Использование некоторых AI-моделей имеет лицензионные ограничения. Коммерческая лицензия на контент, генерированный через определённые платформы, может потребовать дополнительных расходов.
+
+
+
+
+## AI-контент vs традиционное производство
+
+Одно из главных преимуществ AI — значительная экономия по сравнению с классическим продакшеном.
+
+| Критерий | Традиционный продакшен | AI-продакшен |
+|----------|----------------------|-------------|
+| **Рекламный ролик 30 сек** | 200 000 – 1 000 000 ₽ | 30 000 – 100 000 ₽ |
+| **Продуктовый визуал** | 10 000 – 30 000 ₽ | 2 000 – 10 000 ₽ |
+| **Серия баннеров (5 шт.)** | 25 000 – 80 000 ₽ | 8 000 – 25 000 ₽ |
+| **Видео с ведущим (1 мин)** | 100 000 – 500 000 ₽ | 25 000 – 70 000 ₽ |
+| **Анимированный ролик** | 150 000 – 600 000 ₽ | 20 000 – 80 000 ₽ |
+| **Время производства** | 2–6 недель | 1–5 дней |
+| **Стоимость правок** | Высокая (пересъёмка) | Низкая (перегенерация) |
+| **Масштабирование** | Линейный рост затрат | Минимальный рост затрат |
+
+### Когда AI-контент выигрывает
+
+- Нужно быстро запустить рекламу — ролик за 1-3 дня, а не за месяц
+- Большой объём контента — 50 карточек товаров дешевле генерить, чем снимать
+- Тестирование гипотез — проверить 10 креативов за стоимость одного классического
+- Персонализация — адаптация под разные аудитории и языки
+
+### Когда лучше классический продакшен
+
+- Нужна живая съёмка реальных людей и объектов
+- Требуется уникальный авторский стиль с полным контролем
+- Контент должен восприниматься как «не AI» (некоторые B2B-сегменты)
+- Юридические требования к оригинальности контента
+
+
+
+
+## Где AI-контент экономит деньги бизнесу
+
+### E-commerce и маркетплейсы
+
+AI-визуализация товаров позволяет:
+- Создавать карточки без физических образцов (для предзаказов)
+- Генерировать инфографику и lifestyle-визуалы по 2 000–5 000 ₽ за штуку
+- Быстро обновлять контент под сезонные акции
+
+### Социальные сети
+
+Ежедневный контент для Instagram, TikTok, VK:
+- Серия из 10 постов — от 15 000 ₽ вместо 50 000+ ₽ за дизайнера + фотографа
+- Reels и short-видео — от 5 000 ₽ за ролик вместо 30 000+ ₽ за видеографа
+- Быстрая адаптация под тренды — AI сгенерирует вариант за часы
+
+### Реклама и перформанс-маркетинг
+
+AI особенно эффективен для:
+- A/B-тестирования креативов — 10 вариантов по цене одного
+- Ретаргетинговых кампаний — персонализированные визуалы
+- Контекстной рекламы — быстрая адаптация баннеров под разные сегменты
+
+
+
+
+## Как выбрать подрядчика для AI-контента
+
+### Чек-лист при выборе исполнителя
+
+1. **Портфолио AI-работ** — смотрите именно AI-проекты, а не только классические. Хороший AI-продакшен выглядит так, что вы не отличите от реального
+2. **Постобработка включена** — уточните, входит ли ретушь, цветокоррекция и адаптация форматов в стоимость
+3. **Коммерческие права** — убедитесь, что получаете полные права на использование контента
+4. **Сценарий и концепция** — спросите, помогает ли подрядчик с креативной частью или работает только по ТЗ
+5. **Стек инструментов** — профессионалы используют комбинацию нескольких нейросетей и ручной постобработки
+6. **Сроки и правки** — сколько раундов правок включено, каков реальный срок
+
+### Красные флаги
+
+- Обещания «любой контент за 1 000 ₽» — скорее всего, без постобработки
+- Отсутствие портфолио коммерческих AI-проектов
+- Нежелание показывать процесс работы
+- Отсутствие договора и гарантий на коммерческие права
+
+
+
+
+## Этапы создания AI-контента в 3D.GRYZ
+
+### 1. Бриф и оценка (бесплатно)
+
+Обсуждаем задачу, целевую аудиторию, площадки размещения. Определяем тип контента и бюджет. Подбираем оптимальный стек AI-инструментов.
+
+### 2. Разработка концепции и сценария
+
+Создаём креативную концепцию, раскадровку для видео или мудборд для визуалов. Согласовываем стиль, тон и ключевые сообщения.
+
+### 3. Генерация и промт-инженеринг
+
+Профессиональная работа с нейросетями: подбор моделей, настройка параметров, многоэтапная генерация с контролем качества на каждом шаге.
+
+### 4. Постобработка и доработка
+
+Ретушь артефактов, цветокоррекция, композитинг, добавление типографики и брендинга. Именно этот этап отличает профессиональный AI-контент от любительского.
+
+### 5. Адаптация и финализация
+
+Подготовка контента под все нужные форматы и платформы. Финальное согласование и передача готовых файлов.
+
+
+
+
+## Получите бесплатную оценку вашего AI-проекта
+
+Не знаете, сколько будет стоить AI-контент для вашего бизнеса?
+
+Мы бесплатно:
+- Оценим объём и стоимость
+- Предложим оптимальный формат и стек AI-инструментов
+- Подготовим 3 варианта концепта за 1 час
+
+[Оставить заявку на бесплатную оценку](/get-concept)
+
+
+
+
+*Цены актуальны на январь 2026 года и могут отличаться в зависимости от специфики проекта.*
+      `,
+      en: `
+AI content refers to images, videos, animations, and other visual materials created using neural networks and generative models. In 2026, the AI content market has grown more than threefold compared to 2024: businesses are massively adopting neural networks for producing ads, product cards, and social media content.
+
+Why companies choose AI content:
+
+- **Speed** — finished video or visual in hours, not weeks
+- **Cost** — 2-5x cheaper than traditional production
+- **Scalability** — easy to adapt for different formats and platforms
+- **Flexibility** — quick edits without reshooting or re-rendering
+
+In this article, we'll break down current prices for all types of AI content, compare with traditional production, and explain how to choose the right provider.
+
+
+
+
+## Types of AI Content and Average Prices in 2026
+
+Cost depends on content type, complexity, and quality requirements. Below are current market prices.
+
+### Pricing Table by AI Content Type
+
+| Content Type | What's Included | Price |
+|-------------|----------------|-------|
+| **AI video (ads, explainers)** | Promotional videos, explainer videos, product videos | from $200 |
+| **AI images (renders, banners)** | Product visuals, banners, key visuals | from $25 |
+| **Neural avatars (digital speakers)** | Virtual presenter, talking head for training and ads | from $330 |
+| **AI animations (motion, characters)** | Animated clips, motion graphics, character animation | from $260 |
+| **AI social media content** | Post series, stories, carousels, Reels adaptations | from $65 |
+
+> **Important:** Prices are per content unit with professional production including prompt engineering and post-processing. Self-generation through open neural networks will cost less, but quality and commercial viability will be lower.
+
+
+### Detailed Pricing Table
+
+| Service | Base Price | Average Price | Premium |
+|---------|-----------|--------------|---------|
+| AI video up to 30 sec | from $200 | $400 – $800 | from $1,050 |
+| AI video 30–60 sec | from $330 | $650 – $1,300 | from $2,000 |
+| AI image (1 pc.) | from $25 | $65 – $130 | from $200 |
+| AI image series (5–10 pcs.) | from $105 | $260 – $530 | from $800 |
+| Neural avatar (setup + 1 min video) | from $330 | $530 – $920 | from $1,300 |
+| AI animation up to 15 sec | from $260 | $460 – $800 | from $1,050 |
+| Social media package (10 units) | from $200 | $400 – $650 | from $920 |
+
+
+
+
+## What Affects AI Content Cost
+
+### 1. Complexity and Content Length
+
+The main price factor is the scope of work. A 10-second product clip and a 60-second explainer with voiceover are different tasks with different budgets.
+
+**Examples:**
+- Static AI product image on a background — minimum price
+- 15-second animated clip with text overlays — mid-range
+- Full promotional video with neural avatar and script — premium
+
+### 2. Level of Post-Processing
+
+Raw neural network output rarely works for commercial use directly. Quality AI content requires:
+
+- Color correction and grading
+- Artifact retouching
+- Compositing and editing
+- Adding typography and branding
+- Format adaptation (vertical, horizontal, square)
+
+### 3. Need for Script and Concept
+
+If you need not just a visual but a well-thought-out communication — the cost of script development, storyboarding, and creative concept is added. This can be 20-40% of the total cost.
+
+### 4. Number of Iterations and Revisions
+
+Standard 2-3 revision rounds are usually included in the price. But AI content often requires fine-tuning prompts and regeneration — if the client wants to hit the exact look, the number of iterations increases.
+
+### 5. Licensing and Rights
+
+Some AI models have licensing restrictions. Commercial licenses for content generated through certain platforms may require additional expenses.
+
+
+
+
+## AI Content vs Traditional Production
+
+One of AI's main advantages is significant savings compared to traditional production.
+
+| Criteria | Traditional Production | AI Production |
+|----------|----------------------|---------------|
+| **30-sec ad** | $2,500 – $13,000 | $400 – $1,300 |
+| **Product visual** | $130 – $400 | $25 – $130 |
+| **Banner series (5 pcs.)** | $330 – $1,050 | $105 – $330 |
+| **Video with presenter (1 min)** | $1,300 – $6,500 | $330 – $920 |
+| **Animated clip** | $2,000 – $8,000 | $260 – $1,050 |
+| **Production time** | 2–6 weeks | 1–5 days |
+| **Revision cost** | High (reshoot) | Low (regeneration) |
+| **Scaling** | Linear cost growth | Minimal cost growth |
+
+### When AI Content Wins
+
+- Need to launch ads quickly — video in 1-3 days, not a month
+- Large content volume — 50 product cards are cheaper to generate than photograph
+- Hypothesis testing — test 10 creatives for the cost of one traditional piece
+- Personalization — adaptation for different audiences and languages
+
+### When Traditional Production Is Better
+
+- Need live footage of real people and objects
+- Unique authorial style with full control required
+- Content must be perceived as "not AI" (some B2B segments)
+- Legal requirements for content originality
+
+
+
+
+## Where AI Content Saves Business Money
+
+### E-commerce and Marketplaces
+
+AI product visualization enables:
+- Creating product cards without physical samples (for pre-orders)
+- Generating infographics and lifestyle visuals for $25-$65 each
+- Quickly updating content for seasonal promotions
+
+### Social Media
+
+Daily content for Instagram, TikTok, YouTube:
+- Series of 10 posts — from $200 instead of $650+ for a designer + photographer
+- Reels and short videos — from $65 per clip instead of $400+ for a videographer
+- Quick trend adaptation — AI generates a variant in hours
+
+### Advertising and Performance Marketing
+
+AI is especially effective for:
+- A/B testing creatives — 10 variants for the price of one
+- Retargeting campaigns — personalized visuals
+- Display advertising — quick banner adaptation for different segments
+
+
+
+
+## How to Choose an AI Content Provider
+
+### Checklist for Choosing a Provider
+
+1. **AI work portfolio** — look at AI projects specifically, not just traditional work. Good AI production looks indistinguishable from real content
+2. **Post-processing included** — clarify whether retouching, color correction, and format adaptation are included in the price
+3. **Commercial rights** — make sure you receive full rights to use the content
+4. **Script and concept** — ask if the provider helps with the creative part or works only from a brief
+5. **Tool stack** — professionals use a combination of several neural networks and manual post-processing
+6. **Timeline and revisions** — how many revision rounds are included, what's the realistic timeline
+
+### Red Flags
+
+- Promises of "any content for $15" — likely without post-processing
+- No portfolio of commercial AI projects
+- Unwillingness to show the work process
+- No contract or guarantees on commercial rights
+
+
+
+
+## AI Content Creation Stages at 3D.GRYZ
+
+### 1. Brief and Estimation (Free)
+
+We discuss the task, target audience, and placement platforms. We determine content type and budget. We select the optimal AI tool stack.
+
+### 2. Concept and Script Development
+
+We create the creative concept, storyboard for video, or mood board for visuals. We align on style, tone, and key messages.
+
+### 3. Generation and Prompt Engineering
+
+Professional work with neural networks: model selection, parameter tuning, multi-stage generation with quality control at every step.
+
+### 4. Post-Processing and Refinement
+
+Artifact retouching, color correction, compositing, adding typography and branding. This stage is what separates professional AI content from amateur output.
+
+### 5. Adaptation and Finalization
+
+Preparing content for all required formats and platforms. Final approval and delivery of finished files.
+
+
+
+
+## Get a Free Estimate for Your AI Project
+
+Not sure how much AI content will cost for your business?
+
+We will free of charge:
+- Evaluate scope and cost
+- Suggest optimal format and AI tool stack
+- Prepare 3 concept options in 1 hour
+
+[Submit a Request for Free Estimate](/get-concept)
+
+
+
+
+*Prices are current as of January 2026 and may vary depending on project specifics.*
+      `,
+    },
+    author: '3D.GRYZ',
+    publishedAt: '2026-01-28',
+    coverImage: '/blog/ai-content-cost.jpg',
+    tags: ['AI-контент', 'нейросети', 'AI-видео', 'нейро-аватар', 'цены', 'маркетинг'],
+    readingTime: 12,
+    faqItems: [
+      {
+        question: 'Сколько стоит AI-видео для рекламы?',
+        answer: 'Стоимость AI-видео зависит от длительности и сложности: короткий ролик до 30 секунд — от 15 000 ₽, ролик 30–60 секунд — от 25 000 ₽, премиальный ролик со сценарием и постобработкой — от 80 000 ₽. Для сравнения: аналогичный традиционный продакшен обойдётся в 200 000 – 1 000 000 ₽.',
+      },
+      {
+        question: 'Чем AI-контент отличается от обычного 3D?',
+        answer: 'AI-контент создаётся с помощью генеративных нейросетей (Midjourney, Sora, Runway и др.), а классический 3D — через ручное моделирование, текстурирование и рендеринг. AI быстрее и дешевле для многих задач, но 3D даёт полный контроль над каждым элементом сцены. В 3D.GRYZ мы комбинируем оба подхода для лучшего результата.',
+      },
+      {
+        question: 'Можно ли использовать AI-контент на маркетплейсах?',
+        answer: 'Да, AI-контент полностью подходит для маркетплейсов — Wildberries, Ozon, Яндекс.Маркет. Главное — качество финального изображения, а не способ его создания. При профессиональной постобработке AI-визуалы неотличимы от классических рендеров и фотографий.',
+      },
+      {
+        question: 'Заменяет ли AI живых дизайнеров и аниматоров?',
+        answer: 'Нет, AI — это инструмент, который ускоряет работу профессионалов. Нейросеть генерирует черновой материал, но креативная концепция, промт-инженеринг, постобработка и контроль качества по-прежнему требуют человеческой экспертизы. AI снижает стоимость и сроки, но не заменяет специалистов.',
+      },
+      {
+        question: 'Как быстро можно получить готовый AI-контент?',
+        answer: 'Сроки зависят от типа контента: AI-изображение — от 1 рабочего дня, серия визуалов для соцсетей — 2-3 дня, AI-видео — 3-5 дней, сложный проект с нейро-аватаром — 5-7 дней. Это в 3-5 раз быстрее традиционного продакшена.',
+      },
+      {
+        question: 'Что нужно предоставить для создания AI-контента?',
+        answer: 'Минимум: описание задачи и референсы желаемого стиля. В идеале: фотографии продукта, брендбук (логотип, цвета, шрифты), примеры контента конкурентов, который нравится, и описание целевой аудитории. Чем подробнее бриф — тем точнее результат.',
+      },
+    ],
+  },
+  {
     slug: '3d-product-visualization-cost',
     title: {
       ru: 'Сколько стоит 3D визуализация продукта в 2026 году: полный гид по ценам',
