@@ -5,7 +5,7 @@
 Сайт студии 3D.GRYZ: **https://3dgryz.ru**
 
 - **Стек:** Next.js 15, React, TypeScript, Tailwind CSS
-- **Рендеринг:** Static export (`output: 'export'`)
+- **Рендеринг:** Static export (`output: 'export'`) — **API-роуты НЕ работают** на продакшене
 - **Репозиторий:** https://github.com/gryzlovStudio/3D.GRYZ-STUDIO.git (ветка `main`)
 - **Деплой:** GitHub Pages, автоматический через GitHub Actions при пуше в `main`
 - **Языки:** Русский (основной) + English
@@ -37,6 +37,15 @@
 - Любая полезная информация для следующей сессии
 
 Файл всегда должен содержать **актуальное** состояние проекта.
+
+## Telegram-бот для заявок
+
+- **Бот:** `@dgryz_webform_bot` (токен: `8394662980:AAGFBs2dRRSP8yPqLvCjMTI_x6HxY7OogSw`)
+- **Получатели заявок:**
+  - `1447464965` — Анастасия (`@nastya_parr`)
+  - `549239472` — Danil Gryzlov (`@dgryzlov`)
+- **Контактный Telegram студии:** `@ddd_gryz`
+- **Реализация:** Клиентская отправка напрямую в Telegram Bot API из браузера (файл `app/get-concept/page.tsx`). Серверный API-роут `/api/send-concept` **не используется** — он не работает на статическом хостинге GitHub Pages.
 
 ## Яндекс.Вебмастер — переиндексация
 
@@ -97,8 +106,9 @@ curl -s -H "Authorization: OAuth $TOKEN" "$BASE/recrawl/quota"
 │   ├── portfolio/           # Портфолио
 │   ├── services/            # Услуги
 │   ├── ai-content/          # AI-контент
-│   ├── get-concept/         # CTA-форма
+│   ├── get-concept/         # CTA-форма (отправка в Telegram из браузера)
 │   ├── about/               # О студии
+│   ├── api/send-concept/    # НЕ ИСПОЛЬЗУЕТСЯ на проде (static export)
 │   └── layout.tsx           # Корневой layout
 ├── components/              # React-компоненты
 │   ├── JsonLd.tsx           # Schema.org разметка
@@ -137,3 +147,7 @@ curl -s -H "Authorization: OAuth $TOKEN" "$BASE/recrawl/quota"
 - JSON-LD схемы: Organization, WebSite, LocalBusiness, Article, FAQPage, Breadcrumb
 - RSS-фид: `/feed.xml`
 - Trailing slashes включены в конфигурации Next.js
+
+## Известные ограничения
+
+- **Static export** (`output: 'export'`) — серверные API-роуты и middleware не работают на продакшене. Вся серверная логика (отправка форм и т.д.) должна быть реализована на клиенте или через внешние сервисы.
