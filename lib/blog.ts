@@ -23,6 +23,1082 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ar-3d-fitting-wildberries',
+    title: {
+      ru: 'AR и 3D примерка на Wildberries: как подготовить 3D модели товаров',
+      en: 'AR and 3D Try-On for Wildberries: How to Prepare 3D Product Models',
+    },
+    excerpt: {
+      ru: 'Полный гайд по AR-примерке на маркетплейсах: технические требования Wildberries и Ozon, форматы 3D-моделей, стоимость подготовки и реальные кейсы роста конверсии.',
+      en: 'Complete guide to AR try-on for marketplaces: Wildberries and Ozon technical requirements, 3D model formats, preparation costs, and real conversion growth cases.',
+    },
+    content: {
+      ru: `
+AR-примерка — одна из самых быстрорастущих технологий в e-commerce. Wildberries, Ozon и Яндекс.Маркет активно внедряют 3D-просмотр и дополненную реальность, позволяя покупателям «примерить» товар до покупки. Для селлера это означает рост конверсии на 20–40% и снижение возвратов. Но чтобы подключить AR, нужна правильно подготовленная 3D-модель.
+
+В этой статье — всё, что нужно знать о 3D-моделях для AR-примерки на российских маркетплейсах: форматы, технические требования, стоимость, этапы подготовки и реальные результаты.
+
+
+
+## Что такое AR-примерка и как она работает
+
+AR (Augmented Reality) — технология дополненной реальности, которая позволяет покупателю «поместить» виртуальный товар в реальное пространство через камеру смартфона.
+
+### Как покупатель видит AR-примерку:
+
+1. Открывает карточку товара на Wildberries или Ozon
+2. Нажимает кнопку «Посмотреть в AR» или «Примерить»
+3. Наводит камеру на комнату, руку или лицо
+4. Видит товар в реальном масштабе в своём пространстве
+
+### Какие товары поддерживают AR:
+
+| Категория | Тип примерки | Примеры |
+|-----------|-------------|---------|
+| **Мебель** | Размещение в комнате | Диваны, столы, полки, кресла |
+| **Декор** | Размещение на стене/столе | Картины, вазы, светильники |
+| **Обувь** | Примерка на ногу | Кроссовки, туфли, ботинки |
+| **Аксессуары** | Примерка на тело | Часы, очки, сумки |
+| **Электроника** | Размещение на столе | Колонки, наушники, гаджеты |
+| **Бытовая техника** | Размещение в интерьере | Кофемашины, пылесосы, увлажнители |
+
+
+
+## Требования маркетплейсов к 3D-моделям
+
+Каждый маркетплейс устанавливает собственные технические требования к 3D-моделям для AR.
+
+### Wildberries — технические требования:
+
+| Параметр | Требование |
+|----------|-----------|
+| **Формат файла** | GLB (glTF Binary) |
+| **Максимальный размер** | 15 МБ |
+| **Полигонов** | до 100 000 |
+| **Текстуры** | до 2048×2048 px (JPG/PNG) |
+| **Масштаб** | Реальный (1 единица = 1 метр) |
+| **Ось** | Y — вверх |
+| **Материалы** | PBR (metallic-roughness) |
+
+### Ozon — технические требования:
+
+| Параметр | Требование |
+|----------|-----------|
+| **Формат файла** | GLB |
+| **Максимальный размер** | 20 МБ |
+| **Полигонов** | до 150 000 |
+| **Текстуры** | до 4096×4096 px |
+| **Масштаб** | Реальный |
+| **Анимации** | Поддерживаются (необязательно) |
+
+### Яндекс.Маркет:
+
+На данный момент Яндекс.Маркет тестирует 3D-просмотр в формате GLB для ряда категорий, требования аналогичны Ozon.
+
+### Общий формат — GLB:
+
+GLB (glTF Binary) — стандартный формат для веб- и мобильного 3D. Он содержит геометрию, текстуры и материалы в одном файле. Все крупные маркетплейсы поддерживают именно GLB.
+
+
+
+## Как создать 3D-модель для AR: пошаговый процесс
+
+### Шаг 1. Сбор референсов
+
+Что нужно предоставить студии:
+- Фото товара с 6–8 сторон (можно смартфоном)
+- Габаритные размеры (длина, ширина, высота)
+- Информация о материалах и цветах
+- Технический чертёж (если есть)
+- Желаемые цветовые варианты
+
+### Шаг 2. 3D-моделирование
+
+Создание точной геометрии товара в 3D-программе:
+- **Blender** — бесплатный, профессиональный
+- **3ds Max** — отраслевой стандарт
+- **Cinema 4D** — для продуктового дизайна
+
+Модель создаётся в высоком разрешении (high-poly), затем оптимизируется до нужного количества полигонов.
+
+### Шаг 3. Текстурирование
+
+Нанесение реалистичных текстур и материалов:
+- **Базовый цвет** (Albedo) — основной цвет поверхности
+- **Нормали** (Normal Map) — имитация рельефа
+- **Roughness** — шероховатость материала
+- **Metallic** — металличность
+- **AO** (Ambient Occlusion) — затенение в складках
+
+Все текстуры создаются в PBR-стандарте (Physically Based Rendering), который обеспечивает реалистичное отображение при любом освещении.
+
+### Шаг 4. Оптимизация
+
+Ключевой этап для AR — модель должна быстро загружаться на смартфоне:
+- Уменьшение полигонов до 50 000–100 000
+- Компрессия текстур до 1024×1024 или 2048×2048
+- Удаление невидимых элементов
+- Проверка масштаба (1:1 к реальному товару)
+
+### Шаг 5. Экспорт в GLB
+
+Финальная конвертация в формат GLB с проверкой:
+- Размер файла в пределах лимита
+- Корректное отображение на мобильных устройствах
+- Тестирование в AR-просмотрщике
+
+### Шаг 6. Загрузка на маркетплейс
+
+Загрузка GLB-файла в карточку товара через личный кабинет продавца.
+
+
+
+## Стоимость подготовки 3D-моделей для AR
+
+Цены зависят от сложности товара и количества моделей:
+
+| Категория товара | Стоимость 1 модели | Срок | Что входит |
+|-----------------|-------------------|------|-----------|
+| **Простой предмет** (коробка, бутылка) | от 8 000 ₽ | 2–3 дня | Модель + текстуры + GLB |
+| **Средняя сложность** (обувь, гаджет) | от 15 000 ₽ | 4–5 дней | Модель + PBR + оптимизация |
+| **Сложный предмет** (мебель, техника) | от 25 000 ₽ | 5–7 дней | Детальная модель + все карты |
+| **Ювелирные изделия** | от 20 000 ₽ | 5–7 дней | Высокая детализация + рефлексы |
+| **Одежда на манекене** | от 30 000 ₽ | 7–10 дней | Драпировка + текстуры ткани |
+
+### Пакетные предложения:
+
+| Пакет | Количество | Скидка | Итоговая цена за модель |
+|-------|-----------|--------|------------------------|
+| **Стартовый** | 3–5 моделей | 10% | от 7 200 ₽ |
+| **Бизнес** | 10–20 моделей | 20% | от 6 400 ₽ |
+| **Корпоративный** | 30+ моделей | 35% | от 5 200 ₽ |
+
+### Что ещё влияет на стоимость:
+
+- **Количество цветовых вариантов** — +1 000–2 000 ₽ за цвет
+- **Анимация** (открытие крышки, поворот) — +5 000–10 000 ₽
+- **Высокая детализация** (ювелирные изделия, текстуры кожи) — +30–50% к базовой цене
+- **Срочность** (менее 2 дней) — +50% к базовой цене
+
+
+
+## Реальные результаты AR-примерки: данные и кейсы
+
+### Статистика конверсии:
+
+| Показатель | Без AR | С AR-примеркой | Изменение |
+|-----------|--------|---------------|----------|
+| **Конверсия в покупку** | 2,5% | 3,8% | +52% |
+| **Процент возвратов** | 15–25% | 8–12% | −40–50% |
+| **Время на карточке** | 35 сек | 1 мин 20 сек | +130% |
+| **Средний чек** | Базовый | +12–18% | Рост |
+| **Добавление в избранное** | Базовый | +25% | Рост |
+
+### Какие категории выигрывают больше всего:
+
+1. **Мебель** — покупатели хотят увидеть размер в своей комнате. Снижение возвратов на 40–60%
+2. **Обувь** — виртуальная примерка на ноге. Рост конверсии на 30–40%
+3. **Электроника** — оценка размера гаджета в руке. Рост конверсии на 20–30%
+4. **Декор** — картины и светильники на стене. Снижение возвратов на 30–40%
+5. **Аксессуары** — часы, очки на лице. Рост вовлечённости на 50–70%
+
+
+
+## Частые ошибки при подготовке 3D-моделей для AR
+
+### 1. Неправильный масштаб
+
+Самая распространённая ошибка — модель отображается в AR не в реальном размере. Диван становится размером с кружку, а часы — размером с тарелку. Решение: проверять масштаб 1:1 перед экспортом.
+
+### 2. Слишком тяжёлая модель
+
+Файл весит 50+ МБ — не загружается на маркетплейс, тормозит на смартфоне. Оптимальный вес — 3–8 МБ для мобильного AR.
+
+### 3. Некорректные текстуры
+
+Текстуры не в PBR-стандарте: металл выглядит как пластик, ткань — как бумага. Нужны все PBR-карты: albedo, normal, roughness, metallic.
+
+### 4. Отсутствие AO (Ambient Occlusion)
+
+Без карты затенения модель выглядит «плоской» — нет глубины в складках и стыках деталей.
+
+### 5. Неоптимизированная геометрия
+
+Модель с миллионом полигонов — избыточно для мобильного AR. Оптимум: 50 000–100 000 полигонов с нормал-картой для имитации деталей.
+
+
+
+## Одна модель — десяток форматов контента
+
+Главное преимущество 3D для маркетплейсов: из одной модели можно получить весь визуальный контент для карточки товара.
+
+| Формат контента | Из 3D-модели? | Дополнительная стоимость |
+|----------------|:------------:|------------------------|
+| **AR-примерка** (GLB) | ✅ | Включена |
+| **Рендеры на белом фоне** | ✅ | от 500 ₽/ракурс |
+| **Инфографика** | ✅ | от 2 000 ₽/слайд |
+| **360° обзор** | ✅ | от 3 000 ₽ |
+| **Видеообзор** (анимация) | ✅ | от 5 000 ₽ |
+| **Фото в интерьере** (CGI) | ✅ | от 3 000 ₽/сцена |
+| **Баннер для рекламы** | ✅ | от 2 000 ₽ |
+
+Вместо того чтобы заказывать фотосъёмку, инфографику, видео и AR отдельно — одна 3D-модель закрывает все потребности карточки.
+
+
+
+## Как начать: пошаговая инструкция для селлера
+
+1. **Выберите товары** — начните с топ-5 товаров с самым высоким процентом возвратов или самой низкой конверсией
+2. **Соберите референсы** — сфотографируйте товар с 6–8 сторон, подготовьте размеры
+3. **Обратитесь в студию** — отправьте референсы и ТЗ, получите оценку
+4. **Получите модели** — студия создаст 3D-модели и оптимизирует их для GLB
+5. **Загрузите на маркетплейс** — добавьте GLB-файл в карточку товара
+6. **Отслеживайте метрики** — сравните конверсию и возвраты до и после AR
+
+**Студия 3D.GRYZ** создаёт 3D-модели для AR-примерки на Wildberries, Ozon и других маркетплейсах. От простых товаров до сложной мебели и ювелирных изделий — [получите бесплатную оценку проекта](/get-concept/).
+      `,
+      en: `
+AR try-on is one of the fastest-growing technologies in e-commerce. Wildberries, Ozon, and Yandex Market are actively implementing 3D viewing and augmented reality, allowing buyers to "try on" products before purchasing. For sellers, this means a 20–40% increase in conversion and a reduction in returns. But to enable AR, you need a properly prepared 3D model.
+
+In this article — everything you need to know about 3D models for AR try-on on Russian marketplaces: formats, technical requirements, cost, preparation stages, and real results.
+
+
+
+## What Is AR Try-On and How Does It Work
+
+AR (Augmented Reality) is a technology that allows a buyer to "place" a virtual product in real space through a smartphone camera.
+
+### How a buyer sees AR try-on:
+
+1. Opens the product card on Wildberries or Ozon
+2. Taps the "View in AR" or "Try On" button
+3. Points the camera at the room, hand, or face
+4. Sees the product at real scale in their space
+
+### Which products support AR:
+
+| Category | Try-on type | Examples |
+|----------|------------|---------|
+| **Furniture** | Room placement | Sofas, tables, shelves, chairs |
+| **Decor** | Wall/table placement | Paintings, vases, lamps |
+| **Footwear** | Foot try-on | Sneakers, heels, boots |
+| **Accessories** | Body try-on | Watches, glasses, bags |
+| **Electronics** | Desk placement | Speakers, headphones, gadgets |
+| **Home appliances** | Interior placement | Coffee machines, vacuums, humidifiers |
+
+
+
+## Marketplace Requirements for 3D Models
+
+Each marketplace has its own technical requirements for AR 3D models.
+
+### Wildberries — technical requirements:
+
+| Parameter | Requirement |
+|-----------|-----------|
+| **File format** | GLB (glTF Binary) |
+| **Maximum size** | 15 MB |
+| **Polygons** | up to 100,000 |
+| **Textures** | up to 2048×2048 px (JPG/PNG) |
+| **Scale** | Real (1 unit = 1 meter) |
+| **Axis** | Y — up |
+| **Materials** | PBR (metallic-roughness) |
+
+### Ozon — technical requirements:
+
+| Parameter | Requirement |
+|-----------|-----------|
+| **File format** | GLB |
+| **Maximum size** | 20 MB |
+| **Polygons** | up to 150,000 |
+| **Textures** | up to 4096×4096 px |
+| **Scale** | Real |
+| **Animations** | Supported (optional) |
+
+### Yandex Market:
+
+Yandex Market is currently testing 3D viewing in GLB format for select categories, with requirements similar to Ozon.
+
+### Common format — GLB:
+
+GLB (glTF Binary) is the standard format for web and mobile 3D. It contains geometry, textures, and materials in a single file. All major marketplaces support GLB.
+
+
+
+## How to Create a 3D Model for AR: Step-by-Step
+
+### Step 1. Gathering references
+
+What to provide the studio:
+- Photos of the product from 6–8 angles (smartphone photos work)
+- Overall dimensions (length, width, height)
+- Material and color information
+- Technical drawings (if available)
+- Desired color variants
+
+### Step 2. 3D modeling
+
+Creating precise product geometry in a 3D program:
+- **Blender** — free, professional
+- **3ds Max** — industry standard
+- **Cinema 4D** — for product design
+
+The model is created in high resolution (high-poly), then optimized to the required polygon count.
+
+### Step 3. Texturing
+
+Applying realistic textures and materials:
+- **Base color** (Albedo) — main surface color
+- **Normals** (Normal Map) — surface relief simulation
+- **Roughness** — material roughness
+- **Metallic** — metallicity
+- **AO** (Ambient Occlusion) — shadow in folds
+
+All textures are created in PBR standard (Physically Based Rendering), ensuring realistic display under any lighting.
+
+### Step 4. Optimization
+
+A critical step for AR — the model must load quickly on smartphones:
+- Reducing polygons to 50,000–100,000
+- Compressing textures to 1024×1024 or 2048×2048
+- Removing invisible elements
+- Verifying scale (1:1 to real product)
+
+### Step 5. GLB export
+
+Final conversion to GLB format with checks:
+- File size within limits
+- Correct display on mobile devices
+- Testing in an AR viewer
+
+### Step 6. Upload to marketplace
+
+Uploading the GLB file to the product card through the seller's dashboard.
+
+
+
+## Cost of Preparing 3D Models for AR
+
+Prices depend on product complexity and number of models:
+
+| Product category | Cost per model | Timeline | What's included |
+|-----------------|---------------|---------|----------------|
+| **Simple object** (box, bottle) | from $90 | 2–3 days | Model + textures + GLB |
+| **Medium complexity** (shoes, gadget) | from $170 | 4–5 days | Model + PBR + optimization |
+| **Complex object** (furniture, appliance) | from $280 | 5–7 days | Detailed model + all maps |
+| **Jewelry** | from $225 | 5–7 days | High detail + reflections |
+| **Clothing on mannequin** | from $340 | 7–10 days | Draping + fabric textures |
+
+### Package deals:
+
+| Package | Quantity | Discount | Final price per model |
+|---------|---------|---------|----------------------|
+| **Starter** | 3–5 models | 10% | from $80 |
+| **Business** | 10–20 models | 20% | from $72 |
+| **Corporate** | 30+ models | 35% | from $58 |
+
+### Additional cost factors:
+
+- **Color variants** — +$11–22 per color
+- **Animation** (lid opening, rotation) — +$56–112
+- **High detail** (jewelry, leather textures) — +30–50% to base price
+- **Rush orders** (under 2 days) — +50% to base price
+
+
+
+## Real AR Try-On Results: Data and Cases
+
+### Conversion statistics:
+
+| Metric | Without AR | With AR try-on | Change |
+|--------|-----------|---------------|--------|
+| **Purchase conversion** | 2.5% | 3.8% | +52% |
+| **Return rate** | 15–25% | 8–12% | −40–50% |
+| **Time on card** | 35 sec | 1 min 20 sec | +130% |
+| **Average order value** | Baseline | +12–18% | Growth |
+| **Added to favorites** | Baseline | +25% | Growth |
+
+### Which categories benefit most:
+
+1. **Furniture** — buyers want to see the size in their room. Return reduction 40–60%
+2. **Footwear** — virtual try-on on foot. Conversion growth 30–40%
+3. **Electronics** — assessing gadget size in hand. Conversion growth 20–30%
+4. **Decor** — paintings and lamps on the wall. Return reduction 30–40%
+5. **Accessories** — watches, glasses on face. Engagement growth 50–70%
+
+
+
+## Common Mistakes in Preparing 3D Models for AR
+
+### 1. Incorrect scale
+
+The most common mistake — the model displays in AR at the wrong size. A sofa appears mug-sized, and a watch appears plate-sized. Solution: verify 1:1 scale before export.
+
+### 2. Model is too heavy
+
+File weighs 50+ MB — won't upload to the marketplace, lags on smartphones. Optimal weight: 3–8 MB for mobile AR.
+
+### 3. Incorrect textures
+
+Textures not in PBR standard: metal looks like plastic, fabric looks like paper. All PBR maps needed: albedo, normal, roughness, metallic.
+
+### 4. Missing AO (Ambient Occlusion)
+
+Without shadow mapping, the model looks "flat" — no depth in folds and joints.
+
+### 5. Unoptimized geometry
+
+A model with a million polygons is excessive for mobile AR. Optimal: 50,000–100,000 polygons with normal map for detail simulation.
+
+
+
+## One Model — A Dozen Content Formats
+
+The main advantage of 3D for marketplaces: from one model, you can generate all visual content for the product card.
+
+| Content format | From 3D model? | Additional cost |
+|---------------|:--------------:|----------------|
+| **AR try-on** (GLB) | ✅ | Included |
+| **White background renders** | ✅ | from $6/angle |
+| **Infographics** | ✅ | from $22/slide |
+| **360° view** | ✅ | from $34 |
+| **Video review** (animation) | ✅ | from $56 |
+| **Photo in interior** (CGI) | ✅ | from $34/scene |
+| **Ad banner** | ✅ | from $22 |
+
+Instead of ordering photography, infographics, video, and AR separately — one 3D model covers all product card needs.
+
+
+
+## How to Start: Step-by-Step Guide for Sellers
+
+1. **Choose products** — start with your top 5 products with the highest return rate or lowest conversion
+2. **Collect references** — photograph the product from 6–8 angles, prepare dimensions
+3. **Contact a studio** — send references and brief, get an estimate
+4. **Receive models** — the studio will create and optimize 3D models for GLB
+5. **Upload to marketplace** — add the GLB file to the product card
+6. **Track metrics** — compare conversion and returns before and after AR
+
+**3D.GRYZ studio** creates 3D models for AR try-on on Wildberries, Ozon, and other marketplaces. From simple products to complex furniture and jewelry — [get a free project estimate](/get-concept/).
+      `,
+    },
+    author: '3D.GRYZ Studio',
+    publishedAt: '2026-01-28',
+    coverImage: '/blog/ar-3d-fitting-wildberries.jpg',
+    tags: ['AR', '3D примерка', 'Wildberries', 'Ozon', 'маркетплейсы', '3D модели', 'e-commerce'],
+    readingTime: 14,
+    faqItems: [
+      {
+        question: 'Какой формат 3D-модели нужен для AR на Wildberries?',
+        answer: 'Wildberries принимает 3D-модели в формате GLB (glTF Binary) — это стандартный формат для веб- и мобильного 3D. Максимальный размер файла — 15 МБ, до 100 000 полигонов, текстуры до 2048×2048 px. Модель должна быть в PBR-стандарте с реальным масштабом (1 единица = 1 метр).',
+      },
+      {
+        question: 'Сколько стоит 3D-модель для AR-примерки?',
+        answer: 'Стоимость зависит от сложности товара: простой предмет (коробка, бутылка) — от 8 000 ₽, средняя сложность (обувь, гаджет) — от 15 000 ₽, сложный предмет (мебель, техника) — от 25 000 ₽. При заказе от 10 моделей действует скидка 20%, от 30 моделей — 35%.',
+      },
+      {
+        question: 'Как AR-примерка влияет на продажи?',
+        answer: 'По статистике маркетплейсов, AR-примерка увеличивает конверсию в покупку на 30–52%, снижает возвраты на 40–50%, увеличивает средний чек на 12–18% и повышает время просмотра карточки на 130%. Наибольший эффект — в категориях мебели и обуви.',
+      },
+      {
+        question: 'Можно ли использовать одну 3D-модель для AR и обычных рендеров?',
+        answer: 'Да, это главное преимущество 3D-подхода. Из одной модели можно получить: AR-примерку (GLB), рендеры на белом фоне, инфографику, 360° обзор, видеообзор с анимацией, фото в интерьере (CGI) и баннеры для рекламы.',
+      },
+      {
+        question: 'Какие товары больше всего выигрывают от AR?',
+        answer: 'Наибольший эффект от AR — у мебели (снижение возвратов на 40–60%), обуви (рост конверсии на 30–40%), электроники (рост конверсии на 20–30%) и декора (снижение возвратов на 30–40%). AR особенно полезна для товаров, где покупателю важно оценить размер и внешний вид в реальном пространстве.',
+      },
+      {
+        question: 'Что нужно предоставить для создания 3D-модели для AR?',
+        answer: 'Достаточно фото товара с 6–8 сторон (подойдут фото со смартфона), габаритных размеров (длина, ширина, высота), информации о материалах и цветах. Технические чертежи — опционально, но ускоряют процесс. Физический образец не нужен.',
+      },
+    ],
+  },
+  {
+    slug: '3d-visualization-ai-content-trends-2026',
+    title: {
+      ru: '10 трендов 3D визуализации и AI-контента в 2026 году',
+      en: '10 Trends in 3D Visualization and AI Content in 2026',
+    },
+    excerpt: {
+      ru: 'Главные тренды 3D визуализации и AI-контента в 2026: нейросетевой рендеринг, генеративные текстуры, AR-коммерция, AI-видео и цифровые аватары. Что внедрять уже сейчас.',
+      en: 'Top 3D visualization and AI content trends for 2026: neural rendering, generative textures, AR commerce, AI video, and digital avatars. What to adopt now.',
+    },
+    content: {
+      ru: `
+Рынок 3D визуализации и AI-контента в 2026 году переживает взрывной рост. Нейросети генерируют фотореалистичные изображения за секунды, AR-примерка становится стандартом маркетплейсов, а цифровые аватары ведут вебинары и рекламные ролики.
+
+В этой статье — 10 ключевых трендов, которые уже меняют правила игры в визуальном контенте. Для каждого тренда — что это, зачем бизнесу, и сколько стоит внедрение.
+
+
+
+## Тренд 1. Нейросетевой рендеринг (AI-Assisted Rendering)
+
+Нейросети больше не просто генерируют картинки — они ускоряют профессиональный 3D-рендеринг в 5–10 раз.
+
+### Как это работает:
+
+Классический рендер одного кадра высокого качества занимает 15–60 минут. AI-рендеринг использует нейросеть для «додумывания» деталей: вместо полного расчёта каждого луча света, рендерится черновик, который AI дорабатывает до фотореалистичного результата.
+
+| Параметр | Классический рендер | AI-рендеринг |
+|----------|-------------------|-------------|
+| **Время на кадр** | 15–60 минут | 2–10 минут |
+| **Качество** | Эталонное | 95–98% от эталона |
+| **Стоимость серверов** | Высокая | В 3–5 раз ниже |
+| **Видеоролик 30 сек** | 2–3 дня | 4–8 часов |
+
+### Для бизнеса:
+
+- Снижение стоимости 3D-рендеров на 30–50%
+- Ускорение производства контента
+- Возможность заказать больше вариантов за тот же бюджет
+
+**Студия 3D.GRYZ** уже использует AI-рендеринг в работе — это позволяет делать проекты быстрее и дешевле.
+
+
+
+## Тренд 2. Генеративные текстуры и материалы
+
+AI генерирует реалистичные текстуры дерева, ткани, камня и металла по текстовому описанию.
+
+### Инструменты 2026 года:
+
+- **Substance 3D (Adobe)** — генерация текстур по промту
+- **Polycam AI** — создание текстур из фото
+- **Stable Diffusion (текстурные модели)** — бесшовные PBR-карты
+
+### Влияние на стоимость:
+
+| Тип текстуры | Ручная работа | AI-генерация |
+|-------------|-------------|-------------|
+| **Простая (пластик, металл)** | 2 000–3 000 ₽ | 500–1 000 ₽ |
+| **Средняя (дерево, ткань)** | 4 000–6 000 ₽ | 1 000–2 000 ₽ |
+| **Сложная (кожа, камень с прожилками)** | 8 000–12 000 ₽ | 2 000–4 000 ₽ |
+
+AI-генерация текстур сокращает этот этап работы на 50–70%, но финальная доработка всё ещё требует человека.
+
+
+
+## Тренд 3. AR-коммерция как стандарт маркетплейсов
+
+AR-примерка из «фишки» превращается в стандартное требование для продавцов.
+
+### Что происходит в 2026:
+
+- **Wildberries** — активно расширяет категории с 3D-просмотром
+- **Ozon** — поддерживает GLB-модели для мебели, обуви, электроники
+- **Яндекс.Маркет** — тестирует 3D-просмотр
+- **AliExpress** — 3D-просмотр для премиум-продавцов
+
+### Почему это важно:
+
+| Показатель | Обычная карточка | Карточка с AR |
+|-----------|-----------------|-------------|
+| **Конверсия** | 2–3% | 4–5% |
+| **Возвраты** | 15–25% | 8–12% |
+| **Время просмотра** | 30 сек | 1,5 мин |
+
+Селлеры, которые внедрят AR в 2026, получат преимущество перед конкурентами. К 2027–2028 это станет обязательным для топ-категорий.
+
+
+
+## Тренд 4. AI-видео для e-commerce
+
+Нейросети научились генерировать коммерческое видео на уровне, пригодном для рекламы.
+
+### Форматы AI-видео в 2026:
+
+- **Видеообзор товара** — 360° анимация продукта с подписями
+- **Лайфстайл-ролик** — товар в интерьере или в действии
+- **Рекламный клип** — 15–30 сек для VK Ads, Яндекс.Директ
+- **Reels/Shorts** — вертикальное видео для соцсетей
+
+### Стоимость AI-видео:
+
+| Формат | Классическое производство | AI-продакшен | Экономия |
+|--------|--------------------------|-------------|---------|
+| **Видеообзор 15 сек** | от 30 000 ₽ | от 10 000 ₽ | 67% |
+| **Лайфстайл-ролик 30 сек** | от 80 000 ₽ | от 25 000 ₽ | 69% |
+| **Рекламный клип 30 сек** | от 150 000 ₽ | от 40 000 ₽ | 73% |
+| **Серия из 5 Reels** | от 100 000 ₽ | от 25 000 ₽ | 75% |
+
+Качество AI-видео в 2026 году достаточно для маркетплейсов и соцсетей, но для премиум-рекламы по-прежнему нужен классический продакшен.
+
+
+
+## Тренд 5. Цифровые аватары и нейро-ведущие
+
+Цифровые аватары — виртуальные ведущие, которые говорят, жестикулируют и выглядят как реальные люди. В 2026 году они стали доступны малому и среднему бизнесу.
+
+### Где используют нейро-аватаров:
+
+- **Обучающие видео** — инструкции, онбординг сотрудников
+- **Видеоподкасты** — корпоративные новости, дайджесты
+- **Рекламные ролики** — товарные обзоры, продвижение
+- **Презентации** — питч-деки с видеовставками
+- **E-commerce** — видеообзоры товаров на маркетплейсах
+
+### Стоимость нейро-аватаров:
+
+| Формат | Стоимость | Срок |
+|--------|----------|------|
+| **Базовый аватар** (существующий шаблон) | от 5 000 ₽/мин | 1–2 дня |
+| **Кастомный аватар** (по фото) | от 15 000 ₽ + 5 000 ₽/мин | 3–5 дней |
+| **3D-аватар** (полностью уникальный) | от 50 000 ₽ + 8 000 ₽/мин | 7–14 дней |
+| **Клонирование голоса** | от 10 000 ₽ (единоразово) | 2–3 дня |
+
+Подробнее о нейро-аватарах для бизнеса — в нашей [статье о цифровых ведущих](/blog/neural-avatars-for-business/).
+
+
+
+## Тренд 6. Фотограмметрия + AI (сканирование реальных объектов)
+
+Фотограмметрия — технология создания 3D-модели из фотографий реального объекта. В 2026 году AI ускорил этот процесс в 10 раз.
+
+### Как это работает:
+
+1. Снимаете объект на смартфон (30–100 фото по кругу)
+2. Загружаете в сервис (Polycam, RealityScan, Meshroom)
+3. AI обрабатывает фото и создаёт 3D-модель за 5–30 минут
+4. Модель готова для рендеров, AR и каталогов
+
+### Сравнение методов:
+
+| Метод | Стоимость | Качество | Скорость |
+|-------|----------|---------|---------|
+| **Ручное 3D-моделирование** | от 8 000 ₽ | Идеальное | 3–7 дней |
+| **Фотограмметрия (ручная обработка)** | от 5 000 ₽ | Высокое | 1–3 дня |
+| **Фотограмметрия + AI** | от 2 000 ₽ | Хорошее | 2–4 часа |
+| **NeRF / Gaussian Splatting** | от 3 000 ₽ | Высокое (для просмотра) | 1–4 часа |
+
+Для массового каталога товаров фотограмметрия + AI — самый быстрый и дешёвый способ получить 3D-модели.
+
+
+
+## Тренд 7. Интерактивные 3D-конфигураторы
+
+3D-конфигуратор позволяет покупателю собрать товар «под себя» прямо на сайте: выбрать цвет, материал, размер и увидеть результат в реальном времени.
+
+### Применения:
+
+- **Мебель** — выбор обивки, цвета каркаса, размера
+- **Обувь** — кастомизация цветов, материалов
+- **Электроника** — комплектация, цветовые варианты
+- **Одежда** — принты, цвета, размеры
+- **Ювелирные изделия** — металл, камень, гравировка
+
+### Стоимость разработки:
+
+| Сложность | Что входит | Стоимость |
+|-----------|-----------|----------|
+| **Базовый** | 3–5 вариантов цвета/материала | от 50 000 ₽ |
+| **Средний** | 10+ вариантов, 2–3 параметра | от 120 000 ₽ |
+| **Продвинутый** | Полная кастомизация, AR-превью | от 250 000 ₽ |
+
+3D-конфигураторы увеличивают средний чек на 15–30% и снижают возвраты на 25–40%.
+
+
+
+## Тренд 8. AI-инфографика для маркетплейсов
+
+Нейросети автоматизируют создание инфографики — главного визуального формата на Wildberries и Ozon.
+
+### Что умеют AI-сервисы в 2026:
+
+| Функция | Ручная работа | AI-сервис |
+|---------|-------------|----------|
+| **Удаление фона** | 10–30 мин | 5–10 сек |
+| **Генерация фона** | 30–60 мин | 10–30 сек |
+| **Добавление подписей** | 15–30 мин | 1–5 мин |
+| **Создание карусели** | 2–4 часа | 15–30 мин |
+| **A/B варианты** | × стоимость | +5 мин на вариант |
+
+### Популярные AI-сервисы:
+
+- **Fabula AI** — полный цикл инфографики для WB/Ozon
+- **WonderCard** — шаблоны с AI-генерацией
+- **Magvi** — автоматическая инфографика
+- **Midjourney / DALL-E** — генерация фонов и сцен
+
+AI-инфографика стоит в 3–5 раз дешевле ручной работы дизайнера и создаётся в 10 раз быстрее.
+
+
+
+## Тренд 9. GEO — оптимизация для AI-поисковиков
+
+GEO (Generative Engine Optimization) — новая дисциплина: оптимизация контента для нейросетевых поисковиков: Яндекс Нейро, ChatGPT, Perplexity.
+
+### Чем GEO отличается от SEO:
+
+| Параметр | Классический SEO | GEO |
+|----------|-----------------|-----|
+| **Цель** | Попасть в топ-10 выдачи | Быть процитированным нейросетью |
+| **Формат ответа** | Ссылка на сайт | Цитата + ссылка |
+| **Контент** | Ключевые слова, H1-H6 | Прямые ответы, факты, цифры |
+| **Структура** | Длинные тексты | FAQ, таблицы, сравнения |
+| **Ссылки** | Обратные ссылки важны | Экспертность и уникальность данных |
+| **Бренд** | Домен в выдаче | Название бренда в ответе AI |
+
+### Как оптимизировать для GEO:
+
+1. Добавляйте FAQ с прямыми ответами на популярные вопросы
+2. Используйте конкретные цифры: цены, сроки, проценты
+3. Создавайте сравнительные таблицы — AI легче их извлекает
+4. Упоминайте бренд в контексте ответов
+5. Используйте JSON-LD для структурированных данных
+
+Все статьи блога 3D.GRYZ оптимизированы для GEO — мы используем FAQ, таблицы и структурированные данные для максимальной видимости в AI-поисковиках.
+
+
+
+## Тренд 10. Гибридный продакшен: AI + человек
+
+Самый главный тренд 2026 года — не замена людей на AI, а гибридный подход. AI ускоряет рутину, человек контролирует качество и креатив.
+
+### Как выглядит гибридный продакшен:
+
+| Этап | Кто делает | Экономия |
+|------|-----------|---------|
+| **Генерация идей и мудбордов** | AI + арт-директор | 60% времени |
+| **Создание текстур** | AI + 3D-художник | 50% времени |
+| **Черновой рендеринг** | AI-рендерер | 70% времени |
+| **Доработка и ретушь** | Дизайнер | — |
+| **Контроль качества** | Арт-директор | — |
+| **AI-видео (черновик)** | Нейросеть | 80% времени |
+| **Финальный монтаж** | Видеограф | — |
+
+### Итоговое влияние на стоимость:
+
+| Подход | Стоимость проекта | Качество | Скорость |
+|--------|------------------|---------|---------|
+| **Полностью вручную** | 100% (базовая) | Эталонное | 1x |
+| **AI-ассист (гибрид)** | 40–60% от базовой | 95–98% | 2–3x быстрее |
+| **Полностью AI** | 15–25% от базовой | 70–85% | 5–10x быстрее |
+
+Для коммерческого контента оптимален гибридный подход: экономия 40–60% при качестве, неотличимом от ручной работы.
+
+
+
+## Что внедрять уже сейчас
+
+### Для маркетплейсов:
+
+1. **AI-инфографика** — экономит 60–80% на визуальном контенте
+2. **3D-модели для AR** — конкурентное преимущество, которое скоро станет стандартом
+3. **AI-видео** — видеообзоры товаров для карточек
+
+### Для бизнеса в целом:
+
+4. **Нейро-аватары** — для обучения, контента, рекламы
+5. **GEO-оптимизация** — чтобы бренд появлялся в ответах AI-поисковиков
+6. **3D-конфигураторы** — для сайтов с кастомизируемыми товарами
+
+**Студия 3D.GRYZ** работает на пересечении 3D визуализации и AI-технологий. Мы создаём контент с использованием всех актуальных инструментов — от нейросетевого рендеринга до AI-видео и цифровых аватаров. [Получите бесплатную оценку вашего проекта](/get-concept/).
+      `,
+      en: `
+The 3D visualization and AI content market is experiencing explosive growth in 2026. Neural networks generate photorealistic images in seconds, AR try-on is becoming a marketplace standard, and digital avatars host webinars and advertising videos.
+
+In this article — 10 key trends already changing the rules of visual content. For each trend: what it is, why business needs it, and how much implementation costs.
+
+
+
+## Trend 1. Neural Rendering (AI-Assisted Rendering)
+
+Neural networks no longer just generate images — they accelerate professional 3D rendering by 5–10x.
+
+### How it works:
+
+A classic high-quality render takes 15–60 minutes per frame. AI rendering uses a neural network to "fill in" details: instead of calculating every ray of light, a draft is rendered, which AI refines to a photorealistic result.
+
+| Parameter | Classic render | AI rendering |
+|-----------|---------------|-------------|
+| **Time per frame** | 15–60 minutes | 2–10 minutes |
+| **Quality** | Reference | 95–98% of reference |
+| **Server costs** | High | 3–5x lower |
+| **30-sec video** | 2–3 days | 4–8 hours |
+
+### For business:
+
+- 30–50% reduction in 3D render costs
+- Faster content production
+- Ability to order more variants for the same budget
+
+**3D.GRYZ studio** already uses AI rendering — this allows us to deliver projects faster and cheaper.
+
+
+
+## Trend 2. Generative Textures and Materials
+
+AI generates realistic textures of wood, fabric, stone, and metal from text descriptions.
+
+### 2026 tools:
+
+- **Substance 3D (Adobe)** — prompt-based texture generation
+- **Polycam AI** — texture creation from photos
+- **Stable Diffusion (texture models)** — seamless PBR maps
+
+### Cost impact:
+
+| Texture type | Manual work | AI generation |
+|-------------|------------|--------------|
+| **Simple (plastic, metal)** | $22–34 | $6–11 |
+| **Medium (wood, fabric)** | $45–67 | $11–22 |
+| **Complex (leather, veined stone)** | $90–135 | $22–45 |
+
+AI texture generation reduces this stage by 50–70%, but final refinement still requires a human.
+
+
+
+## Trend 3. AR Commerce as Marketplace Standard
+
+AR try-on is evolving from a "nice feature" to a standard requirement for sellers.
+
+### What's happening in 2026:
+
+- **Wildberries** — actively expanding 3D viewing categories
+- **Ozon** — supports GLB models for furniture, shoes, electronics
+- **Yandex Market** — testing 3D viewing
+- **AliExpress** — 3D viewing for premium sellers
+
+### Why it matters:
+
+| Metric | Standard card | Card with AR |
+|--------|-------------|-------------|
+| **Conversion** | 2–3% | 4–5% |
+| **Returns** | 15–25% | 8–12% |
+| **View time** | 30 sec | 1.5 min |
+
+Sellers who adopt AR in 2026 will gain an advantage over competitors. By 2027–2028, it will be mandatory for top categories.
+
+
+
+## Trend 4. AI Video for E-Commerce
+
+Neural networks have learned to generate commercial video at an advertising-ready level.
+
+### AI video formats in 2026:
+
+- **Product review** — 360° product animation with labels
+- **Lifestyle video** — product in interior or in action
+- **Ad clip** — 15–30 sec for advertising platforms
+- **Reels/Shorts** — vertical video for social media
+
+### AI video costs:
+
+| Format | Traditional production | AI production | Savings |
+|--------|----------------------|-------------|---------|
+| **15-sec review** | from $340 | from $112 | 67% |
+| **30-sec lifestyle** | from $900 | from $280 | 69% |
+| **30-sec ad clip** | from $1,700 | from $450 | 73% |
+| **Series of 5 Reels** | from $1,120 | from $280 | 75% |
+
+AI video quality in 2026 is sufficient for marketplaces and social media, but premium advertising still requires traditional production.
+
+
+
+## Trend 5. Digital Avatars and Neural Presenters
+
+Digital avatars are virtual presenters that speak, gesture, and look like real people. In 2026, they became accessible to small and medium businesses.
+
+### Where neural avatars are used:
+
+- **Training videos** — instructions, employee onboarding
+- **Video podcasts** — corporate news, digests
+- **Advertising** — product reviews, promotion
+- **Presentations** — pitch decks with video inserts
+- **E-commerce** — product video reviews on marketplaces
+
+### Neural avatar costs:
+
+| Format | Cost | Timeline |
+|--------|------|---------|
+| **Basic avatar** (existing template) | from $56/min | 1–2 days |
+| **Custom avatar** (from photo) | from $170 + $56/min | 3–5 days |
+| **3D avatar** (fully unique) | from $560 + $90/min | 7–14 days |
+| **Voice cloning** | from $112 (one-time) | 2–3 days |
+
+Learn more about neural avatars for business in our [article about digital presenters](/blog/neural-avatars-for-business/).
+
+
+
+## Trend 6. Photogrammetry + AI (Scanning Real Objects)
+
+Photogrammetry creates 3D models from photographs of real objects. In 2026, AI accelerated this process 10x.
+
+### How it works:
+
+1. Photograph the object with a smartphone (30–100 photos around it)
+2. Upload to a service (Polycam, RealityScan, Meshroom)
+3. AI processes photos and creates a 3D model in 5–30 minutes
+4. Model is ready for renders, AR, and catalogs
+
+### Method comparison:
+
+| Method | Cost | Quality | Speed |
+|--------|------|---------|-------|
+| **Manual 3D modeling** | from $90 | Perfect | 3–7 days |
+| **Photogrammetry (manual processing)** | from $56 | High | 1–3 days |
+| **Photogrammetry + AI** | from $22 | Good | 2–4 hours |
+| **NeRF / Gaussian Splatting** | from $34 | High (for viewing) | 1–4 hours |
+
+For mass product catalogs, photogrammetry + AI is the fastest and cheapest way to get 3D models.
+
+
+
+## Trend 7. Interactive 3D Configurators
+
+A 3D configurator lets buyers customize a product on the website: choose color, material, size, and see the result in real time.
+
+### Applications:
+
+- **Furniture** — upholstery, frame color, size selection
+- **Footwear** — color and material customization
+- **Electronics** — configuration, color options
+- **Clothing** — prints, colors, sizes
+- **Jewelry** — metal, stone, engraving
+
+### Development costs:
+
+| Complexity | What's included | Cost |
+|-----------|----------------|------|
+| **Basic** | 3–5 color/material variants | from $560 |
+| **Medium** | 10+ variants, 2–3 parameters | from $1,350 |
+| **Advanced** | Full customization, AR preview | from $2,800 |
+
+3D configurators increase average order value by 15–30% and reduce returns by 25–40%.
+
+
+
+## Trend 8. AI Infographics for Marketplaces
+
+Neural networks automate infographic creation — the main visual format on Wildberries and Ozon.
+
+### What AI services can do in 2026:
+
+| Function | Manual work | AI service |
+|----------|------------|-----------|
+| **Background removal** | 10–30 min | 5–10 sec |
+| **Background generation** | 30–60 min | 10–30 sec |
+| **Adding labels** | 15–30 min | 1–5 min |
+| **Creating carousel** | 2–4 hours | 15–30 min |
+| **A/B variants** | × cost | +5 min per variant |
+
+### Popular AI services:
+
+- **Fabula AI** — full infographic cycle for WB/Ozon
+- **WonderCard** — templates with AI generation
+- **Magvi** — automatic infographics
+- **Midjourney / DALL-E** — background and scene generation
+
+AI infographics cost 3–5x less than manual designer work and are created 10x faster.
+
+
+
+## Trend 9. GEO — Optimization for AI Search Engines
+
+GEO (Generative Engine Optimization) is a new discipline: optimizing content for neural search engines like Yandex Neuro, ChatGPT, and Perplexity.
+
+### How GEO differs from SEO:
+
+| Parameter | Classic SEO | GEO |
+|-----------|------------|-----|
+| **Goal** | Rank in top 10 | Be cited by AI |
+| **Response format** | Link to site | Quote + link |
+| **Content** | Keywords, H1-H6 | Direct answers, facts, numbers |
+| **Structure** | Long texts | FAQ, tables, comparisons |
+| **Links** | Backlinks matter | Expertise and unique data |
+| **Brand** | Domain in results | Brand name in AI response |
+
+### How to optimize for GEO:
+
+1. Add FAQ with direct answers to popular questions
+2. Use specific numbers: prices, timelines, percentages
+3. Create comparison tables — AI extracts them more easily
+4. Mention brand in the context of answers
+5. Use JSON-LD for structured data
+
+All 3D.GRYZ blog articles are GEO-optimized — we use FAQ, tables, and structured data for maximum visibility in AI search engines.
+
+
+
+## Trend 10. Hybrid Production: AI + Human
+
+The biggest trend of 2026 isn't replacing people with AI, but a hybrid approach. AI accelerates routine work, humans control quality and creativity.
+
+### What hybrid production looks like:
+
+| Stage | Who does it | Time saved |
+|-------|------------|-----------|
+| **Ideas and moodboards** | AI + art director | 60% |
+| **Texture creation** | AI + 3D artist | 50% |
+| **Draft rendering** | AI renderer | 70% |
+| **Refinement and retouching** | Designer | — |
+| **Quality control** | Art director | — |
+| **AI video (draft)** | Neural network | 80% |
+| **Final editing** | Videographer | — |
+
+### Overall cost impact:
+
+| Approach | Project cost | Quality | Speed |
+|----------|-------------|---------|-------|
+| **Fully manual** | 100% (baseline) | Reference | 1x |
+| **AI-assisted (hybrid)** | 40–60% of baseline | 95–98% | 2–3x faster |
+| **Fully AI** | 15–25% of baseline | 70–85% | 5–10x faster |
+
+For commercial content, the hybrid approach is optimal: 40–60% savings with quality indistinguishable from manual work.
+
+
+
+## What to Adopt Now
+
+### For marketplaces:
+
+1. **AI infographics** — saves 60–80% on visual content
+2. **3D models for AR** — competitive advantage that will soon become standard
+3. **AI video** — product video reviews for listings
+
+### For business overall:
+
+4. **Neural avatars** — for training, content, advertising
+5. **GEO optimization** — to get your brand into AI search responses
+6. **3D configurators** — for websites with customizable products
+
+**3D.GRYZ studio** works at the intersection of 3D visualization and AI technologies. We create content using all current tools — from neural rendering to AI video and digital avatars. [Get a free project estimate](/get-concept/).
+      `,
+    },
+    author: '3D.GRYZ Studio',
+    publishedAt: '2026-01-28',
+    coverImage: '/blog/3d-visualization-ai-content-trends-2026.jpg',
+    tags: ['тренды', '3D визуализация', 'AI-контент', 'AR', 'нейросети', 'GEO', 'e-commerce', '2026'],
+    readingTime: 16,
+    faqItems: [
+      {
+        question: 'Какие тренды 3D визуализации самые важные в 2026 году?',
+        answer: 'Топ-3 тренда 2026 года: AI-рендеринг (ускорение в 5–10 раз), AR-коммерция (рост конверсии на 30–52%), и гибридный продакшен AI+человек (экономия 40–60% при качестве 95–98%). Для маркетплейсов критически важны AR-примерка и AI-инфографика.',
+      },
+      {
+        question: 'Сколько можно сэкономить с AI на 3D визуализации?',
+        answer: 'AI-рендеринг снижает стоимость на 30–50%, AI-генерация текстур — на 50–70%, AI-инфографика — в 3–5 раз дешевле ручной. Гибридный подход (AI + дизайнер) позволяет сэкономить 40–60% бюджета при качестве, неотличимом от полностью ручной работы.',
+      },
+      {
+        question: 'Что такое GEO-оптимизация и зачем она нужна?',
+        answer: 'GEO (Generative Engine Optimization) — оптимизация контента для AI-поисковиков: Яндекс Нейро, ChatGPT, Perplexity. Цель — чтобы нейросеть цитировала ваш контент в своих ответах. Для этого нужны FAQ с прямыми ответами, конкретные цифры, сравнительные таблицы и JSON-LD разметка.',
+      },
+      {
+        question: 'Когда AR-примерка станет обязательной на маркетплейсах?',
+        answer: 'В 2026 году AR активно внедряют Wildberries, Ozon и Яндекс.Маркет. Пока это конкурентное преимущество, но по прогнозам, к 2027–2028 году AR станет обязательным требованием для топ-категорий (мебель, обувь, электроника). Селлеры, внедрившие AR сейчас, получают прирост конверсии 30–52%.',
+      },
+      {
+        question: 'Стоит ли полностью заменить дизайнера на AI?',
+        answer: 'Нет. Полностью AI даёт 70–85% качества при экономии 75–85%. Оптимален гибридный подход: AI ускоряет рутину (текстуры, черновой рендер, мудборды), а дизайнер контролирует качество и креатив. Это даёт 95–98% качества при экономии 40–60% — лучшее соотношение цена/качество.',
+      },
+      {
+        question: 'Какие AI-инструменты для 3D визуализации использовать в 2026?',
+        answer: 'Для текстур — Substance 3D (Adobe) и Stable Diffusion. Для рендеринга — встроенные AI-ускорители в Blender и 3ds Max. Для инфографики — Fabula AI, WonderCard, Midjourney. Для видео — Runway, Pika Labs. Для аватаров — HeyGen, D-ID, Synthesia. Для фотограмметрии — Polycam, RealityScan.',
+      },
+    ],
+  },
+  {
     slug: '3d-render-vs-photography',
     title: {
       ru: '3D рендер vs фотосъёмка товара: что выбрать для маркетплейса',
