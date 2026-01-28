@@ -131,13 +131,15 @@ curl -s -H "Authorization: OAuth $TOKEN" "$BASE/recrawl/quota"
 
 Посты хранятся в `lib/blog.ts` как массив `blogPosts: BlogPost[]`.
 
-### Текущие статьи (5 шт.):
+### Текущие статьи (7 шт.):
 
-1. `3d-visualization-for-marketplaces` — 3D визуализация для маркетплейсов: гайд для селлеров WB и Ozon (2026-01-28)
-2. `neural-avatars-for-business` — Нейро-аватары для бизнеса: цифровые ведущие в маркетинге (2026-01-28)
-3. `ai-content-cost` — Сколько стоит AI-контент для бизнеса (2026-01-28)
-4. `3d-product-visualization-cost` — Стоимость 3D визуализации (2026-01-19)
-5. `3d-mascots-for-brands` — 3D-маскоты для брендов (2026-01-17)
+1. `3d-render-vs-photography` — 3D рендер vs фотосъёмка: что выбрать для маркетплейса (2026-01-28)
+2. `ai-tools-for-marketplace-content` — Нейросети для контента маркетплейсов: что работает в 2026 (2026-01-28)
+3. `3d-visualization-for-marketplaces` — 3D визуализация для маркетплейсов: гайд для селлеров WB и Ozon (2026-01-28)
+4. `neural-avatars-for-business` — Нейро-аватары для бизнеса: цифровые ведущие в маркетинге (2026-01-28)
+5. `ai-content-cost` — Сколько стоит AI-контент для бизнеса (2026-01-28)
+6. `3d-product-visualization-cost` — Стоимость 3D визуализации (2026-01-19)
+7. `3d-mascots-for-brands` — 3D-маскоты для брендов (2026-01-17)
 
 ### Контент-план:
 
