@@ -23,6 +23,916 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: '3d-render-vs-photography',
+    title: {
+      ru: '3D рендер vs фотосъёмка товара: что выбрать для маркетплейса',
+      en: '3D Render vs Product Photography: What to Choose for a Marketplace',
+    },
+    excerpt: {
+      ru: 'Детальное сравнение 3D визуализации и фотосъёмки для маркетплейсов: стоимость, сроки, качество, масштабируемость. Таблицы, реальные примеры и рекомендации для селлеров.',
+      en: 'Detailed comparison of 3D visualization and photography for marketplaces: cost, timelines, quality, scalability. Tables, real examples, and recommendations for sellers.',
+    },
+    content: {
+      ru: `
+Каждый селлер на Wildberries, Ozon или Яндекс.Маркет стоит перед выбором: фотографировать товар или заказать 3D визуализацию? Оба подхода имеют свои сильные стороны, и правильный выбор зависит от категории товара, бюджета и целей.
+
+В этой статье — честное сравнение без рекламных штампов: где выигрывает фото, где 3D, а где стоит комбинировать оба метода. Все цены и сроки — актуальны на январь 2026 года.
+
+
+
+
+## Главная таблица сравнения
+
+| Критерий | Фотосъёмка | 3D визуализация |
+|----------|-----------|----------------|
+| **Нужен физический образец** | Да, обязательно | Нет, достаточно фото и размеров |
+| **Стоимость 1 товара (базовая)** | от 3 000 ₽ | от 5 000 ₽ |
+| **Стоимость 10 товаров** | от 25 000 ₽ | от 35 000 ₽ (пакет со скидкой) |
+| **Стоимость 50 товаров** | от 100 000 ₽ | от 120 000 ₽ (скидка 40%) |
+| **Сроки (1 товар)** | 1–2 дня | 3–5 дней |
+| **Сроки (10 товаров)** | 3–5 дней | 7–12 дней |
+| **Изменение цвета** | Новая съёмка | 15–30 минут |
+| **Добавление нового ракурса** | Пересъёмка | 1–2 часа рендера |
+| **Инфографика** | Фото + дизайнер | Из той же 3D-модели |
+| **360° обзор** | Специальное оборудование | Из той же модели |
+| **AR-примерка** | Невозможно | Да, из 3D-модели |
+| **Видеообзор** | Видеограф + монтаж | Анимация из модели |
+| **Идеальное качество** | Зависит от условий | Полный контроль |
+| **Масштабируемость** | Линейный рост затрат | Экономия при масштабе |
+
+
+
+
+## Когда фотосъёмка лучше 3D
+
+### 1. Товары с живой текстурой
+
+Для товаров, где важна тактильная привлекательность, фото выигрывает:
+- **Текстиль и одежда** — фактура ткани, драпировка, посадка на модели
+- **Еда и напитки** — аппетитность, натуральный вид
+- **Косметика** — текстура кремов, блеск помад
+- **Растения и цветы** — живость, натуральность
+
+### 2. Бюджет до 3 000 ₽ за товар
+
+Если бюджет минимальный и нужны базовые фото на белом фоне — фотосъёмка обойдётся дешевле. Простой предметный фотограф снимает от 500 ₽ за ракурс.
+
+### 3. Один-два ракурса без вариантов
+
+Если нужно быстро отснять 2–3 фото одного товара без цветовых вариантов, инфографики и дополнительных форматов — фото быстрее и проще.
+
+### 4. У вас есть готовый образец
+
+Если товар уже на складе и вы можете привезти его в студию — фотосъёмка занимает 1–2 дня. Это быстрее, чем 3D.
+
+
+
+
+## Когда 3D визуализация лучше фото
+
+### 1. Товар ещё не произведён
+
+Это главное преимущество 3D — можно создать карточку товара до его появления:
+- Предзаказы и краудфандинг
+- Новые коллекции до производства
+- Презентации для инвесторов и партнёров
+
+### 2. Много цветовых вариантов
+
+Классическая ситуация: товар выпускается в 5–10 цветах. При фотосъёмке каждый цвет — это отдельная съёмка. В 3D — перекрасить модель занимает 15–30 минут.
+
+| Количество цветов | Фотосъёмка | 3D визуализация |
+|-------------------|-----------|----------------|
+| 1 цвет | 3 000 ₽ | 5 000 ₽ |
+| 3 цвета | 9 000 ₽ | 7 000 ₽ |
+| 5 цветов | 15 000 ₽ | 8 000 ₽ |
+| 10 цветов | 30 000 ₽ | 10 000 ₽ |
+
+Начиная с 3 цветов 3D уже выгоднее.
+
+### 3. Нужна инфографика и AR
+
+Из одной 3D-модели можно сделать всё:
+- Рендеры на белом фоне
+- Инфографику с подписями функций
+- 360° обзор
+- AR-модель для примерки
+- Видеообзор с анимацией
+
+При фотосъёмке каждый из этих форматов — отдельная работа с отдельной оплатой.
+
+### 4. Товар сложно сфотографировать
+
+Некоторые продукты объективно проще визуализировать в 3D:
+- **Отражающие поверхности** — хромированные смесители, металлическая посуда, ювелирные изделия
+- **Мелкие детали** — электронные компоненты, часовые механизмы
+- **Крупная техника** — холодильники, стиральные машины (логистика до студии)
+- **Взрыв-схемы** — показать внутреннее устройство
+
+### 5. Регулярное обновление карточек
+
+Если вы часто обновляете карточки товаров (сезонные акции, новые функции), 3D-модель позволяет быстро менять фон, добавлять элементы и генерировать новые рендеры без повторной съёмки.
+
+
+
+
+## Экономика: подробный расчёт для селлера
+
+### Сценарий 1: Маленький магазин (10 товаров)
+
+| Статья расходов | Фотосъёмка | 3D визуализация |
+|----------------|-----------|----------------|
+| Базовые фото (5 ракурсов) | 25 000 ₽ | 35 000 ₽ |
+| Инфографика | +15 000 ₽ (дизайнер) | +10 000 ₽ (из модели) |
+| Цветовые варианты (×3) | +40 000 ₽ (пересъёмка) | +8 000 ₽ |
+| **Итого** | **80 000 ₽** | **53 000 ₽** |
+
+### Сценарий 2: Средний магазин (50 товаров)
+
+| Статья расходов | Фотосъёмка | 3D визуализация |
+|----------------|-----------|----------------|
+| Базовые фото (5 ракурсов) | 100 000 ₽ | 120 000 ₽ (скидка 40%) |
+| Инфографика | +60 000 ₽ | +30 000 ₽ |
+| Цветовые варианты (×3) | +160 000 ₽ | +20 000 ₽ |
+| AR-модели (10 товаров) | Невозможно | +50 000 ₽ |
+| **Итого** | **320 000 ₽** | **220 000 ₽** |
+
+### Сценарий 3: Крупный магазин (200+ товаров)
+
+При объёме от 200 товаров с цветовыми вариантами 3D визуализация обходится в **2–3 раза дешевле** фотосъёмки за счёт:
+- Пакетных скидок (до 40%)
+- Повторного использования базовых моделей для однотипных товаров
+- Минимальной стоимости цветовых вариантов
+- Отсутствия логистики образцов
+
+
+
+
+## Комбинированный подход: лучшее из двух миров
+
+Необязательно выбирать что-то одно. Многие успешные селлеры комбинируют оба подхода:
+
+### Стратегия комбинирования
+
+| Задача | Метод | Почему |
+|--------|-------|--------|
+| Главное фото карточки | Фотосъёмка | Живая фактура, доверие |
+| Дополнительные ракурсы | 3D | Быстро, дёшево |
+| Инфографика | 3D | Идеальные схемы из модели |
+| Цветовые варианты | 3D | 15 минут вместо пересъёмки |
+| AR-примерка | 3D | Единственный способ |
+| Lifestyle (товар в интерьере) | 3D | Без аренды студии |
+| На модели (одежда) | Фото | Посадка, движение |
+
+### Когда комбинировать
+
+- Главный SKU — фотосъёмка, остальные цвета — 3D
+- Фото для основных ракурсов, 3D для инфографики и AR
+- Фотосъёмка первой партии, 3D для обновлений и дополнений
+
+
+
+
+## Как выбрать исполнителя
+
+### Для фотосъёмки
+
+| Критерий | На что обратить внимание |
+|----------|------------------------|
+| Портфолио | Опыт работы с вашей категорией товаров |
+| Оборудование | Лайтбокс, поворотный стол, макрообъектив |
+| Постобработка | Ретушь, выравнивание баланса белого |
+| Формат файлов | RAW + обработанные JPG/PNG |
+| Сроки | 1–2 дня на съёмку, +1–2 дня обработка |
+
+### Для 3D визуализации
+
+| Критерий | На что обратить внимание |
+|----------|------------------------|
+| Портфолио | Фотореалистичные рендеры, а не схемы |
+| Знание площадок | Опыт работы с WB, Ozon, Я.Маркет |
+| AR-модели | Умение готовить GLB/GLTF |
+| Пакетные скидки | Экономия при объёме |
+| AI-ускорение | Снижение цены на 15–25% |
+
+
+
+
+## Рекомендации 3D.GRYZ
+
+Мы работаем с обоими форматами и честно рекомендуем:
+
+- **До 3 товаров без вариантов** → фотосъёмка быстрее и дешевле
+- **3+ товара с цветовыми вариантами** → 3D выгоднее
+- **Нужна AR-примерка или инфографика** → только 3D
+- **Одежда и текстиль** → фотосъёмка + 3D для инфографики
+- **Электроника и техника** → 3D — оптимальный выбор
+
+
+
+
+## Получите расчёт для вашего магазина
+
+Не уверены, что выбрать?
+
+Мы бесплатно:
+- Проанализируем ваш ассортимент
+- Рассчитаем стоимость обоих подходов
+- Предложим оптимальную стратегию
+
+[Оставить заявку на бесплатный расчёт](/get-concept)
+
+
+
+
+*Цены актуальны на январь 2026 года и могут отличаться в зависимости от специфики проекта.*
+      `,
+      en: `
+Every seller on marketplaces faces a choice: photograph the product or order 3D visualization? Both approaches have their strengths, and the right choice depends on product category, budget, and goals.
+
+In this article — an honest comparison without marketing clichés: where photography wins, where 3D wins, and where you should combine both methods. All prices and timelines are current as of January 2026.
+
+
+
+
+## Main Comparison Table
+
+| Criteria | Photography | 3D Visualization |
+|----------|------------|-----------------|
+| **Physical sample needed** | Yes, mandatory | No, photos and dimensions suffice |
+| **Cost per 1 product (basic)** | from $40 | from $65 |
+| **Cost for 10 products** | from $330 | from $460 (bulk discount) |
+| **Cost for 50 products** | from $1,300 | from $1,600 (40% discount) |
+| **Timeline (1 product)** | 1–2 days | 3–5 days |
+| **Timeline (10 products)** | 3–5 days | 7–12 days |
+| **Color change** | New photoshoot | 15–30 minutes |
+| **Adding new angle** | Reshoot | 1–2 hours rendering |
+| **Infographics** | Photo + designer | From the same 3D model |
+| **360° view** | Special equipment | From the same model |
+| **AR try-on** | Not possible | Yes, from 3D model |
+| **Video review** | Videographer + editing | Animation from model |
+| **Perfect quality** | Depends on conditions | Full control |
+| **Scalability** | Linear cost growth | Savings at scale |
+
+
+
+
+## When Photography Is Better Than 3D
+
+### 1. Products with Living Textures
+
+For products where tactile appeal matters, photography wins:
+- **Textiles and clothing** — fabric texture, draping, fit on a model
+- **Food and beverages** — appetizing, natural appearance
+- **Cosmetics** — cream textures, lipstick shine
+- **Plants and flowers** — liveliness, natural look
+
+### 2. Budget Under $40 per Product
+
+If the budget is minimal and you need basic white-background photos — photography is cheaper. A simple product photographer charges from $7 per angle.
+
+### 3. One or Two Angles Without Variants
+
+If you need to quickly shoot 2–3 photos of a single product without color variants, infographics, or additional formats — photography is faster and simpler.
+
+### 4. You Have the Physical Sample
+
+If the product is already in your warehouse and you can bring it to a studio — photography takes 1–2 days. That's faster than 3D.
+
+
+
+
+## When 3D Visualization Is Better Than Photography
+
+### 1. Product Not Yet Manufactured
+
+This is 3D's main advantage — you can create a product card before the product exists:
+- Pre-orders and crowdfunding
+- New collections before production
+- Presentations for investors and partners
+
+### 2. Multiple Color Variants
+
+Classic scenario: product comes in 5–10 colors. With photography, each color is a separate shoot. In 3D — recoloring a model takes 15–30 minutes.
+
+| Number of Colors | Photography | 3D Visualization |
+|-----------------|------------|-----------------|
+| 1 color | $40 | $65 |
+| 3 colors | $120 | $90 |
+| 5 colors | $200 | $105 |
+| 10 colors | $400 | $130 |
+
+Starting from 3 colors, 3D is already more cost-effective.
+
+### 3. You Need Infographics and AR
+
+From a single 3D model you can create everything:
+- White background renders
+- Infographics with feature labels
+- 360° view
+- AR model for try-on
+- Animated video review
+
+With photography, each of these formats is separate work with separate payment.
+
+### 4. Product Is Hard to Photograph
+
+Some products are objectively easier to visualize in 3D:
+- **Reflective surfaces** — chrome faucets, metal cookware, jewelry
+- **Small details** — electronic components, watch mechanisms
+- **Large appliances** — refrigerators, washing machines (logistics to studio)
+- **Exploded views** — showing internal structure
+
+### 5. Regular Card Updates
+
+If you frequently update product cards (seasonal promotions, new features), a 3D model lets you quickly change backgrounds, add elements, and generate new renders without reshooting.
+
+
+
+
+## Economics: Detailed Calculation for Sellers
+
+### Scenario 1: Small Store (10 products)
+
+| Expense Item | Photography | 3D Visualization |
+|-------------|------------|-----------------|
+| Basic photos (5 angles) | $330 | $460 |
+| Infographics | +$200 (designer) | +$130 (from model) |
+| Color variants (×3) | +$530 (reshoot) | +$105 |
+| **Total** | **$1,060** | **$695** |
+
+### Scenario 2: Medium Store (50 products)
+
+| Expense Item | Photography | 3D Visualization |
+|-------------|------------|-----------------|
+| Basic photos (5 angles) | $1,300 | $1,600 (40% discount) |
+| Infographics | +$800 | +$400 |
+| Color variants (×3) | +$2,100 | +$260 |
+| AR models (10 products) | Not possible | +$650 |
+| **Total** | **$4,200** | **$2,910** |
+
+### Scenario 3: Large Store (200+ products)
+
+With 200+ products and color variants, 3D visualization costs **2–3x less** than photography thanks to:
+- Bulk discounts (up to 40%)
+- Reusing base models for similar products
+- Minimal cost for color variants
+- No sample logistics
+
+
+
+
+## Combined Approach: Best of Both Worlds
+
+You don't have to choose one or the other. Many successful sellers combine both:
+
+### Combination Strategy
+
+| Task | Method | Why |
+|------|--------|-----|
+| Main card photo | Photography | Living texture, trust |
+| Additional angles | 3D | Fast, affordable |
+| Infographics | 3D | Perfect diagrams from model |
+| Color variants | 3D | 15 minutes vs reshoot |
+| AR try-on | 3D | Only option |
+| Lifestyle (product in interior) | 3D | No studio rental |
+| On model (clothing) | Photography | Fit, movement |
+
+### When to Combine
+
+- Main SKU — photography, other colors — 3D
+- Photos for primary angles, 3D for infographics and AR
+- Photography for first batch, 3D for updates and additions
+
+
+
+
+## How to Choose a Provider
+
+### For Photography
+
+| Criteria | What to Look For |
+|----------|-----------------|
+| Portfolio | Experience with your product category |
+| Equipment | Lightbox, turntable, macro lens |
+| Post-processing | Retouching, white balance correction |
+| File formats | RAW + processed JPG/PNG |
+| Timeline | 1–2 days shooting, +1–2 days processing |
+
+### For 3D Visualization
+
+| Criteria | What to Look For |
+|----------|-----------------|
+| Portfolio | Photorealistic renders, not diagrams |
+| Platform expertise | Experience with major marketplaces |
+| AR models | Ability to prepare GLB/GLTF |
+| Bulk discounts | Savings at volume |
+| AI acceleration | 15–25% price reduction |
+
+
+
+
+## 3D.GRYZ Recommendations
+
+We work with both formats and honestly recommend:
+
+- **Under 3 products without variants** → photography is faster and cheaper
+- **3+ products with color variants** → 3D is more cost-effective
+- **Need AR try-on or infographics** → 3D only
+- **Clothing and textiles** → photography + 3D for infographics
+- **Electronics and appliances** → 3D is the optimal choice
+
+
+
+
+## Get a Calculation for Your Store
+
+Not sure what to choose?
+
+We will free of charge:
+- Analyze your product range
+- Calculate the cost of both approaches
+- Suggest the optimal strategy
+
+[Submit a Request for Free Calculation](/get-concept)
+
+
+
+
+*Prices are current as of January 2026 and may vary depending on project specifics.*
+      `,
+    },
+    author: '3D.GRYZ',
+    publishedAt: '2026-01-29',
+    coverImage: '/blog/3d-render-vs-photography.jpg',
+    tags: ['3D визуализация', 'фотосъёмка', 'маркетплейсы', 'сравнение', 'e-commerce', 'Wildberries', 'Ozon'],
+    readingTime: 11,
+    faqItems: [
+      {
+        question: 'Что дешевле для маркетплейса — фотосъёмка или 3D?',
+        answer: 'Зависит от количества товаров и вариантов. 1–2 товара без цветовых вариантов — фотосъёмка дешевле (от 3 000 ₽). От 3 товаров с вариантами цветов — 3D выгоднее. При 50+ товарах 3D обходится в 2–3 раза дешевле за счёт пакетных скидок и минимальной стоимости вариантов.',
+      },
+      {
+        question: 'Можно ли совмещать фотосъёмку и 3D визуализацию?',
+        answer: 'Да, комбинированный подход часто оптимален. Например: главное фото — фотосъёмка (живая фактура), дополнительные ракурсы и цветовые варианты — 3D, инфографика и AR-модель — только 3D. Это сочетает доверие от реальных фото и гибкость 3D.',
+      },
+      {
+        question: 'Нужен ли физический образец для 3D визуализации?',
+        answer: 'Нет, достаточно фотографий товара с 4–6 сторон (даже с телефона), габаритных размеров и информации о материалах. Это позволяет создавать карточки для предзаказов и новых коллекций до производства.',
+      },
+      {
+        question: 'Сколько стоит добавить новый цвет при 3D визуализации?',
+        answer: 'Изменение цвета готовой 3D-модели занимает 15–30 минут и стоит 1 000–2 000 ₽ за вариант. При фотосъёмке каждый новый цвет — это полноценная пересъёмка стоимостью от 3 000 ₽. При 5+ цветах 3D экономит от 50% бюджета.',
+      },
+      {
+        question: 'Для каких товаров фото однозначно лучше 3D?',
+        answer: 'Одежда на модели (посадка и движение), еда и напитки (аппетитность), живые цветы, текстиль, где важна тактильная фактура. Для этих категорий фотосъёмка передаёт качества, которые 3D пока воспроизводит хуже.',
+      },
+      {
+        question: 'Можно ли сделать AR-примерку из фотографии?',
+        answer: 'Нет, AR-примерка требует 3D-модель в формате GLB/GLTF. Фотография — это плоское изображение, из которого невозможно создать объёмный объект для дополненной реальности. Если вам нужна AR-примерка на Wildberries или Ozon — только 3D визуализация.',
+      },
+    ],
+  },
+  {
+    slug: 'ai-tools-for-marketplace-content',
+    title: {
+      ru: 'Нейросети для создания контента маркетплейсов: что работает в 2026 году',
+      en: 'AI Tools for Marketplace Content: What Works in 2026',
+    },
+    excerpt: {
+      ru: 'Обзор нейросетей для создания карточек товаров на Wildberries, Ozon и Яндекс.Маркет: какие инструменты работают, сколько стоят и когда лучше обратиться в студию.',
+      en: 'Review of AI tools for creating product cards on marketplaces: which tools work, how much they cost, and when it\'s better to hire a studio.',
+    },
+    content: {
+      ru: `
+Нейросети для маркетплейсов — одна из самых горячих тем среди селлеров в 2026 году. AI-инструменты обещают создавать карточки товаров за минуты вместо дней, и за сотни рублей вместо тысяч. Но насколько это соответствует реальности?
+
+В этой статье — честный обзор: какие нейросети действительно работают, какие дают коммерчески пригодный результат, а где маркетинг опережает реальные возможности. Разберём инструменты, цены и ограничения.
+
+
+
+
+## Виды AI-инструментов для маркетплейсов
+
+### 1. Генерация изображений товаров
+
+Нейросети, которые создают изображения товаров по фотографии или описанию.
+
+| Инструмент | Возможности | Цена | Качество для WB/Ozon |
+|-----------|------------|------|---------------------|
+| **Midjourney** | Генерация по промту, стилизация | от $10/мес | Среднее — требует доработки |
+| **DALL-E 3** | Генерация по текстовому описанию | от $20/мес (ChatGPT Plus) | Среднее |
+| **Stable Diffusion** | Локальная генерация, контроль параметров | Бесплатно (нужен GPU) | Хорошее с настройкой |
+| **Kandinsky** (Сбер) | Русскоязычные промты, без VPN | Бесплатно | Среднее |
+| **Шедеврум** (Яндекс) | Простота, русский язык, без VPN | Бесплатно | Базовое |
+
+**Реальность:** Для фотореалистичных карточек товаров ни одна из этих нейросетей не даёт готовый результат «из коробки». Нужен промт-инженеринг, постобработка и часто — доработка в графическом редакторе.
+
+### 2. Специализированные сервисы для маркетплейсов
+
+Эти инструменты заточены именно под создание контента для WB, Ozon и Яндекс.Маркет.
+
+| Сервис | Что делает | Цена | Особенности |
+|--------|----------|------|------------|
+| **Fabula AI** | Инфографика, карточки из фото | от 990 ₽/мес | Заточен под WB и Ozon |
+| **WonderCard** | Генерация карточек по фото | от 1 490 ₽/мес | Шаблоны для маркетплейсов |
+| **Magvi** | Фон, инфографика, улучшение фото | от 690 ₽/мес | Российский сервис |
+| **Study AI** | Текст + изображения для карточек | от 990 ₽/мес | Комплексное решение |
+| **Chad AI** | Тексты для карточек и SEO | от 490 ₽/мес | Фокус на описаниях |
+
+**Реальность:** Специализированные сервисы дают лучший результат для типовых задач (замена фона, инфографика, тексты). Но для уникального визуала и сложных товаров их возможности ограничены.
+
+### 3. AI для видеоконтента
+
+| Инструмент | Что делает | Цена | Качество |
+|-----------|----------|------|---------|
+| **Runway Gen-3** | Генерация видео из текста/фото | от $12/мес | Хорошее для коротких клипов |
+| **Sora** (OpenAI) | Генерация видео по промту | от $20/мес | Высокое |
+| **Kling AI** | Видео, анимация, эффекты | от $5/мес | Среднее |
+| **Visper** | AI-аватар, видеоконтент | от 2 500 ₽/мес | Хорошее для говорящей головы |
+
+### 4. AI для текстов и SEO
+
+| Инструмент | Что делает | Цена |
+|-----------|----------|------|
+| **YandexGPT** | Тексты на русском, без VPN | Бесплатно / от 200 ₽ за 1000 токенов |
+| **ChatGPT** | Описания, SEO-тексты | от $20/мес |
+| **GigaChat** (Сбер) | Тексты на русском, без VPN | Бесплатно |
+| **Chad AI** | Тексты для карточек WB/Ozon | от 490 ₽/мес |
+
+
+
+
+## Что AI реально умеет делать для маркетплейсов
+
+### Хорошо работает
+
+1. **Замена и генерация фона** — убрать белый фон, поставить lifestyle-сцену. Качество: 7/10.
+2. **Инфографика по шаблону** — подставить фото товара в готовый шаблон с текстом. Качество: 8/10.
+3. **Тексты для карточек** — описания, характеристики, SEO-оптимизация. Качество: 8/10.
+4. **Улучшение фото** — повышение разрешения, коррекция цвета, удаление дефектов. Качество: 8/10.
+5. **Короткие видеоклипы** — простая анимация товара, эффект вращения. Качество: 6/10.
+
+### Работает с ограничениями
+
+1. **Фотореалистичные рендеры** — результат приемлемый, но видны артефакты. Нужна ручная доработка.
+2. **Lifestyle-визуализация** — товар в интерьере выглядит неплохо, но пропорции и освещение часто неточные.
+3. **Видеообзоры** — AI-видео улучшается быстро, но пока заметны «нейросетевые» артефакты.
+
+### Пока не работает надёжно
+
+1. **Точная 3D-модель товара** — нейросети не создают точные 3D-модели для AR-примерки.
+2. **Взрыв-схемы и сечения** — технические иллюстрации требуют ручной работы.
+3. **Консистентность** — тот же товар в разных генерациях выглядит по-разному.
+4. **Мелкие детали** — логотипы, текст на упаковке, мелкая фурнитура искажаются.
+
+
+
+
+## DIY vs студия: когда что выбрать
+
+### Самостоятельная работа с AI (DIY)
+
+**Подходит если:**
+- Бюджет до 5 000 ₽/мес на контент
+- Товары простой формы (одежда, аксессуары)
+- Нужны базовые карточки без AR и видео
+- Вы готовы тратить время на изучение инструментов
+
+**Типичный стек:**
+- Fabula AI или WonderCard — инфографика (от 990 ₽/мес)
+- ChatGPT или YandexGPT — тексты (от 0 ₽)
+- Канва или Figma — финальная сборка (бесплатно)
+- **Итого:** от 990 ₽/мес
+
+**Ограничения:**
+- Фотореалистичность ниже, чем у студии
+- Нет AR-моделей
+- Нет профессионального видео
+- Много времени на обучение и эксперименты
+
+### Профессиональная студия с AI
+
+**Подходит если:**
+- Нужен фотореалистичный контент
+- Требуется AR-примерка или видеообзор
+- Важна консистентность визуала бренда
+- Объём от 10+ товаров
+
+**Что получаете:**
+- Промт-инженеринг + ручная постобработка
+- 3D-моделирование для AR и 360°
+- AI-ускорение (–15–25% к цене)
+- Единый стиль всех карточек
+
+**Стоимость:** от 5 000 ₽ за товар (полный пакет)
+
+
+
+
+## Сколько можно сэкономить с AI
+
+### Сравнение стоимости контента для 10 товаров
+
+| Тип контента | Классический продакшен | DIY с AI | Студия с AI |
+|-------------|----------------------|---------|------------|
+| Фото/рендеры (5 ракурсов) | 50 000 ₽ | 5 000 ₽ | 35 000 ₽ |
+| Инфографика | 30 000 ₽ | 3 000 ₽ | 15 000 ₽ |
+| Тексты | 15 000 ₽ | 0 ₽ (ChatGPT) | 10 000 ₽ |
+| Видеообзор | 100 000 ₽ | 10 000 ₽ | 40 000 ₽ |
+| AR-модели | 150 000 ₽ | Невозможно | 50 000 ₽ |
+| **Итого** | **345 000 ₽** | **18 000 ₽** | **150 000 ₽** |
+| **Качество** | Максимум | Базовое | Высокое |
+
+DIY экономит максимум денег, но ограничен в качестве и форматах. Студия с AI — оптимальный баланс цены и качества.
+
+
+
+
+## Тренды AI для маркетплейсов в 2026 году
+
+### 1. Генерация видео из фото товара
+
+Загружаете фото — получаете 15-секундный рекламный ролик. Технология Runway Gen-3 и Sora уже позволяют это, но качество пока нестабильное для коммерческого использования.
+
+### 2. AI-инфографика в один клик
+
+Сервисы вроде Fabula AI и WonderCard движутся к формату «загрузил фото → получил готовую карточку». В 2026 году это уже работает для простых товаров.
+
+### 3. Мультиязычные карточки
+
+AI автоматически переводит и адаптирует карточки для разных рынков. Актуально для селлеров, работающих на Wildberries (Россия, Казахстан, Беларусь) и международных площадках.
+
+### 4. AI + 3D гибрид
+
+Комбинация классического 3D-моделирования и AI-генерации — самый перспективный подход. 3D даёт точность и контроль, AI ускоряет рутинные операции (текстуры, фоны, вариации).
+
+
+
+
+## Как работает AI-ускоренный продакшен в 3D.GRYZ
+
+В 3D.GRYZ мы используем AI не вместо, а вместе с профессиональной 3D-работой:
+
+1. **AI-генерация концептов** — быстрый поиск стиля и композиции
+2. **AI-текстурирование** — ускорение создания материалов
+3. **AI-фоны и окружение** — lifestyle-сцены без ручного моделирования
+4. **AI-постобработка** — автоматическая цветокоррекция и улучшение
+5. **Ручной контроль качества** — каждый результат проверяется специалистом
+
+Это позволяет снизить стоимость на 15–25% и ускорить производство на 30% без потери качества.
+
+
+
+
+## Получите бесплатную консультацию
+
+Не знаете, какой подход выбрать для своих товаров?
+
+Мы бесплатно:
+- Оценим ваш ассортимент
+- Покажем, что можно сделать с AI, а что требует 3D
+- Рассчитаем стоимость оптимального подхода
+
+[Оставить заявку на бесплатную консультацию](/get-concept)
+
+
+
+
+*Информация актуальна на январь 2026 года. Рынок AI-инструментов развивается быстро — рекомендуем проверять актуальные возможности сервисов.*
+      `,
+      en: `
+AI tools for marketplaces are one of the hottest topics among sellers in 2026. AI tools promise to create product cards in minutes instead of days, and for hundreds instead of thousands of rubles. But how much of this matches reality?
+
+In this article — an honest review: which AI tools actually work, which deliver commercially viable results, and where marketing outpaces real capabilities. We'll cover tools, pricing, and limitations.
+
+
+
+
+## Types of AI Tools for Marketplaces
+
+### 1. Product Image Generation
+
+AI tools that create product images from a photo or description.
+
+| Tool | Capabilities | Price | Quality for Marketplaces |
+|------|-------------|-------|------------------------|
+| **Midjourney** | Prompt-based generation, stylization | from $10/mo | Medium — needs post-processing |
+| **DALL-E 3** | Text-based generation | from $20/mo (ChatGPT Plus) | Medium |
+| **Stable Diffusion** | Local generation, parameter control | Free (GPU needed) | Good with tuning |
+| **Kandinsky** (Sber) | Russian prompts, no VPN needed | Free | Medium |
+| **Shedevrum** (Yandex) | Simple, Russian language, no VPN | Free | Basic |
+
+**Reality:** For photorealistic product cards, none of these tools deliver a ready result "out of the box." You need prompt engineering, post-processing, and often — manual finishing in a graphics editor.
+
+### 2. Specialized Marketplace Services
+
+These tools are specifically designed for creating marketplace content.
+
+| Service | What It Does | Price | Features |
+|---------|-------------|-------|---------|
+| **Fabula AI** | Infographics, cards from photos | from $12/mo | Designed for WB and Ozon |
+| **WonderCard** | Card generation from photos | from $18/mo | Marketplace templates |
+| **Magvi** | Background, infographics, photo enhancement | from $8/mo | Russian service |
+| **Study AI** | Text + images for cards | from $12/mo | Comprehensive solution |
+| **Chad AI** | Texts for cards and SEO | from $6/mo | Focus on descriptions |
+
+**Reality:** Specialized services deliver better results for standard tasks (background replacement, infographics, texts). But for unique visuals and complex products, their capabilities are limited.
+
+### 3. AI for Video Content
+
+| Tool | What It Does | Price | Quality |
+|------|-------------|-------|---------|
+| **Runway Gen-3** | Video from text/photo | from $12/mo | Good for short clips |
+| **Sora** (OpenAI) | Video from prompts | from $20/mo | High |
+| **Kling AI** | Video, animation, effects | from $5/mo | Medium |
+| **Visper** | AI avatar, video content | from $30/mo | Good for talking head |
+
+### 4. AI for Text and SEO
+
+| Tool | What It Does | Price |
+|------|-------------|-------|
+| **YandexGPT** | Russian texts, no VPN | Free / from $0.003 per 1000 tokens |
+| **ChatGPT** | Descriptions, SEO texts | from $20/mo |
+| **GigaChat** (Sber) | Russian texts, no VPN | Free |
+| **Chad AI** | Texts for WB/Ozon cards | from $6/mo |
+
+
+
+
+## What AI Can Actually Do for Marketplaces
+
+### Works Well
+
+1. **Background replacement and generation** — remove white background, add lifestyle scene. Quality: 7/10.
+2. **Template-based infographics** — place product photo into a template with text. Quality: 8/10.
+3. **Card texts** — descriptions, specifications, SEO optimization. Quality: 8/10.
+4. **Photo enhancement** — resolution upscaling, color correction, defect removal. Quality: 8/10.
+5. **Short video clips** — simple product animation, rotation effect. Quality: 6/10.
+
+### Works with Limitations
+
+1. **Photorealistic renders** — acceptable results but visible artifacts. Manual finishing needed.
+2. **Lifestyle visualization** — product in interior looks decent, but proportions and lighting are often inaccurate.
+3. **Video reviews** — AI video is improving fast, but "neural network" artifacts are still noticeable.
+
+### Doesn't Work Reliably Yet
+
+1. **Precise 3D product models** — AI doesn't create accurate 3D models for AR try-on.
+2. **Exploded views and cross-sections** — technical illustrations require manual work.
+3. **Consistency** — the same product looks different across generations.
+4. **Fine details** — logos, packaging text, small hardware get distorted.
+
+
+
+
+## DIY vs Studio: When to Choose What
+
+### Self-Service AI (DIY)
+
+**Works if:**
+- Content budget under $65/mo
+- Simple-shaped products (clothing, accessories)
+- Need basic cards without AR and video
+- You're willing to spend time learning tools
+
+**Typical stack:**
+- Fabula AI or WonderCard — infographics (from $12/mo)
+- ChatGPT or YandexGPT — texts (from $0)
+- Canva or Figma — final assembly (free)
+- **Total:** from $12/mo
+
+**Limitations:**
+- Photorealism lower than studio quality
+- No AR models
+- No professional video
+- Significant time investment in learning
+
+### Professional Studio with AI
+
+**Works if:**
+- Need photorealistic content
+- AR try-on or video review required
+- Brand visual consistency matters
+- Volume of 10+ products
+
+**What you get:**
+- Prompt engineering + manual post-processing
+- 3D modeling for AR and 360°
+- AI acceleration (–15–25% cost reduction)
+- Consistent style across all cards
+
+**Cost:** from $65 per product (full package)
+
+
+
+
+## How Much You Can Save with AI
+
+### Content Cost Comparison for 10 Products
+
+| Content Type | Traditional Production | DIY with AI | Studio with AI |
+|-------------|----------------------|------------|---------------|
+| Photos/renders (5 angles) | $650 | $65 | $460 |
+| Infographics | $400 | $40 | $200 |
+| Texts | $200 | $0 (ChatGPT) | $130 |
+| Video review | $1,300 | $130 | $530 |
+| AR models | $2,000 | Not possible | $650 |
+| **Total** | **$4,550** | **$235** | **$1,970** |
+| **Quality** | Maximum | Basic | High |
+
+DIY saves maximum money but is limited in quality and formats. Studio with AI is the optimal balance of price and quality.
+
+
+
+
+## AI Trends for Marketplaces in 2026
+
+### 1. Video Generation from Product Photo
+
+Upload a photo — get a 15-second promotional clip. Runway Gen-3 and Sora technology already enables this, but quality is still unstable for commercial use.
+
+### 2. One-Click AI Infographics
+
+Services like Fabula AI and WonderCard are moving toward "upload photo → get finished card." In 2026, this already works for simple products.
+
+### 3. Multi-Language Cards
+
+AI automatically translates and adapts cards for different markets. Relevant for sellers working across multiple regions and international platforms.
+
+### 4. AI + 3D Hybrid
+
+Combining traditional 3D modeling with AI generation is the most promising approach. 3D provides accuracy and control, AI speeds up routine operations (textures, backgrounds, variations).
+
+
+
+
+## How AI-Accelerated Production Works at 3D.GRYZ
+
+At 3D.GRYZ, we use AI alongside — not instead of — professional 3D work:
+
+1. **AI concept generation** — quick style and composition exploration
+2. **AI texturing** — faster material creation
+3. **AI backgrounds and environments** — lifestyle scenes without manual modeling
+4. **AI post-processing** — automatic color correction and enhancement
+5. **Manual quality control** — every result is verified by a specialist
+
+This reduces costs by 15–25% and speeds up production by 30% without quality loss.
+
+
+
+
+## Get a Free Consultation
+
+Not sure which approach to choose for your products?
+
+We will free of charge:
+- Assess your product range
+- Show what AI can handle and what requires 3D
+- Calculate the cost of the optimal approach
+
+[Submit a Request for Free Consultation](/get-concept)
+
+
+
+
+*Information is current as of January 2026. The AI tools market evolves rapidly — we recommend checking current service capabilities.*
+      `,
+    },
+    author: '3D.GRYZ',
+    publishedAt: '2026-01-29',
+    coverImage: '/blog/ai-tools-marketplace-content.jpg',
+    tags: ['нейросети', 'маркетплейсы', 'AI-контент', 'Wildberries', 'Ozon', 'карточки товаров', 'инструменты'],
+    readingTime: 13,
+    faqItems: [
+      {
+        question: 'Какие нейросети лучше всего подходят для создания карточек товаров?',
+        answer: 'Для инфографики — специализированные сервисы Fabula AI и WonderCard (от 990 ₽/мес), они заточены под маркетплейсы. Для генерации изображений — Midjourney и Stable Diffusion, но они требуют промт-инженеринга и постобработки. Для текстов — ChatGPT и YandexGPT (бесплатно).',
+      },
+      {
+        question: 'Можно ли сделать карточку для Wildberries полностью нейросетью?',
+        answer: 'Базовую карточку — да: AI сгенерирует фоны, инфографику и тексты. Но для фотореалистичного результата нужна постобработка. AR-модели и точные 3D-рендеры нейросети пока не создают — для этого нужно профессиональное 3D-моделирование.',
+      },
+      {
+        question: 'Сколько стоит создание контента для маркетплейса с помощью AI?',
+        answer: 'DIY с AI-сервисами — от 990 ₽/мес за подписку. Студия с AI-ускорением — от 5 000 ₽ за товар (полный пакет с рендерами и инфографикой). Классический продакшен без AI — от 15 000 ₽ за товар. AI экономит 15–60% в зависимости от подхода.',
+      },
+      {
+        question: 'Какие российские нейросети работают без VPN?',
+        answer: 'Kandinsky (Сбер) — генерация изображений, Шедеврум (Яндекс) — изображения и видео, YandexGPT — тексты, GigaChat (Сбер) — тексты. Также российские сервисы Fabula AI, WonderCard и Magvi работают без VPN и заточены под WB/Ozon.',
+      },
+      {
+        question: 'Заменят ли нейросети 3D визуализацию для маркетплейсов?',
+        answer: 'В ближайшие годы — нет. AI отлично справляется с фонами, инфографикой и текстами, но не создаёт точные 3D-модели для AR-примерки, 360° обзоров и технических иллюстраций. Оптимальный подход — гибрид: 3D для точности + AI для ускорения рутины.',
+      },
+      {
+        question: 'Что лучше: самому работать с нейросетями или заказать в студии?',
+        answer: 'DIY подходит для бюджета до 5 000 ₽/мес и простых товаров — подписка на AI-сервисы от 990 ₽/мес. Студия — для фотореалистичного контента, AR-моделей и больших объёмов (10+ товаров). Студия с AI-ускорением стоит от 5 000 ₽/товар и даёт профессиональное качество.',
+      },
+    ],
+  },
+  {
     slug: '3d-visualization-for-marketplaces',
     title: {
       ru: '3D визуализация товаров для маркетплейсов: гайд для селлеров Wildberries и Ozon',
