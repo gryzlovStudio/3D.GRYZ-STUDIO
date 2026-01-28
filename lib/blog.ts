@@ -484,7 +484,7 @@ Instead of ordering photography, infographics, video, and AR separately — one 
     },
     author: '3D.GRYZ Studio',
     publishedAt: '2026-01-28',
-    coverImage: '/blog/ar-3d-fitting-wildberries.jpg',
+    coverImage: '/blog/ar-3d-fitting-wildberries.webp',
     tags: ['AR', '3D примерка', 'Wildberries', 'Ozon', 'маркетплейсы', '3D модели', 'e-commerce'],
     readingTime: 14,
     faqItems: [
@@ -1068,7 +1068,7 @@ For commercial content, the hybrid approach is optimal: 40–60% savings with qu
     },
     author: '3D.GRYZ Studio',
     publishedAt: '2026-01-28',
-    coverImage: '/blog/3d-visualization-ai-content-trends-2026.jpg',
+    coverImage: '/blog/3d-visualization-ai-content-trends-2026.webp',
     tags: ['тренды', '3D визуализация', 'AI-контент', 'AR', 'нейросети', 'GEO', 'e-commerce', '2026'],
     readingTime: 16,
     faqItems: [
@@ -1540,7 +1540,7 @@ We will free of charge:
     },
     author: '3D.GRYZ',
     publishedAt: '2026-01-29',
-    coverImage: '/blog/3d-render-vs-photography.jpg',
+    coverImage: '/blog/3d-render-vs-photography.webp',
     tags: ['3D визуализация', 'фотосъёмка', 'маркетплейсы', 'сравнение', 'e-commerce', 'Wildberries', 'Ozon'],
     readingTime: 11,
     faqItems: [
@@ -1978,7 +1978,7 @@ We will free of charge:
     },
     author: '3D.GRYZ',
     publishedAt: '2026-01-29',
-    coverImage: '/blog/ai-tools-marketplace-content.jpg',
+    coverImage: '/blog/ai-tools-for-marketplace-content.webp',
     tags: ['нейросети', 'маркетплейсы', 'AI-контент', 'Wildberries', 'Ozon', 'карточки товаров', 'инструменты'],
     readingTime: 13,
     faqItems: [
@@ -2466,7 +2466,7 @@ We will free of charge:
     },
     author: '3D.GRYZ',
     publishedAt: '2026-01-28',
-    coverImage: '/blog/3d-visualization-marketplaces.jpg',
+    coverImage: '/blog/3d-visualization-for-marketplaces.webp',
     tags: ['3D визуализация', 'маркетплейсы', 'Wildberries', 'Ozon', 'AR', 'карточки товаров', 'e-commerce'],
     readingTime: 12,
     faqItems: [
@@ -2940,7 +2940,7 @@ We will free of charge:
     },
     author: '3D.GRYZ',
     publishedAt: '2026-01-28',
-    coverImage: '/blog/neural-avatars-business.jpg',
+    coverImage: '/blog/neural-avatars-for-business.webp',
     tags: ['нейро-аватар', 'AI-видео', 'цифровой ведущий', 'нейросети', 'маркетинг', 'бизнес'],
     readingTime: 14,
     faqItems: [
@@ -3390,7 +3390,7 @@ We will free of charge:
     },
     author: '3D.GRYZ',
     publishedAt: '2026-01-28',
-    coverImage: '/blog/ai-content-cost.jpg',
+    coverImage: '/blog/ai-content-cost.webp',
     tags: ['AI-контент', 'нейросети', 'AI-видео', 'нейро-аватар', 'цены', 'маркетинг'],
     readingTime: 12,
     faqItems: [
@@ -3903,7 +3903,7 @@ We will free of charge:
     },
     author: '3D.GRYZ',
     publishedAt: '2026-01-19',
-    coverImage: '/blog/product-visualization.jpg',
+    coverImage: '/blog/3d-product-visualization-cost.webp',
     tags: ['3D визуализация', 'цены', 'e-commerce', 'маркетплейсы', 'продуктовая съёмка', 'руководство'],
     readingTime: 15,
     faqItems: [
@@ -4017,7 +4017,7 @@ Ready to discuss a mascot for your brand? [Submit a request](/get-concept) and g
     },
     author: '3D.GRYZ',
     publishedAt: '2026-01-17',
-    coverImage: '/blog/3d-mascots.jpg',
+    coverImage: '/blog/3d-mascots-for-brands.webp',
     tags: ['3D-маскоты', 'брендинг', 'дизайн персонажей'],
     readingTime: 5,
     faqItems: [
