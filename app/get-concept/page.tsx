@@ -120,6 +120,10 @@ ${formData.description}
       if (allSuccess) {
         localStorage.removeItem('conceptFormData')
         setSubmitSuccess(true)
+        // Отправка цели в Яндекс.Метрику
+        if (typeof window !== 'undefined' && (window as any).ym) {
+          (window as any).ym(106307550, 'reachGoal', 'form_submit_success')
+        }
       } else {
         setSubmitError(true)
       }
