@@ -58,10 +58,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
-    languages: {
-      'ru': siteUrl,
-      'en': `${siteUrl}/en`,
-    },
     types: {
       'application/rss+xml': `${siteUrl}/feed.xml`,
     },
@@ -92,11 +88,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    'max-video-preview': -1,
+    'max-image-preview': 'large' as const,
+    'max-snippet': -1,
     googleBot: {
       index: true,
       follow: true,
       'max-video-preview': -1,
-      'max-image-preview': 'large',
+      'max-image-preview': 'large' as const,
       'max-snippet': -1,
     },
   },
@@ -133,8 +132,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
-        {/* Разрешаем всем ботам (включая Яндекс Нейро) использовать большие сниппеты */}
-        <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        {/* Сниппет-директивы перенесены в metadata.robots */}
         <OrganizationJsonLd />
         <WebSiteJsonLd />
         <LocalBusinessJsonLd />

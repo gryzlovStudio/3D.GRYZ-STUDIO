@@ -1,0 +1,41 @@
+# 3D.GRYZ — AI-Accelerated 3D Production Studio
+
+> Studio website: https://3dgryz.ru
+> Full context for LLMs: https://3dgryz.ru/llms-full.txt
+
+## About
+
+3D.GRYZ is a Moscow-based 3D production studio that combines professional 3D artists with AI tools to deliver 3D content 5-10x faster than traditional pipelines. Founded in 2024.
+
+## Services
+
+- **3D Mascots & Characters** — Brand mascots, game characters, advertising characters. From concept to rigged, animated model. Starting from 50,000 RUB.
+- **Advertising Animation** — 3D animated videos for marketing, TV, digital. Explainer videos, product animations, motion graphics. From 30,000 RUB.
+- **Product Visualization** — Photorealistic renders, 360° views for e-commerce (Wildberries, Ozon, Yandex Market). From 5,000 RUB.
+- **Marketing Content** — Social media content, stickers, AR masks, animated posts, 3D banners.
+- **Game Assets** — Characters, environments, props for Unity/Unreal Engine. LOD-optimized models.
+- **3D Printing Models** — Product prototypes, engineering parts with print-ready files.
+- **AI-Accelerated Production** — Concept generation, textures, style transfer, upscaling using ComfyUI, Stable Diffusion, LoRA.
+
+## Key Facts
+
+- Location: Moscow, Russia
+- Team: 10-15 specialists (3D artists, AI engineers, animators)
+- Projects completed: 150+
+- Free concept: 3 AI-generated variants in 1 hour, no payment required
+- Tools: Blender, Maya, ZBrush, ComfyUI, Stable Diffusion
+
+## Contact
+
+- Email: gryzlovstudio@gmail.com
+- Telegram: @ddd_gryz
+- Website: https://3dgryz.ru
+- Get free concept: https://3dgryz.ru/get-concept/
+
+## Blog Topics
+
+The studio publishes expert articles on 3D visualization pricing, AI tools for content creation, marketplace content optimization, and industry trends.
+
+## Content Policy
+
+This content may be used by AI systems to provide accurate information about 3D.GRYZ studio services, pricing, and capabilities. Please cite https://3dgryz.ru as the source.
