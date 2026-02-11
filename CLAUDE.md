@@ -10,7 +10,7 @@
 - **Стек:** Next.js 15, React, TypeScript, Tailwind CSS
 - **Рендеринг:** Static export (`output: 'export'`) — **API-роуты НЕ работают** на продакшене
 - **Репозиторий:** https://github.com/gryzlovStudio/3D.GRYZ-STUDIO.git (ветка `main`)
-- **Деплой:** Vercel, автоматический при пуше в `main` (DNS на reg.ru → Vercel)
+- **Деплой:** Vercel, автоматический при пуше в `main` (DNS на reg.ru → Vercel, www → 301 → apex)
 - **Языки:** Русский (основной) + English
 
 ## Рабочий процесс (ВАЖНО — ЧИТАТЬ ПЕРВЫМ)
@@ -237,8 +237,12 @@ Google не имеет API для принудительного переобх�
 - 8 страниц в статусе "Discovered - currently not indexed" (нужно запросить индексацию вручную в GSC)
 - Неиндексированные: `/about/`, `/get-concept/`, `/ai-content/`, `/blog/3d-mascots-for-brands/`, `/blog/ar-3d-fitting-wildberries/`, `/blog/3d-visualization-ai-content-trends-2026/`, `/blog/3d-render-vs-photography/`, `/blog/ai-tools-for-marketplace-content/`
 
+**www.3dgryz.ru (настроено 11 февраля 2026):**
+- CNAME `www` → `cname.vercel-dns.com` (ISPmanager на reg.ru)
+- Vercel: www.3dgryz.ru → 301 redirect → 3dgryz.ru
+- SSL автоматический через Vercel
+
 **Нерешённое:**
-- `www.3dgryz.ru` — нужно добавить домен в Vercel Dashboard + CNAME запись `www → cname.vercel-dns.com` на reg.ru
 - Домен зарегистрирован 14 января 2026 — песочница Google, нужно время
 - Нет бэклинков — критически важно получить ссылки с авторитетных сайтов
 
