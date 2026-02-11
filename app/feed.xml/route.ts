@@ -15,6 +15,7 @@ export async function GET() {
       <link>${siteUrl}/blog/${post.slug}/</link>
       <guid isPermaLink="true">${siteUrl}/blog/${post.slug}/</guid>
       <description><![CDATA[${post.excerpt.ru}]]></description>
+      <content:encoded><![CDATA[${post.content.ru}]]></content:encoded>
       <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
       <author>hello@3dgryz.ru (${post.author})</author>
       ${post.coverImage ? `<enclosure url="${siteUrl}${post.coverImage}" type="image/jpeg" />` : ''}
